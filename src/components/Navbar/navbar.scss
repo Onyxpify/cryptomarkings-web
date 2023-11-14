@@ -1,0 +1,36 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+#Navbar {
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    @include flex_between();
+    background-color: $header_bg;
+    padding: 1rem;
+    a {
+      text-decoration: none;
+      color: $header-text-color;
+      font-size: 1.5em;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+    .group {
+      @include flex_between();
+      gap: 1rem;
+      :hover {
+        color: $hover_col;
+      }
+      #active {
+        color: $hover_col;
+      }
+    }
+  }
+}

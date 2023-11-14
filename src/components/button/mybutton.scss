@@ -1,0 +1,29 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+.MyButton {
+  text-align: end;
+  button {
+    color: black;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+}
+.redBorderText {
+  button {
+    border: 1px solid red;
+    color: red;
+  }
+}
+.disabled {
+  background-color: $header-text-color;
+  border-radius: 1.5rem;
+  color: $header_bg;
+}

@@ -1,0 +1,76 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/variables";
+@import "../../scss/mixims";
+@import "../../scss/googlesans";
+
+#SetDiag {
+  background-color: $sub_header_bg;
+  min-height: 25vh;
+  margin-top: 2rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  padding: 1rem;
+  margin-bottom: 15vh;
+  .line1 {
+    @include flex_between();
+    justify-content: start;
+    span {
+      @include flex_between();
+      justify-content: start;
+      color: rgb(243, 83, 87);
+      .black {
+        color: black;
+      }
+    }
+  }
+  .line2 {
+    background-color: $header_bg;
+    color: white;
+    padding: 1rem;
+    p {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .group {
+      @include grid(2);
+      fieldset {
+        @include flex_col();
+        gap: 0.7rem;
+        outline: none;
+        border: none;
+        input {
+          background-color: transparent;
+          border: 1px solid white;
+          border-radius: 10px;
+          width: 70%;
+          margin: auto;
+          padding: 0.6rem 1rem;
+          color: white;
+        }
+      }
+      .fieldset {
+        text-align: center;
+      }
+    }
+    .btns {
+      @include grid(2);
+      width: 100%;
+      margin-top: 0.5rem;
+      //   button {
+      //     width: fit-content;
+      //     padding: 0.5rem;
+      //     border-radius: 5px;
+      //     outline: none;
+      //     border: none;
+      //     cursor: pointer;
+      //   }
+      //   .add {
+      //     background-color: white;
+      //   }
+      //   .cancel {
+      //     background-color: rgb(243, 83, 87);
+      //     color: white;
+      //   }
+    }
+  }
+}
