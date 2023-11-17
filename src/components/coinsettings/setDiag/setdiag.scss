@@ -11,18 +11,7 @@
   border-radius: 1rem 1rem 0rem 0rem;
   padding: 1rem;
   margin-bottom: 15vh;
-  .line1 {
-    @include flex_between();
-    justify-content: start;
-    span {
-      @include flex_between();
-      justify-content: start;
-      color: rgb(243, 83, 87);
-      .black {
-        color: black;
-      }
-    }
-  }
+
   .line2 {
     background-color: $header_bg;
     color: white;

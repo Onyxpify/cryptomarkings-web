@@ -22,6 +22,12 @@
     color: red;
   }
 }
+.redBgWhiteText {
+  button {
+    background-color: $warning;
+    color: $whiteText;
+  }
+}
 .disabled {
   background-color: $header-text-color;
   border-radius: 1.5rem;

@@ -12,6 +12,7 @@ import SetDiag from './setDiag/SeDiag';
 import MySignals from './mysignals/MySignals';
 import MyButton from '../button/MyButton';
 import CoinWatchList from './watchlist/CoinWatchList';
+import Indicator from './indicator/Indicator';
 
 
 
@@ -20,7 +21,11 @@ const CoinSettings = () => {
   let redir = useNavigate();
   let pair = manualTrades.filter(each => each.id === Number(String(coin).split('_')[1]))[0];
   let [add, setAdd] = useState(false);
-  
+  let [indicator, setIndicator] = useState(false);
+
+  function handleIndicator() {
+    setIndicator(true);
+  }
   
 
   return (
@@ -36,20 +41,24 @@ const CoinSettings = () => {
           <MyButton text='Disabled' styles='disabled' />
         </div>
         <div className="line-2">
-          <MyButton text='Indicator' styles='redBorderText' />
+          <MyButton action={handleIndicator}  text='Indicator' styles='redBorderText' />
         </div>
       </div>} class='Sb' />
      <SetTrades />
       {
-        !add && 
-        <SetDiag setAdd={setAdd} pair={pair} redir={redir} />
+        !add &&
+        <SetDiag  setAdd={setAdd} pair={pair} redir={redir} />
       }
       {
-        add && 
+        add &&
         <>
           <MySignals />
-          <CoinWatchList />
+          <CoinWatchList  />
         </>
+      }
+      {
+        indicator&& 
+        <Indicator setIndicator={setIndicator} />
       }
     </div>
   )

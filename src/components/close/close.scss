@@ -1,0 +1,19 @@
+@import "../scss/extends";
+@import "../scss/googlesans";
+@import "../scss/media-queries";
+@import "../scss/mixims";
+@import "../scss/variables";
+
+#close {
+  @include flex_between();
+  justify-content: start;
+  span {
+    @include flex_between();
+    justify-content: start;
+    color: rgb(243, 83, 87);
+    cursor: pointer;
+    .black {
+      color: black;
+    }
+  }
+}
