@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './navbar.scss'
-import { Link } from 'react-router-dom'
-import { MobileNavData } from '../MobileNav/mobileNavData';
+import { Link, useLocation } from 'react-router-dom'
+import { NavData } from './navbarData';
+
+
 
 const Navbar = () => {
-  let [list, setList] = useState(MobileNavData);
+  let [list, setList] = useState(NavData);
+  let { pathname } = useLocation();
+  let noNav = ['/'];
+  let lent = useRef(noNav.includes(pathname)?'noNav': '');
    function handleActive(id:number) {
         let upd = list.map(each => {
             if (each.id === id) {
@@ -17,13 +22,13 @@ const Navbar = () => {
         setList(upd);
     }
   return (
-    <div id='Navbar'>
-      <Link to={'/'} className="logo">BlockVilla</Link>
+    <div className={`Navbar ${lent.current}`}>
+      <Link to={'/'} className="logo"></Link>
       <div className="group">
         {
               list.map(item => {
                   return (
-                      <Link onClick={()=>  handleActive(item.id)} id={item.active} to={item.to} className={`items`} key={item.id}>
+                      <Link onClick={()=>  handleActive(item.id)} id={item.active} to={item.to} className={`items ${item.class}`} key={item.id}>
                           {/* <span className='icons'> {item.icon} </span> */}
                           <span className='text'> {item.text} </span>
                       </Link>
