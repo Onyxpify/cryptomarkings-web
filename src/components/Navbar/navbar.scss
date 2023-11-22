@@ -1,0 +1,268 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+.Navbar {
+  @include mobile {
+    @include flex_between();
+    background: $background;
+    padding: 0.5rem;
+    margin: auto;
+
+    a {
+      text-decoration: none;
+      text-align: center;
+      @include mobile {
+        color: $primary;
+      }
+      @include tablet {
+        color: $primary;
+      }
+      @include desktop {
+        color: $background;
+      }
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .logo {
+      display: flex;
+      width: 5.1875rem;
+      height: 3.45831rem;
+      justify-content: center;
+      align-items: center;
+      @include image("/blockvilla.svg");
+    }
+    .group {
+      // @include grid(6);
+      display: none;
+      gap: 1rem;
+      .items {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+      }
+      .login {
+        border-radius: 0.5rem;
+        @include mobile {
+          color: $primary;
+        }
+        @include tablet {
+          color: $primary;
+          border: 1px solid $mainText;
+          background: $background;
+        }
+        @include desktop {
+          border: 1px solid $background;
+          background: $primary;
+          color: $background;
+        }
+      }
+      .register {
+        color: var(--Main-text, rgba(0, 0, 0, 0.9));
+        text-align: center;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 0.5rem;
+        @include mobile {
+          color: $primary;
+        }
+        @include tablet {
+          color: $background;
+          background: $primary;
+        }
+        @include desktop {
+          background: $secondary;
+          color: $background;
+        }
+      }
+      :hover {
+        color: $hover_col;
+      }
+      #active {
+        color: $hover_col;
+      }
+    }
+    .more {
+      @include image("/outlined-menu.svg");
+      width: 1.5rem;
+      height: 1.5rem;
+      @include flex_center();
+      cursor: pointer;
+    }
+  }
+
+  @include tablet {
+    @include flex_between();
+    background: $background;
+    padding: 0.5rem;
+    margin: auto;
+
+    .more {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      text-align: center;
+      @include mobile {
+        color: $primary;
+      }
+      @include tablet {
+        color: $primary;
+      }
+      @include desktop {
+        color: $background;
+      }
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-wrap: nowrap;
+    }
+    .logo {
+      display: flex;
+      width: 5.1875rem;
+      height: 3.45831rem;
+      justify-content: center;
+      align-items: center;
+      @include image("/blockvilla.svg");
+    }
+    .group {
+      @include grid(6);
+      gap: 1rem;
+      .items {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+      }
+      .login {
+        border-radius: 0.5rem;
+        @include mobile {
+          color: $primary;
+        }
+        @include tablet {
+          color: $primary;
+          border: 1px solid $mainText;
+          background: $background;
+        }
+        @include desktop {
+          border: 1px solid $background;
+          background: $primary;
+          color: $background;
+        }
+      }
+      .register {
+        color: var(--Main-text, rgba(0, 0, 0, 0.9));
+        text-align: center;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 0.5rem;
+        @include mobile {
+          color: $primary;
+        }
+        @include tablet {
+          color: $background;
+          background: $primary;
+        }
+        @include desktop {
+          background: $secondary;
+          color: $background;
+        }
+      }
+      :hover {
+        color: $hover_col;
+      }
+      #active {
+        color: $hover_col;
+      }
+    }
+  }
+
+  @include desktop {
+    @include flex_between();
+    background: var(--Primary, #003d2b);
+    padding: 0.5rem;
+    margin: auto;
+    .more {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--background, #fff);
+      text-align: center;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .logo {
+      display: flex;
+      width: 5.1875rem;
+      height: 3.45831rem;
+      justify-content: center;
+      align-items: center;
+      @include image("/blockvilla.svg");
+    }
+    .group {
+      @include grid(6);
+      gap: 1rem;
+      .items {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+      }
+      .login {
+        border-radius: 0.5rem;
+        border: 1px solid var(--background, #fff);
+        background: var(--Primary, #003d2b);
+      }
+      .register {
+        color: var(--Main-text, rgba(0, 0, 0, 0.9));
+        text-align: center;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 0.5rem;
+        background: var(--Secondary, #95cea5);
+      }
+      :hover {
+        color: $hover_col;
+      }
+      #active {
+        color: $hover_col;
+      }
+    }
+  }
+}
+
+.noNav {
+  border-radius: 1rem;
+  width: 86.25% !important;
+}

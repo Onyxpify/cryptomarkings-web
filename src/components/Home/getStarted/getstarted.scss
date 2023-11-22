@@ -1,0 +1,197 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#GetStarted {
+  margin-top: 5.75rem;
+  padding: 0rem 1rem;
+  .line1 {
+    @include mobile {
+      text-align: start;
+      h6 {
+        color: $primary;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      h2 {
+        color: $mainText;
+
+        /* Desktop/Heading 3 */
+        font-family: Lato;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    @include tablet {
+      text-align: start;
+    }
+    @include desktop {
+      text-align: center;
+    }
+  }
+  .line2 {
+    min-height: 53.61rem;
+    // border: 1px solid green;
+    margin-top: 7.5rem;
+    @include mobile {
+      @include grid(1);
+      gap: 1.81rem;
+      .boxa {
+        order: 2;
+      }
+      .boxb {
+        order: 1;
+      }
+    }
+    @include tablet {
+      column-gap: 9.5vw;
+      @include grid(2);
+      .boxa {
+        order: 1;
+      }
+      .boxb {
+        order: 2;
+      }
+    }
+    @include desktop {
+      @include grid(2);
+      column-gap: 10.25rem;
+    }
+    .boxa {
+      width: 100%;
+      height: 53.61rem;
+      //   border: 1px solid red;
+      background-image: url("/app_pics.svg"), url("/green_dots.svg");
+      background-repeat: no-repeat;
+      @include mobile {
+        background-size: 75%, 95%;
+        background-position: center 30vw, bottom center;
+      }
+      @include tablet {
+        background-size: 80% 90%, 100%;
+        background-position: center 18vw, bottom center;
+      }
+      @include desktop {
+        background-size: unset;
+        background-position: top center, bottom center;
+      }
+    }
+    .boxb {
+      width: 100%;
+      height: 53.61rem;
+      //   border: 1px solid red;
+      h3 {
+        color: $primary;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 4.87rem;
+      }
+      .steps {
+        @include flex_col();
+        justify-content: flex-start;
+        gap: 0px;
+        margin-top: 2.31rem;
+        padding-right: 0.1rem;
+        .step {
+          @include flex_col();
+          gap: 0px;
+          .cell1 {
+            @include grid(2);
+            grid-template-columns: 3rem 1fr;
+            gap: 1.5rem;
+            .img {
+              width: 3rem;
+              height: 3rem;
+              border: 2px solid $primary;
+              border-radius: 50%;
+              @include flex_center();
+            }
+            .text {
+              //   border: 1px solid gold;
+              width: 100%;
+              color: $mainText;
+
+              /* Desktop/Body 5 */
+              font-family: Lato;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+          #hr-box {
+            @include grid(2);
+            grid-template-columns: 3rem 1fr;
+            // border: 1px solid purple;
+            .hr {
+              width: 2px !important;
+              height: 4rem;
+              background-color: $primary;
+            }
+          }
+        }
+      }
+      #get-btns {
+        @include mobile {
+          @include grid(1);
+          margin-top: 3.88rem;
+          //   border: 1px solid black;
+        }
+        @include tablet {
+          place-items: start;
+          margin-top: 3.88rem;
+        }
+        @include desktop {
+          width: unset;
+          margin: auto;
+          margin-top: 3.88rem;
+        }
+        .bt {
+          .get-started {
+            @include mobile {
+              background-color: $primary;
+              color: $background;
+            }
+            @include tablet {
+            }
+            @include desktop {
+            }
+          }
+          .watch {
+            @include mobile {
+              background-color: $primary;
+              color: $background;
+              border: 1px solid $primary;
+            }
+            @include tablet {
+              background-color: $primary;
+              color: $background;
+              border: 1px solid $primary;
+            }
+            @include desktop {
+              background-color: transparent;
+              color: $primary;
+              border: 1px solid $primary;
+            }
+          }
+        }
+        .stores {
+          display: flex;
+        }
+      }
+    }
+  }
+}

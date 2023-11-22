@@ -1,0 +1,185 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Hero {
+  width: 100%;
+  min-height: 47.25rem;
+  padding-top: 3rem;
+  @include mobile {
+    background: $background;
+  }
+  @include tablet {
+    background: $background;
+  }
+  @include desktop {
+    background: radial-gradient(
+      104.39% 45.14% at 56.45% 11.64%,
+      #0cbc8b 0%,
+      #06815f 44.63%,
+      #003d2b 96.83%
+    );
+  }
+
+  .line2 {
+    color: $primary;
+    @include grid(1);
+    place-items: start;
+    .more-heading {
+      margin-top: 5.02rem;
+      margin-bottom: 3.62rem;
+      margin-left: 1.5rem;
+      @include mobile {
+        @include flex_center();
+        flex-direction: column;
+        width: 95%;
+        gap: 1rem;
+        flex-wrap: wrap;
+        // border: 1px solid red;
+        h3 {
+          color: $primary;
+          padding: 0.62rem;
+          /* Desktop/Heading 5 */
+          font-family: Lato;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          border-radius: 1.875rem;
+          background: $foreground;
+          &:last-child {
+            background-color: $secondary;
+          }
+        }
+      }
+      @include tablet {
+        width: 30.625rem;
+        @include flex_between();
+        flex-direction: row;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    //
+    .block {
+      @include mobile {
+        @include grid(1);
+        background: $background;
+        .boxa {
+          order: 2;
+        }
+        .boxb {
+          order: 1;
+        }
+      }
+      @include tablet {
+        @include grid(2);
+        .boxa {
+          order: 1;
+        }
+        .boxb {
+          order: 2;
+        }
+        background: $background;
+      }
+      @include desktop {
+        background: radial-gradient(
+          104.39% 45.14% at 56.45% 11.64%,
+          #0cbc8b 0%,
+          #06815f 44.63%,
+          #003d2b 96.83%
+        );
+        @include grid(2);
+      }
+      gap: 3.31rem;
+      margin-top: 4.31rem;
+      // border: 1px solid red;
+      .boxa {
+        //   border: 1px solid white;
+        height: auto;
+        height: 28.625rem;
+        @include flex_col();
+        gap: 1.5rem;
+        .a-heading {
+          color: var(--Secondary, #95cea5);
+
+          /* Desktop/Heading 2 */
+          font-family: Lato;
+          font-size: 2.5rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 6.44rem;
+          @include mobile {
+            display: none;
+          }
+          @include tablet {
+            display: none;
+          }
+          @include desktop {
+            display: block;
+          }
+        }
+
+        p {
+          /* Desktop/body 3 */
+
+          @include mobile {
+            color: $primary;
+            width: 95%;
+            color: var(--Primary, #003d2b);
+
+            /* Mobile/Heading 2 m */
+            font-family: Lato;
+            font-size: 1.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          @include tablet {
+            color: $primary;
+            width: 31.125rem;
+            /* Desktop/Heading 2 */
+            font-family: Lato;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          @include desktop {
+            width: 95%;
+            color: $background;
+            font-family: Lato;
+            font-size: 1.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-wrap: wrap;
+          }
+        }
+
+        @include mobile {
+          width: 90%;
+          margin-left: 0rem;
+        }
+        @include desktop {
+          margin-left: 6.31rem;
+          width: 51.39vw;
+        }
+      }
+      .boxb {
+        //   border: 1px solid white;
+        height: 28.625rem;
+        @include image("/hero_image.svg");
+        @include mobile {
+          width: 90%;
+        }
+        @include desktop {
+          width: 31.34vw;
+        }
+      }
+    }
+  }
+}

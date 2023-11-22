@@ -1,0 +1,99 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+.FourBtn {
+  .bt {
+    @include flex_between();
+    justify-content: start;
+    gap: 1rem;
+    .get-started {
+      gap: 0.625rem;
+      display: flex;
+      padding: 1rem 2rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      width: 9.6875rem;
+      text-align: center;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+      @include mobile {
+        color: $background;
+        background: $primary;
+      }
+      @include tablet {
+        color: $background;
+        background: $primary;
+      }
+      @include desktop {
+        color: $primary;
+        background: $background;
+      }
+    }
+    .watch {
+      display: flex;
+      padding: 1rem 2rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 1rem;
+      text-align: center;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+      @include mobile {
+        color: $primary;
+        background: $background;
+        border: 1px solid $primary;
+      }
+      @include tablet {
+        color: $background;
+        background: $primary;
+        border: 1px solid $primary;
+      }
+      @include desktop {
+        color: $background;
+        border: 1px solid $background;
+        background: $primary;
+      }
+    }
+  }
+  .stores {
+    margin-top: 2.06rem;
+    @include flex_between();
+    justify-content: start;
+    gap: 1rem;
+    @include mobile {
+      display: flex;
+    }
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      display: none;
+    }
+    a {
+      width: 11.0625rem;
+      height: 3.49938rem;
+    }
+    .play {
+      @include image("/Play Store.svg");
+    }
+    .apple {
+      @include image("/App Store.svg");
+    }
+  }
+}
