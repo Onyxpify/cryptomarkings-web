@@ -1,12 +1,10 @@
 import React from 'react'
-import Hero from './hero/Hero'
-import AboutUs from './aboutUs/AboutUs'
 
 const Home = () => {
+  window.location.href = "http://localhost:4000/";
   return (
     <div>
-      <Hero />
-      <AboutUs />
+      
     </div>
   )
 }
