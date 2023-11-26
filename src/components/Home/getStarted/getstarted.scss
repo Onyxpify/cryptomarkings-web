@@ -68,20 +68,30 @@
     .boxa {
       width: 100%;
       height: 53.61rem;
-      //   border: 1px solid red;
-      background-image: url("/app_pics.svg"), url("/green_dots.svg");
-      background-repeat: no-repeat;
-      @include mobile {
-        background-size: 75%, 95%;
-        background-position: center 30vw, bottom center;
+
+      position: relative;
+      .phone {
+        width: 60%;
+        height: 47.5rem;
+        margin: auto;
+        // border: 1px solid red;
+        position: absolute;
+        bottom: 6.55rem;
+        left: 20%;
+        z-index: 3;
+        @include image("/app_pics.svg");
+        background-position: bottom;
       }
-      @include tablet {
-        background-size: 80% 90%, 100%;
-        background-position: center 18vw, bottom center;
-      }
-      @include desktop {
-        background-size: unset;
-        background-position: top center, bottom center;
+      .dots {
+        width: 100%;
+        height: 32.5515rem;
+        // border: 1px solid green;
+        position: absolute;
+        bottom: 0px;
+        left: 0rem;
+        z-index: 1;
+        @include image("/green_dots.svg");
+        background-position: bottom;
       }
     }
     .boxb {

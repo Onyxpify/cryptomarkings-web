@@ -1,6 +1,7 @@
 import React from 'react';
 import './aboutus.scss';
 import Link from 'next/link';
+import LearnMore from '../learnMore/LearnMore';
 
 const AboutUs = () => {
   return (
@@ -13,9 +14,7 @@ const AboutUs = () => {
               <h4>At CryptoMarkings, we've redefined the way you trade cryptocurrencies.
                   Derived from "Crypto Market Kings," we combine cutting-edge artificial intelligence algorithms with a range of innovative trading tools.
               </h4>
-              <Link href='#' className="learn-more">
-                  Learn more <span className="icon"></span>
-              </Link>
+             <LearnMore />
               <p>
                   At CryptoMarkings, we unveil the power of exclusive, closely guarded trading strategies that have been honed over several years of meticulous refinement. These unique strategies, crafted with precision and tested rigorously for over six years, have finally been made accessible to the public. This groundbreaking revelation is your gateway to unparalleled success in the world of crypto trading.
               </p>

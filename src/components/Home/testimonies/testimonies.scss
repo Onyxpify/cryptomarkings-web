@@ -1,0 +1,110 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Testimonies {
+  margin-top: 6.33rem;
+  .line1 {
+    padding-left: 1rem;
+    h6 {
+      color: $primary;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      @include mobile {
+        text-align: left;
+      }
+      @include tablet {
+        text-align: left;
+      }
+      @include desktop {
+        text-align: center;
+      }
+    }
+    h3 {
+      color: $mainText;
+      text-align: center;
+
+      /* Desktop/Heading 3 */
+      font-family: Lato;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      @include mobile {
+        text-align: left;
+      }
+      @include tablet {
+        text-align: left;
+      }
+      @include desktop {
+        text-align: center;
+      }
+    }
+  }
+  .line2 {
+    margin-top: 3.44rem;
+    @include grid(4);
+    gap: 2.25rem;
+    .User {
+      @include flex_between();
+      gap: 1rem;
+      width: 36.8125rem;
+      height: 13.125rem;
+      border-radius: 1.875rem;
+      background: $foreground;
+      padding: 1rem;
+      .cell1 {
+        // width: 6.25rem;
+        height: inherit;
+        // border: 1px solid red;
+        @include flex_center();
+        padding-top: 1rem;
+
+        img {
+          //   border: 1px solid teal;
+          width: 6.25rem;
+          height: 6.25rem;
+          align-self: flex-start;
+        }
+      }
+      .cell2 {
+        p {
+          width: 100%;
+          //   border: 1px solid red;
+          color: $bodyText;
+
+          /* Desktop/Body 5 */
+          font-family: Lato;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        h5 {
+          text-align: right;
+          color: $mainText;
+
+          /* Desktop/Heading 5 */
+          font-family: Lato;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+  #ScrollX {
+    width: 100%;
+    @include desktop {
+      overflow-x: scroll;
+    }
+  }
+}

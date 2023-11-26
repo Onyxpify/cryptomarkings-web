@@ -1,0 +1,81 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+.Table {
+  background-color: $foreground;
+  min-height: 23.5rem;
+  @include grid(1);
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include desktop {
+    padding-left: 5.68rem;
+    padding-right: 6.41rem;
+  }
+  .row {
+    @include grid(4);
+    background-color: $background;
+    height: 4.125rem;
+    border-radius: 1rem;
+    border: 0px solid $mainText;
+    @include mobile {
+      width: 77.8125rem;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    @include desktop {
+      width: 100%;
+    }
+    .cell1,
+    .cell2,
+    .cell3,
+    .cell4 {
+      min-width: 8.125rem;
+      text-align: center;
+      //   border: 1px solid red;
+    }
+    .cell1 {
+      @include grid(2);
+      gap: 1rem;
+      //   text-align: center;
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        @include flex_center();
+      }
+    }
+  }
+  .heading {
+    color: $mainText;
+    text-align: center;
+
+    /* Desktop/Heading 5 */
+    font-family: Lato;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    .cell1,
+    .cell2,
+    .cell3,
+    .cell4 {
+      min-width: 8.125rem;
+      text-align: center;
+      //   border: 1px solid red;
+    }
+    .cell1 {
+      @include flex_center();
+    }
+  }
+}

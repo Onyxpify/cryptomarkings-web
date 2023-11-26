@@ -11,7 +11,10 @@ const GetStarted = () => {
               <h2>Crypto can be challenging, but CryptoMarkings simplifies it.</h2>
           </div>
           <div className="line2">
-              <div className="boxa"></div>
+              <div className="boxa">
+                  <div className="phone"></div>
+                  <div className="dots"></div>
+              </div>
               <div className="boxb">
                   <h3>HOW TO GET STARTED</h3>
                   <div className="steps">

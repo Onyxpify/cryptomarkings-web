@@ -1,0 +1,30 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#LearnMore {
+  text-align: left;
+  width: 100%;
+  .learn-more {
+    @include flex_between();
+    justify-content: flex-start;
+    width: 100%;
+    color: var(--Secondary, #95cea5);
+    text-align: center;
+
+    /* Mobile/Heading 6 */
+    font-family: Lato;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+    .icon {
+      @include image("/chevron-right.svg");
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
