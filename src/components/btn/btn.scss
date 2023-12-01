@@ -1,0 +1,24 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+.Btn {
+  @include flex_center();
+  width: 24.75rem;
+  padding: 1rem 2rem;
+  gap: 0.625rem;
+  border-radius: 1rem;
+  background: $primary;
+  color: $background;
+  text-align: center;
+
+  /* Desktop/Body 5 */
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+  border: none;
+}

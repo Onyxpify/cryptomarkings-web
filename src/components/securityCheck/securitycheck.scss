@@ -1,0 +1,126 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+.SecurityCheck {
+  @include mobile {
+    @include grid(1);
+    gap: 1.2rem;
+    width: 100%;
+    .left {
+      order: 2;
+    }
+    .right {
+      order: 1;
+    }
+  }
+  @include tablet {
+    @include grid(1);
+    gap: 1.2rem;
+    width: 100%;
+    .left {
+      order: 2;
+    }
+    .right {
+      order: 1;
+    }
+  }
+  @include desktop {
+    @include grid(2);
+
+    gap: 10.37rem;
+    width: unset;
+    .left {
+      padding-left: 6.69rem;
+      order: 1;
+    }
+    .right {
+      order: 2;
+    }
+  }
+  .left {
+    .line1 {
+      h3 {
+        color: $primary;
+
+        /* Desktop/Heading 2 */
+        font-family: Lato;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      p {
+        color: $mainText;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .img {
+      width: 25.375rem;
+      height: 12.75rem;
+      @include image("/puzzle.svg");
+      background-position: left;
+      background-size: cover;
+      margin-top: 3.19rem;
+      @include flex_center();
+      ._line {
+        padding-left: unset;
+        @include flex_between();
+        width: 25.375rem;
+        margin: auto;
+        // border: 1px solid red;
+        .mdi {
+          width: 6.25rem;
+          height: 6.25rem;
+        }
+        .icon1 {
+          @include image("/mdi_puzzle1.svg");
+        }
+        .icon2 {
+          @include image("/mdi_puzzle2.svg");
+        }
+      }
+    }
+    .line2 {
+      width: 25.375rem;
+      height: 5.9375rem;
+      @include flex_between();
+      gap: 7.38rem;
+      justify-content: flex-start;
+      .icon {
+        @include image("/arrowForward.svg");
+        background-color: $primary;
+        // border: 1px solid red;
+        width: 3rem;
+        height: 3rem;
+      }
+      .text {
+        color: $mainText;
+
+        /* Desktop/body 3 */
+        font-family: Lato;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+  .right {
+    width: 22.91063rem;
+    height: 22.91063rem;
+    @include image("/locked.svg");
+    background-color: rgb(149, 206, 165, 0.1);
+    border-radius: 50%;
+    background-size: 60%;
+  }
+}

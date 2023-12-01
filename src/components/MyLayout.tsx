@@ -8,7 +8,8 @@ interface props {
 }
 const MyLayout = ({ children }: props) => {
     let router = usePathname();
-  let noNav = ['/'];
+  let noNav = ['/','/login','/register'];
+  let noFooter = ['/login','/register'];
   return (
       <>
           {
@@ -17,7 +18,12 @@ const MyLayout = ({ children }: props) => {
 
          }
           {children}
-          <Footer />
+          {
+              !noFooter.includes(router) && 
+             <Footer />
+
+         }
+          
       </>
   )
 }

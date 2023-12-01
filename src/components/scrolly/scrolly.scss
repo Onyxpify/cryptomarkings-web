@@ -1,0 +1,31 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/mixims";
+@import "../scss/variables";
+
+#ScrollY {
+  @include mobile {
+    overflow-y: scroll;
+  }
+  @include tablet {
+    overflow-y: scroll;
+  }
+  @include desktop {
+    overflow-y: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: $primary;
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 6px;
+    border: 0px solid transparent;
+  }
+}

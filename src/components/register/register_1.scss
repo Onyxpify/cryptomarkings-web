@@ -1,0 +1,120 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+.Register_1 {
+  @include mobile {
+    @include grid(1);
+    .boxa {
+      order: 2;
+    }
+    .img {
+      order: 1;
+    }
+  }
+  @include tablet {
+    @include grid(1);
+    .boxa {
+      order: 2;
+    }
+    .img {
+      order: 1;
+    }
+  }
+  @include desktop {
+    @include grid(2);
+    .boxa {
+      order: 1;
+    }
+    .img {
+      order: 2;
+    }
+  }
+  .boxa {
+    // @include mobile {
+    //   padding-left: unset;
+    // }
+    // @include tablet {
+    //   padding-left: unset;
+    // }
+    // @include desktop {
+    //   padding-left: 6.69rem;
+    // }
+    height: 75vh;
+    // border: 1px solid red;
+    padding-top: 2rem;
+    form {
+      h3 {
+        margin-bottom: 1rem;
+        color: $primary;
+
+        /* Desktop/Heading 3 */
+        font-family: Lato;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 1.5rem;
+      }
+      fieldset {
+        margin-bottom: 1rem;
+      }
+      .fieldSet {
+        @include flex_col();
+        gap: 1rem;
+        justify-content: flex-start;
+        border: none;
+        label {
+          color: $bodyText;
+
+          /* Desktop/Heading 5 */
+          font-family: Lato;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        input {
+          width: 24.75rem;
+          height: 3.3125rem;
+          border-radius: 1rem;
+          border: 1px solid var(--Primary, #003d2b);
+          padding-left: 1rem;
+          font-size: 1.3rem;
+          outline: none;
+          &:hover {
+            border-color: purple;
+          }
+        }
+      }
+      .ask {
+        margin-top: 1rem;
+        color: $mainText;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        a {
+          color: $primary;
+
+          /* Desktop/Heading 5 */
+          font-family: Lato;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .img {
+    @include image("/securelogin.svg");
+    width: 22.71675rem;
+    height: 22rem;
+  }
+}

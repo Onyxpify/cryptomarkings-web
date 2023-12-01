@@ -1,0 +1,69 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+#Onboarding {
+  background: $primary;
+  width: 100%;
+  min-height: 100vh;
+  @include grid(1);
+  padding-bottom: 1rem;
+  .circle {
+    width: 23.125rem;
+    height: 23.125rem;
+    // border: 1px solid red;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 23.125rem;
+    background: linear-gradient(
+      180deg,
+      rgba(44, 122, 99, 0.6) 0%,
+      rgba(73, 239, 119, 0.6) 100%
+    );
+    filter: blur(40px);
+  }
+  .line1 {
+    .img {
+      width: 7.6875rem;
+      height: 4.45831rem;
+      //   border: 1px solid red;
+      @include image("/footerLogo.svg");
+    }
+  }
+  .content {
+    @include mobile {
+      width: 90%;
+      min-height: 80.37vh;
+      margin-bottom: 3rem;
+      padding: 2rem 0rem;
+    }
+    @include tablet {
+      min-height: 80.37vh;
+      width: 90%;
+      margin-bottom: 3rem;
+      padding: 2rem 0rem;
+    }
+    @include desktop {
+      min-height: 80.37vh;
+      width: 78rem;
+      margin-bottom: unset;
+      padding: 0rem 0rem;
+    }
+    border-radius: 1.875rem;
+    border: 3px solid #0cbc8b;
+    background: var(--background, #fff);
+    backdrop-filter: blur(40px);
+  }
+  .line2 {
+    color: var(--gray-400, #a1a1aa);
+
+    /* Desktop/Paragraph 3 */
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

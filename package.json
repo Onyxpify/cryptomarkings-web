@@ -13,10 +13,12 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
+    "country-codes-list": "^1.6.11",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
+    "react-phone-number-input": "^3.3.7",
     "react-router-dom": "^6.19.0",
     "sass": "^1.69.5",
     "util": "^0.12.5"

@@ -1,0 +1,174 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/variables";
+@import "../scss/mixims";
+
+#Login {
+  //   background-color: red;
+  height: inherit;
+  .line1 {
+    @include grid(1);
+    p {
+      @include flex_center();
+      margin-top: 2.06rem;
+      color: #9f0505;
+      font-family: Lato;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      .bold {
+        color: #9f0505;
+        font-family: Lato;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        @include image("/alert-circle.svg");
+      }
+      border-radius: 1rem;
+      background: #ffe5db;
+      padding: 0.25rem;
+    }
+  }
+  .line2 {
+    @include mobile {
+      @include grid(1);
+      gap: 1.2rem;
+      width: 100%;
+      .form {
+        order: 2;
+      }
+      .img {
+        order: 1;
+      }
+    }
+    @include tablet {
+      @include grid(1);
+      gap: 1.2rem;
+      width: 100%;
+      .form {
+        order: 2;
+      }
+      .img {
+        order: 1;
+      }
+    }
+    @include desktop {
+      @include grid(2);
+      // gap: 17.2rem;
+      width: unset;
+      .form {
+        order: 1;
+      }
+      .img {
+        order: 2;
+      }
+    }
+
+    margin-top: 0.31rem;
+    .form {
+      form {
+        h3 {
+          color: $primary;
+
+          /* Desktop/Heading 3 */
+          font-family: Lato;
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 0.56rem;
+        }
+        fieldset {
+          outline: none;
+          border: none;
+          @include flex_col();
+          justify-content: flex-start;
+          gap: 0.5rem;
+          label {
+            margin-bottom: 0.5rem;
+            color: $bodyText;
+
+            /* Desktop/Heading 5 */
+            font-family: Lato;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          #emailPhone {
+            width: 24.75rem;
+            height: 3.3125rem;
+            border-radius: 1rem;
+            border: 1px solid $primary;
+            padding-left: 1rem;
+            outline: none;
+            &:focus {
+              border-color: purple;
+            }
+          }
+          a {
+            text-decoration: none;
+          }
+          ._4got {
+            color: $bodyText;
+            text-align: left;
+
+            /* Desktop/Heading 5 */
+            font-family: Lato;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+          .ask {
+            margin-top: 1.5rem;
+            color: $mainText;
+
+            /* Desktop/Body 5 */
+            font-family: Lato;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            a {
+              color: $primary;
+
+              /* Desktop/Heading 5 */
+              font-family: Lato;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+          }
+        }
+        #Line {
+          // border: 1px solid red;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+          span {
+            @include flex_between();
+            justify-content: flex-start;
+            gap: 0.5rem;
+            label {
+              margin-bottom: unset;
+            }
+          }
+        }
+      }
+    }
+
+    .img {
+      @include image("/securelogin.svg");
+      width: 22.71675rem;
+      height: 22rem;
+    }
+  }
+}
