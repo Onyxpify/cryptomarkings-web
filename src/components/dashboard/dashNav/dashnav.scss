@@ -1,0 +1,112 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#DashNav {
+  @include flex_between();
+  padding-right: 2.5rem;
+  .line2 {
+    @include flex_between();
+    column-gap: 4rem;
+    row-gap: 0.25rem;
+    .cell {
+      .pair {
+        color: $bodyText;
+
+        /* Desktop/Caption */
+        font-family: Lato;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+      .price {
+        color: $mainText;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .rate {
+        color: $primary;
+
+        /* Desktop/Caption */
+        font-family: Lato;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+    .three {
+      .bt {
+        color: $primary;
+
+        /* Desktop/Caption */
+        font-family: Lato;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        border-radius: 1rem;
+        background: $secondary;
+        text-align: center;
+        width: fit-content;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+  .line3 {
+    @include flex_center();
+    gap: 2rem;
+    .deposite {
+      @include flex_center();
+      width: 8.16669rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background: $secondary;
+      color: $primary;
+      text-align: center;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+    }
+    .bell {
+      font-size: 3rem;
+      color: $bodyText;
+      width: 3rem;
+      height: 3rem;
+      //   border: 1px solid red;
+      position: relative;
+      @include flex_center();
+      .green {
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: $secondary;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        right: 0.6rem;
+        border: 2px solid white;
+      }
+    }
+    .user {
+      @include flex_center();
+      .drop {
+        cursor: pointer;
+      }
+    }
+  }
+}

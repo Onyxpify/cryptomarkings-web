@@ -1,0 +1,10 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/mixims";
+@import "../scss/variables";
+
+#Logo {
+  width: 7.5rem;
+  height: 5rem;
+  @include image("../../../public/blockvilla.svg");
+}

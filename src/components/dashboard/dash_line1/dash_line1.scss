@@ -1,0 +1,58 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Dash_line1 {
+  @include flex_center();
+  padding: 2.25rem;
+  border-radius: 1rem;
+  width: 100%;
+  gap: 14.3125rem;
+  background: $background;
+  .boxa {
+    @include flex_between();
+    gap: 1rem;
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
+    h3 {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    h1 {
+      color: $mainText;
+
+      /* Desktop/Heading 3 */
+      font-family: Lato;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      .eye {
+        color: $bodyText;
+      }
+    }
+    p {
+      color: $bodyText;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .boxb {
+    @include flex_between();
+    gap: 1rem;
+  }
+}

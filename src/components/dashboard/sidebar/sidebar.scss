@@ -1,0 +1,28 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Sidebar {
+  @include flex_col();
+  gap: 1rem;
+  justify-content: flex-start;
+  .item {
+    padding: 1rem 2rem;
+    @include flex_between();
+    justify-content: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    color: $foreground;
+    font-family: Lato;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .active {
+    background-color: $secondary;
+    color: $primary;
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#DashLayout {
+  height: 100vh;
+  background-color: $foreground;
+  #Line-1 {
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 1rem;
+    background-color: $background;
+    // border: 1px solid red;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: grid;
+    }
+  }
+  #Line-2 {
+    display: grid;
+    gap: 1rem;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    @include desktop {
+      grid-template-columns: 15.4375rem 1fr;
+    }
+
+    .box {
+      height: calc(100vh - 7rem);
+    }
+    .left {
+      background-color: $primary;
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+      @include desktop {
+        display: grid;
+      }
+    }
+    .main {
+      background-color: $foreground;
+
+      @include mobile {
+        border-radius: 0rem;
+        margin-right: 0rem;
+      }
+      @include tablet {
+        border-radius: 0rem;
+        margin-right: 0rem;
+      }
+      @include desktop {
+        border-radius: 1rem 1rem 0rem 0rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

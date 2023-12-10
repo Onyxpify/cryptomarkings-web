@@ -16,9 +16,11 @@ const Error = lazy(()=> import('./components/error/Error')) ;
 const Login = lazy(()=> import('./components/Login/Login')) ;
 const Register = lazy(()=> import('./components/register/Register')) ;
 const CoinSettings = lazy(() => import('./components/coinsettings/CoinSettings'));
+const DashLayout = lazy(() => import('./components/dashboard/dashLayout/DashLayout'));
 function App() {
   let Path = useLocation();
-  let noNav = ['/'];
+  let noNav = ['/','/dashboard'];
+  let noFooter = ['/dashboard'];
 
   return (
     <div className="App">
@@ -33,12 +35,16 @@ function App() {
         <Route path='/explore' element={<Explore />} />
         <Route path='/more' element={<More />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/dashboard' element={<DashLayout />} />
         <Route path='/register' element={<Register />} />
         <Route path='/coinsettings/:coin' element={<CoinSettings />} />
         <Route path='*' element={<Error />} />
       </Routes>
       </Suspense>
-      <Footer />
+       {
+        !noNav.includes(Path.pathname) &&  <Footer />
+     }
+      
       <MobileNav />
     </div>
   );
