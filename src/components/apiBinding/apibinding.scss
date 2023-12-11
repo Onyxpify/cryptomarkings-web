@@ -1,0 +1,205 @@
+@import "../scss/extends";
+@import "../scss/media-queries";
+@import "../scss/mixims";
+@import "../scss/variables";
+
+#ApiBinding {
+  .line2 {
+    margin-top: 3.25rem;
+    .cell1 {
+      width: fit-content;
+      height: 3.125rem;
+      @include flex_between();
+      //   justify-content: flex-start;
+      background-color: $background;
+      margin: auto;
+      border-radius: 2rem;
+      //   padding-right: 0.5rem;
+      //   border: 1px solid red;
+      button {
+        outline: none;
+        border: none;
+        @include flex_center();
+        height: 3.125rem;
+        gap: 0.3rem;
+        cursor: pointer;
+        .icon {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+      .binance {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        text-align: center;
+
+        /* Desktop/Heading 4 */
+        font-family: Lato;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .bybit {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        text-align: center;
+
+        /* Desktop/Heading 4 */
+        font-family: Lato;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .active {
+        background-color: $secondary;
+        color: $primary;
+      }
+      .not-active {
+        color: $bodyText;
+        background-color: transparent;
+      }
+    }
+  }
+  .line3 {
+    width: 36.6rem;
+    height: 46.6rem;
+    background-color: $background;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 2.25rem 1rem;
+    .cell1 {
+      @include flex_between();
+      h3 {
+        color: $mainText;
+        text-align: center;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      span {
+        padding: 0.25rem 1rem;
+        @include flex_center();
+        border-radius: 1rem;
+        background: $active;
+        color: $mainText;
+        text-align: center;
+
+        /* Desktop/Caption */
+        font-family: Lato;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+    .cell2 {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      @include flex_center();
+    }
+    .cell3 {
+      //   margin-top: 2.38rem;
+      form {
+        @include grid(1);
+        gap: 1rem;
+        p {
+          @include flex_center();
+          gap: 0.5rem;
+          span {
+            color: #f64646;
+
+            /* Caption body */
+            font-family: Lato;
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .inp {
+          margin-top: 2.38rem;
+          fieldset {
+            border: none;
+            @include flex_col();
+            justify-content: flex-start;
+            gap: 0.5rem;
+            input {
+              width: 24.75rem;
+              height: 4.3125rem;
+              border-radius: 1rem;
+              border: 1px solid $primary;
+              padding: 1.4rem 1.9rem;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+            }
+            label {
+              color: $bodyText;
+
+              /* Desktop/Heading 5 */
+              font-family: Lato;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+          }
+          .bt {
+            @include flex_center();
+            button {
+              @include flex_center();
+              border: none;
+              cursor: pointer;
+              width: 24.75rem;
+              padding: 1rem 2rem;
+              gap: 0.625rem;
+              border-radius: 1rem;
+              background: $primary;
+              color: $background;
+              text-align: center;
+
+              /* Desktop/Body 5 */
+              font-family: Lato;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+          .texts {
+            @include grid(1);
+            margin-top: 1rem;
+            .black {
+              color: $mainText;
+
+              /* Desktop/Body 5 */
+              font-family: Lato;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            .red {
+              margin-top: 1rem;
+              color: #f64646;
+
+              /* Desktop/Heading 5 */
+              font-family: Lato;
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
