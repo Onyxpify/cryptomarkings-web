@@ -13,7 +13,7 @@ const Dashboard = () => {
       <Dash_line2 />
       <Dash_line3 />
       <Dash_line4 />
-      <Footer bg='white' />
+      {/* <Footer bg='white' color='#808080' /> */}
     </div>
   )
 }

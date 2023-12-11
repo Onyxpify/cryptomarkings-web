@@ -40,6 +40,7 @@
     }
     .left {
       background-color: $primary;
+      border-radius: 0rem 2rem 0rem 0rem;
       @include mobile {
         display: none;
       }
@@ -64,6 +65,19 @@
       @include desktop {
         border-radius: 1rem 1rem 0rem 0rem;
         margin-right: 1rem;
+      }
+    }
+  }
+  .FooTer {
+    margin-top: 15rem;
+    a {
+      color: #808080;
+    }
+    .boxa {
+      .icons {
+        a {
+          color: $secondary;
+        }
       }
     }
   }

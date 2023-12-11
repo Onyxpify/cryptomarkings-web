@@ -5,16 +5,5 @@
 
 #Dashboard {
   display: grid;
-  .FooTer {
-    a {
-      color: #808080;
-    }
-    .boxa {
-      .icons {
-        a {
-          color: $secondary;
-        }
-      }
-    }
-  }
+  padding-right: 1rem;
 }

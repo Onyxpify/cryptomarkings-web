@@ -7,6 +7,8 @@
   @include flex_col();
   gap: 1rem;
   justify-content: flex-start;
+  // border-radius: 0rem 2rem 1rem 0rem;
+
   .item {
     padding: 1rem 2rem;
     @include flex_between();
@@ -19,6 +21,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    // border-radius: 0rem 1rem 1rem 0rem;
   }
   .active {
     background-color: $secondary;

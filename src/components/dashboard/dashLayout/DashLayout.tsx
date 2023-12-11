@@ -5,6 +5,7 @@ import './dashlayout.scss';
 import Sidebar from '../sidebar/Sidebar';
 import { useRecoilValue } from 'recoil';
 import { sideComps } from '../../atoms/sidebar';
+import Footer from '../../Footer/Footer';
 interface p{
     children: any,
     className: string,
@@ -22,6 +23,7 @@ const DashLayout = () => {
               </ScrollY>
               <ScrollY className="main box">
                   {comp}
+                   <Footer bg='white' color='#808080' />
               </ScrollY>
           </div>
     </div>

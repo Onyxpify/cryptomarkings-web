@@ -1,0 +1,89 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Bonus {
+  margin-top: 5.19rem;
+  height: 33.5rem;
+  background-color: $background;
+  padding: 2.25rem;
+  @include grid(3);
+  .Card {
+    padding: 2.25rem;
+    @include flex_center();
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    .img {
+      @include flex_center();
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: $secondary;
+    }
+    h3 {
+      color: $mainText;
+      text-align: center;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .p {
+      color: $bodyText;
+      text-align: center;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      height: 13.57rem;
+      @include flex_col();
+      gap: 1rem;
+      p {
+        text-align: center;
+        padding: 0rem 0.5rem;
+      }
+    }
+    .btns {
+      @include flex_center();
+      gap: 0.5rem;
+      a {
+        text-decoration: none;
+        padding: 1rem 2rem;
+      }
+      .subscribe {
+        background-color: $primary;
+        color: $background;
+        text-align: center;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 1rem;
+      }
+      .share {
+        border-radius: 1rem;
+        border: 1px solid $primary;
+        color: $primary;
+        text-align: center;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
