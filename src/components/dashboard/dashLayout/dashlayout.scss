@@ -82,3 +82,9 @@
     }
   }
 }
+.no-left {
+  grid-template-columns: 1fr !important;
+  .left {
+    display: none !important;
+  }
+}

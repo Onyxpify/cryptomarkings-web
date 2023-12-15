@@ -6,19 +6,22 @@ import Sidebar from '../sidebar/Sidebar';
 import { useRecoilValue } from 'recoil';
 import { sideComps } from '../../atoms/sidebar';
 import Footer from '../../Footer/Footer';
+import { hideSide } from '../../atoms/rewards';
 interface p{
     children: any,
     className: string,
 }
 const DashLayout = () => {
     let comp = useRecoilValue(sideComps);
+    let hide = useRecoilValue(hideSide);
   return (
       <div id='DashLayout'>
           <div id="Line-1">
               <DashNav />
           </div>
-          <div id="Line-2">
-              <ScrollY className="left box">
+          <div className={hide.class} id="Line-2">
+            
+                   <ScrollY className="left box">
                   <Sidebar />
               </ScrollY>
               <ScrollY className="main box">
