@@ -16,7 +16,7 @@ const DashNav = () => {
         {
           dashNavList.map(each => {
             return (
-              <div className={`cell ${each.class}`}>
+              <div key={each.id} className={`cell ${each.class}`}>
                   <div className="pair bt"> {each.pair} </div>
                 <div className="price">
                   {

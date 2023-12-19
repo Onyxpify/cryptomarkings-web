@@ -1,0 +1,58 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Apply {
+  width: 61.69rem;
+  min-height: 102rem;
+  background-color: $background;
+  margin: auto;
+  margin-top: 5.13rem;
+  border-radius: 1rem;
+  padding-bottom: 2.69rem;
+  @include flex_between();
+  align-items: flex-start;
+  gap: 10.06rem;
+  .ap_cell1 {
+    width: 12.44rem;
+    min-height: 10.52rem;
+    background-color: $foreground;
+    margin-top: 5.06rem;
+    @include flex_col();
+    justify-content: flex-start;
+    gap: 0.2rem;
+    .tab {
+      padding: 0.62rem;
+      p {
+        color: $bodyText;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+    .active {
+      background-color: $secondary;
+      p {
+        color: $mainText;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+  .ap_cell2 {
+    // border: 1px solid red;
+    height: inherit;
+    width: calc(100% - 10.06rem - 12.44rem);
+  }
+}

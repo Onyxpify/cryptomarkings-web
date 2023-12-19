@@ -3,6 +3,9 @@ import user1 from '../../assets/toptraderIcon.svg';
 import user2 from '../../assets/user2.svg';
 import user3 from '../../assets/user3.svg';
 import { svgs } from "../svgs";
+import Traders from "./traders/Traders";
+import Manager from "./manager/Manager";
+import Apply from "./apply/Apply";
 
 let id = 0;
 export const traderTab = [
@@ -10,19 +13,22 @@ export const traderTab = [
         id: id++,
         text: 'Traders',
         icon: sideSvgs.traderlist,
-        class: 'active'
+        class: 'active',
+        component: <Traders />,
     },
     {
         id: id++,
         text: 'Manager',
         icon: svgs.manager,
-         class: ''
+        class: '',
+         component: <Manager />,
     },
     {
         id: id++,
         text: 'Apply',
         icon: svgs.apply,
-         class: ''
+        class: '',
+         component: <Apply />,
     },
 ]
 let id1 = 0;

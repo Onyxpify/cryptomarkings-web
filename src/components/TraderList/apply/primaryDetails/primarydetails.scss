@@ -1,0 +1,344 @@
+@import "../../../scss/extends";
+@import "../../../scss/media-queries";
+@import "../../../scss/mixims";
+@import "../../../scss/variables";
+
+#PrimaryDetails {
+  h3 {
+    color: $primary;
+    text-align: center;
+
+    /* Desktop/Heading 4 */
+    font-family: Lato;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 2.19rem;
+  }
+  .pri_line1 {
+    // border: 1px solid blue;
+    @include flex_col();
+    justify-content: flex-start;
+    margin-top: 3.38rem;
+    #trading-experience {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .MuiTypography-root {
+      color: $mainText;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .pri_line2 {
+    width: 20.625rem;
+    margin-top: 2.25rem;
+    h4 {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 4rem;
+    }
+    .MuiSlider-valueLabelOpen {
+      background-color: $primary !important;
+      border-radius: 60% !important;
+    }
+  }
+  .pri_line3 {
+    // border: 1px solid blue;
+    @include flex_col();
+    justify-content: flex-start;
+    margin-top: 3.38rem;
+    #trading-profit {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .MuiTypography-root {
+      color: $mainText;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .pri_line4 {
+    fieldset {
+      @include flex_col();
+      justify-content: flex-start;
+      gap: 1rem;
+      border: none;
+      label {
+        color: $mainText;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      input {
+        width: 24.75rem;
+        height: 4.3125rem;
+        border-radius: 1rem;
+        border: 1px solid $primary;
+        padding: 1.44rem 1.37rem;
+        font-size: 1.125rem;
+      }
+    }
+  }
+  .pri_line5 {
+    margin-top: 2.25rem;
+    #trading-social {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .fieldset {
+      @include flex_col();
+      justify-content: flex-start;
+      gap: 1rem;
+      border: none;
+      label {
+        color: $mainText;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      input {
+        width: 24.75rem;
+        height: 4.3125rem;
+        border-radius: 1rem;
+        border: 1px solid $primary;
+        padding: 1.44rem 1.37rem;
+        font-size: 1.125rem;
+      }
+    }
+    p {
+      span {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  .pri_line6 {
+    @include flex_col();
+    justify-content: flex-start;
+    margin-top: 3.38rem;
+    #trading-strategy {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .MuiTypography-root {
+      color: $mainText;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .pri_line7 {
+    @include flex_col();
+    justify-content: flex-start;
+    margin-top: 3.38rem;
+    #trading-copier {
+      color: $mainText;
+
+      /* Desktop/Heading 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 22.8rem;
+    }
+    .MuiTypography-root {
+      color: $mainText;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .pri_line8 {
+    margin-top: 4.5rem;
+    @include flex_center();
+    button {
+      @include flex_center();
+      width: 8.1875rem;
+      height: 3.6875rem;
+      padding: 1rem 2rem;
+
+      gap: 0.625rem;
+      color: $background;
+      text-align: center;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border-radius: 1rem;
+      background-color: $primary;
+      border: none;
+      outline: none;
+    }
+  }
+  .pri_line9 {
+    margin-top: 3.38rem;
+    @include flex_between();
+    justify-content: flex-start;
+    gap: 0.5rem;
+    .level {
+      width: 5.5rem;
+      height: 5px;
+      border-radius: 5px;
+      background-color: $primary;
+    }
+    .not-level {
+      width: 5.5rem;
+      height: 5px;
+      border-radius: 5px;
+      background-color: $foreground;
+    }
+  }
+
+  .facebook {
+    .MuiSwitch-root {
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-radius: 1.2rem;
+      // width: 3.25rem;
+      // height: 2rem;
+      background-color: $primary !important;
+    }
+    .Mui-checked {
+      color: white;
+    }
+  }
+  .instagram {
+    .MuiSwitch-root {
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-radius: 1.2rem;
+      // width: 3.25rem;
+      // height: 2rem;
+      background-color: $primary !important;
+    }
+    .Mui-checked {
+      color: white;
+    }
+  }
+  .telegram {
+    .MuiSwitch-root {
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-radius: 1.2rem;
+      // width: 3.25rem;
+      // height: 2rem;
+      background-color: $primary !important;
+    }
+    .Mui-checked {
+      color: white;
+    }
+  }
+  .discord {
+    .MuiSwitch-root {
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-radius: 1.2rem;
+      // width: 3.25rem;
+      // height: 2rem;
+      background-color: $primary !important;
+    }
+    .Mui-checked {
+      color: white;
+    }
+  }
+  .youtube {
+    .MuiSwitch-root {
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-radius: 1.2rem;
+      // width: 3.25rem;
+      // height: 2rem;
+      background-color: $primary !important;
+    }
+    .Mui-checked {
+      color: white;
+    }
+  }
+  .not-active {
+    .MuiSwitch-root {
+      box-sizing: border-box;
+      border: 1px solid $bodyText;
+      border-radius: 1.2rem;
+      // width: 3.25rem;
+      // height: 2rem;
+      background-color: transparent !important;
+    }
+    .MuiButtonBase-root {
+      color: gray;
+    }
+  }
+  .MuiSwitch-track,
+  .css-1yjjitx-MuiSwitch-track {
+    background-color: transparent;
+  }
+  .MuiPaper-root {
+    // background-color: $background;
+    box-shadow: 0px 0px 4px transparent;
+
+    &::before {
+      border-bottom: 1px solid white !important;
+    }
+  }
+}
