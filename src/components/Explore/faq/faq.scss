@@ -1,0 +1,112 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Faq {
+  padding-top: 3.62rem;
+  // background-color: red;
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include desktop {
+    // padding-left: 5.62rem;
+    // padding-right: 6.25rem;
+  }
+  h3 {
+    color: $mainText;
+
+    /* Desktop/Heading 3 */
+    font-family: Lato;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mobile {
+      text-align: left;
+    }
+    @include tablet {
+      text-align: left;
+    }
+    @include desktop {
+      text-align: center;
+    }
+  }
+  .line1 {
+    margin-top: 7.13rem;
+    background-color: $foreground;
+    @include mobile {
+      @include grid(1);
+      gap: 5.79rem;
+      .qa {
+        order: 2;
+      }
+      .icon {
+        order: 1;
+      }
+    }
+    @include tablet {
+      @include grid(1);
+      .qa {
+        order: 2;
+      }
+      .icon {
+        order: 1;
+      }
+    }
+    @include desktop {
+      @include grid(2);
+      .qa {
+        order: 1;
+      }
+      .icon {
+        order: 2;
+      }
+    }
+    .qa {
+      //   border: 1px solid red;
+      background-color: transparent;
+      @include mobile {
+        // width: 41rem;
+        width: 100%;
+        min-height: 23.0625rem;
+      }
+      @include tablet {
+        width: 100%;
+        min-height: 23.0625rem;
+      }
+      @include desktop {
+        width: 100%;
+        min-height: 27.0625rem;
+      }
+    }
+    .icon {
+      //   border: 1px solid red;
+      background-color: $foreground;
+
+      @include image("../../../assets/faqIcon.svg");
+
+      @include mobile {
+        width: 100%;
+        min-height: 23.0625rem;
+        background-position: right;
+      }
+      @include tablet {
+        width: 100%;
+        min-height: 23.0625rem;
+        margin: auto;
+        background-position: center;
+      }
+      @include desktop {
+        width: 30.2605rem;
+        height: 27.0625rem;
+        background-position: left;
+      }
+    }
+  }
+}

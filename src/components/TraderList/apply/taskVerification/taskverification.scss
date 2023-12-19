@@ -22,7 +22,15 @@
     // border: 1px solid blue;
     @include flex_col();
     justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
     margin-top: 3.38rem;
+    .MuiFormControlLabel-root {
+      @include flex_between();
+      justify-content: flex-start;
+      align-items: flex-start;
+      // border: 1px solid blue;
+    }
     #trading-experience {
       color: $mainText;
 
@@ -32,6 +40,7 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      margin-bottom: 1rem;
     }
     .MuiTypography-root {
       color: $mainText;
@@ -42,6 +51,9 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      margin-bottom: 0.5rem;
+      // border: 1px solid red;
+      align-self: flex-end;
     }
   }
   .pri_line8 {
