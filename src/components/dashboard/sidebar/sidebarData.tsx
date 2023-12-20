@@ -1,5 +1,5 @@
 import Explore from "../../Explore/Explore";
-import Market from "../../Market/Market";
+import NewMarket from "../../newMarket/NewMarket";
 import More from "../../More/More";
 import TraderList from "../../TraderList/TraderList";
 import ApiBinding from "../../apiBinding/ApiBinding";
@@ -46,7 +46,7 @@ export const sideList = [
         text: 'Market',
         icon: sideSvgs.market,
         active: '',
-         component: <Market />
+         component: <NewMarket />
     },
     {
         id: id++,

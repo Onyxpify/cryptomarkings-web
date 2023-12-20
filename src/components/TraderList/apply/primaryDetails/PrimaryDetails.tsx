@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./primarydetails.scss";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -22,18 +22,19 @@ const PrimaryDetails = () => {
   const [profit, setProfit] = React.useState("");
   const [strategy, setStrategy] = React.useState("");
   const [copier, setCopier] = React.useState("");
-  const [facebook, setFacebook] = React.useState(false);
-  const [instagram, setInstagram] = React.useState(false);
-  const [telegram, setTelegram] = React.useState(false);
-  const [discord, setDiscord] = React.useState(false);
-  const [youtube, setYoutube] = React.useState(false);
+  const [facebook, setFacebook] = React.useState({state: false, url: ''});
+  const [instagram, setInstagram] = React.useState({state: false, url: ''});
+  const [telegram, setTelegram] = React.useState({state: false, url: ''});
+  const [discord, setDiscord] = React.useState({state: false, url: ''});
+  const [youtube, setYoutube] = React.useState({ state: false, url: '' });
+  const [myRatingScale,setMyRatingScale] = useState(0)
   const [applyStage, setApplyStage] = useRecoilState(applyLevel);
 
   const AccordionStyle = {
-  '&:before': {
-    backgroundColor: 'transparent !important',
-  },
-};
+    "&:before": {
+      backgroundColor: "transparent !important",
+    },
+  };
 
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -55,6 +56,19 @@ const PrimaryDetails = () => {
     setCopier(event.target.value);
   };
   function handleNext() {
+    let upd = {
+      experience,
+      profit,
+      strategy,
+      copier,
+      facebook,
+      instagram,
+      telegram,
+      discord,
+      youtube,
+      myRatingScale
+    };
+    console.log(upd);
     setApplyStage(applyStage + 1);
   }
   return (
@@ -136,6 +150,7 @@ const PrimaryDetails = () => {
           sx={{ color: "#003D2B" }}
           max={10}
           min={0}
+          onChange={(e:any)=> {setMyRatingScale(e.target.value)}}
           valueLabelDisplay="on"
         />
       </div>
@@ -212,13 +227,14 @@ const PrimaryDetails = () => {
       <div className="pri_line4">
         <fieldset>
           <label htmlFor="phone">Enter your Phone Number</label>
-          <input type="search" name="phone" id="phone" />
+          <input type="number" name="phone" id="phone" />
         </fieldset>
       </div>
       <div className={`pri_line5 `}>
         <FormControl>
           <FormLabel id="trading-social">Enable social media</FormLabel>
-          <Accordion sx={AccordionStyle}
+          <Accordion
+            sx={AccordionStyle}
             expanded={expanded === `${facebook ? "panel1" : ""}`}
             onChange={handleChange("panel1")}
           >
@@ -230,12 +246,12 @@ const PrimaryDetails = () => {
               <Typography>
                 <FormControlLabel
                   value="Facebook"
-                  className={`${facebook ? "facebook" : "not-active"}`}
+                  className={`${facebook.state ? "facebook" : "not-active"}`}
                   control={
                     <Switch
-                      checked={facebook}
+                      checked={facebook.state}
                       onChange={(e) => {
-                        setFacebook(e.target.checked);
+                        setFacebook({state:e.target.checked,url:''});
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -249,14 +265,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="facebook">Username/Link</label>
-                  <input type="text" name="facebook" id="facebook" />
+                  <input value={facebook.url} onChange={(e)=> setFacebook({...facebook,url: e.target.value})} type="text" name="facebook" id="facebook" />
                 </span>
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
-           sx={AccordionStyle}
-            expanded={expanded === `${instagram ? "panel2" : ""}`}
+            sx={AccordionStyle}
+            expanded={expanded === `${instagram.state ? "panel2" : ""}`}
             onChange={handleChange("panel2")}
           >
             <AccordionSummary
@@ -267,12 +283,12 @@ const PrimaryDetails = () => {
               <Typography>
                 <FormControlLabel
                   value="Instagram"
-                   className={`${instagram ? "instagram" : "not-active"}`}
+                  className={`${instagram.state ? "instagram" : "not-active"}`}
                   control={
                     <Switch
-                      checked={instagram}
+                      checked={instagram.state}
                       onChange={(e) => {
-                        setInstagram(e.target.checked);
+                        setInstagram({state: e.target.checked, url: ''});
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -286,14 +302,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="instagram">Username/Link</label>
-                  <input type="text" name="instagram" id="instagram" />
+                  <input onChange={(e)=> setInstagram({...instagram,url: e.target.value})} type="text" name="instagram" id="instagram" />
                 </span>
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             sx={AccordionStyle}
-            expanded={expanded === `${telegram ? "panel3" : ""}`}
+            expanded={expanded === `${telegram .state? "panel3" : ""}`}
             onChange={handleChange("panel3")}
           >
             <AccordionSummary
@@ -304,12 +320,12 @@ const PrimaryDetails = () => {
               <Typography>
                 <FormControlLabel
                   value="Telegram"
-                   className={`${telegram ? "telegram" : "not-active"}`}
+                  className={`${telegram.state ? "telegram" : "not-active"}`}
                   control={
                     <Switch
-                      checked={telegram}
+                      checked={telegram.state}
                       onChange={(e) => {
-                        setTelegram(e.target.checked);
+                        setTelegram({state:e.target.checked, url: ''});
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -323,14 +339,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="telegram">Username/Link</label>
-                  <input type="text" name="telegram" id="telegram" />
+                  <input onChange={(e)=> setTelegram({...telegram,url: e.target.value})} type="text" name="telegram" id="telegram" />
                 </span>
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             sx={AccordionStyle}
-            expanded={expanded === `${discord ? "panel4" : ""}`}
+            expanded={expanded === `${discord.state ? "panel4" : ""}`}
             onChange={handleChange("panel4")}
           >
             <AccordionSummary
@@ -341,12 +357,12 @@ const PrimaryDetails = () => {
               <Typography>
                 <FormControlLabel
                   value="Discord"
-                   className={`${discord ? "discord" : "not-active"}`}
+                  className={`${discord.state ? "discord" : "not-active"}`}
                   control={
                     <Switch
-                      checked={discord}
+                      checked={discord.state}
                       onChange={(e) => {
-                        setDiscord(e.target.checked);
+                        setDiscord({state:e.target.checked,url: ''});
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -360,14 +376,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="discord">Username/Link</label>
-                  <input type="text" name="discord" id="discord" />
+                  <input onChange={(e)=> setDiscord({...discord,url: e.target.value})} type="text" name="discord" id="discord" />
                 </span>
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             sx={AccordionStyle}
-            expanded={expanded === `${youtube ? "panel5" : ""}`}
+            expanded={expanded === `${youtube.state ? "panel5" : ""}`}
             onChange={handleChange("panel5")}
           >
             <AccordionSummary
@@ -378,13 +394,12 @@ const PrimaryDetails = () => {
               <Typography>
                 <FormControlLabel
                   value="Youtube"
-                   className={`${youtube ? "youtube" : "not-active"}`}
+                  className={`${youtube.state ? "youtube" : "not-active"}`}
                   control={
                     <Switch
-                      checked={youtube}
+                      checked={youtube.state}
                       onChange={(e) => {
-                        setYoutube(e.target.checked);
-                        
+                        setYoutube({state:e.target.checked,url: ''});
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -397,8 +412,8 @@ const PrimaryDetails = () => {
             <AccordionDetails>
               <Typography>
                 <span className="fieldset">
-                  <label htmlFor="youtube">Username/Link</label>
-                  <input type="text" name="youtube" id="youtube" />
+                  <label htmlFor="youtube">Username/Link </label>
+                  <input onChange={(e)=> setYoutube({...youtube,url: e.target.value})} type="text" name="youtube" id="youtube" />
                 </span>
               </Typography>
             </AccordionDetails>
@@ -406,10 +421,8 @@ const PrimaryDetails = () => {
         </FormControl>
       </div>
       <div className="pri_line6">
-         <FormControl>
-          <FormLabel id="trading-strategy">
-            Choose Strategy
-          </FormLabel>
+        <FormControl>
+          <FormLabel id="trading-strategy">Choose Strategy</FormLabel>
           <RadioGroup
             aria-labelledby="trading-stragegy"
             name="tradint-stragegy"
@@ -458,15 +471,13 @@ const PrimaryDetails = () => {
               }
               label="Knight Robot"
             />
-            
           </RadioGroup>
         </FormControl>
       </div>
       <div className="pri_line7">
-         <FormControl>
+        <FormControl>
           <FormLabel id="trading-copier">
-           What  percentage commission do you want to
-            charge copiers
+            What percentage commission do you want to charge copiers
           </FormLabel>
           <RadioGroup
             aria-labelledby="trading-copier"
@@ -530,18 +541,17 @@ const PrimaryDetails = () => {
               }
               label="20%"
             />
-            
           </RadioGroup>
         </FormControl>
       </div>
       <div className="pri_line8">
-        <button onClick={(e)=> handleNext()}>Next</button>
+        <button onClick={(e) => handleNext()}>Next</button>
       </div>
       <div className="pri_line9">
-        <div className={applyStage === 1? 'level': 'not-level'}></div>
-        <div className={applyStage === 2? 'level': 'not-level'}></div>
-        <div className={applyStage === 3? 'level': 'not-level'}></div>
-        <div className={applyStage === 4? 'level': 'not-level'}></div>
+        <div className={applyStage === 1 ? "level" : "not-level"}></div>
+        <div className={applyStage === 2 ? "level" : "not-level"}></div>
+        <div className={applyStage === 3 ? "level" : "not-level"}></div>
+        <div className={applyStage === 4 ? "level" : "not-level"}></div>
       </div>
     </div>
   );

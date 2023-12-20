@@ -1,0 +1,65 @@
+@import "../scss/extends";
+@import "../scss/mixims";
+@import "../scss/media-queries";
+
+.Paginate {
+  @include flex_center();
+  justify-content: right;
+  margin-top: 5.06rem;
+  .btns {
+    @include flex_between();
+    gap: 1rem;
+    button {
+      display: flex;
+      width: 2.875rem;
+      padding: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 0.25rem;
+      color: var(--Body-text, #808080);
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .active {
+      display: flex;
+      width: 2.875rem;
+      padding: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 0.25rem;
+      background: var(--foreground, #f2f2f2);
+      color: var(--Main-text, rgba(0, 0, 0, 0.9));
+
+      /* Desktop/Body 5 */
+      font-family: Lato;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .elipses {
+      @include flex_between();
+      gap: 2.25rem;
+      margin-right: 0.5rem;
+    }
+    .arrow {
+      &:hover {
+        color: gold;
+      }
+    }
+  }
+}
+
+.westArrow {
+  transform: rotate(180deg);
+}

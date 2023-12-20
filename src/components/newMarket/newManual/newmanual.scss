@@ -1,0 +1,46 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#NewManual {
+  background-color: $background;
+  .search {
+    @include flex_center();
+    padding-top: 3.56rem;
+    fieldset {
+      width: 32.3125rem;
+      height: 2.5rem;
+      border: none;
+      background-color: $foreground;
+      border-radius: 1rem;
+      padding-right: 0.5rem;
+      @include flex_center();
+      input {
+        padding: 0.5rem 1rem;
+        width: 95%;
+        height: 2.5rem;
+        color: $bodyText;
+        border-radius: 1rem;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+        outline: none;
+        background-color: $foreground;
+        &:focus {
+          color: $mainText;
+        }
+      }
+      label {
+        @include flex_center();
+        width: 5%;
+        height: inherit;
+      }
+    }
+  }
+}
