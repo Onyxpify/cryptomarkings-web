@@ -14,7 +14,7 @@ const Bonus = () => {
           {
               bonusCard.map((each: any) => {
                   return (
-                      <div id={each.id} className="Card">
+                      <div key={each.id} className="Card">
                           <div className="img"> {each.icon} </div>
                           <h3> {each.h3} </h3>
                           <div className="p">

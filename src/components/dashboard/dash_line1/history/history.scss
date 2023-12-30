@@ -1,0 +1,44 @@
+@import "../../../scss/extends";
+@import "../../../scss/media-queries";
+@import "../../../scss/mixims";
+@import "../../../scss/variables";
+
+#History {
+  .His_inline {
+    @include flex_center();
+    // border: 1px solid red;
+    padding-right: 6.22rem;
+    .historyLine1 {
+      @include flex_center();
+      background-color: $background;
+      width: fit-content;
+      margin: auto;
+      border-radius: 2rem;
+      .tab {
+        @include flex_center();
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        text-align: center;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $bodyText;
+        cursor: pointer;
+      }
+      div.active {
+        background: $secondary;
+        color: $primary;
+      }
+    }
+    #LearnMore {
+    }
+  }
+  .comps {
+    margin-top: 11.31rem;
+    padding: 0rem 9.5rem;
+  }
+}

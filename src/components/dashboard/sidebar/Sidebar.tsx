@@ -2,16 +2,18 @@ import './sidebar.scss';
 import { useState } from 'react';
 import { sideList } from './sidebarData';
 import { useRecoilState } from 'recoil';
-import { sideComps } from '../../atoms/sidebar';
+import { selectedSide, sideComps } from '../../atoms/sidebar';
 
 const Sidebar = () => {
     let [list, setList] = useState(sideList);
     let [comps, setComps] = useRecoilState(sideComps);
+    let [clicked, setClicked] = useRecoilState(selectedSide);
     function handleClick(id: any) {
        let upd:any= list.map(each => {
             if (each.id === id) {
                 each.active = 'active';
                 setComps(each.component);
+                setClicked(each.component);
                 
             } else {
                 each.active = '';
