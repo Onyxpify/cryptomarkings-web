@@ -21,6 +21,7 @@
     width: fit-content;
     margin: auto;
     border-radius: 2rem;
+    // border: 1px solid red;
     .tab {
       @include flex_center();
       padding: 0.5rem 1rem;

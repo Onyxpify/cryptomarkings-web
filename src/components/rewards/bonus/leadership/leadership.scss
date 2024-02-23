@@ -4,24 +4,48 @@
 @import "../../../scss/variables";
 
 #Leadership {
+  // border: 1px solid gold;
   .di_line1 {
     margin-top: 6rem;
     @include flex_between();
     width: 100%;
     // background-color: red;
+    // border: 1px solid red;
     height: fit-content;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    @include mobile {
+      flex-direction: column;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+    @include desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      flex-direction: row;
+    }
     .di_cell1 {
+      // border: 1px solid green;
       @include flex_col();
-      justify-content: flex-start;
       gap: 2.06rem;
+      @include mobile {
+        width: 100%;
+      }
+      @include desktop {
+        width: unset;
+      }
       .unit_1 {
-        width: 38rem;
-        padding: 2.25rem;
         background-color: $background;
         min-height: 13.94rem;
         border-radius: 1rem;
+        @include mobile {
+          padding: 2.25rem;
+          width: 100%;
+          justify-content: center;
+        }
+        @include desktop {
+          width: 38rem;
+          justify-content: flex-start;
+          padding: 2.25rem;
+        }
         .un_line1 {
           margin-top: 0.5rem;
           //   border: 1px solid red;
@@ -32,7 +56,12 @@
           .un_cell1 {
             @include flex_between();
             justify-content: flex-start;
-            gap: 2rem;
+            @include mobile {
+              gap: 0.5rem;
+            }
+            @include desktop {
+              gap: 2rem;
+            }
             .texts {
               h5 {
                 color: $mainText;
@@ -49,10 +78,15 @@
 
                 /* Desktop/Body 5 */
                 font-family: Lato;
-                font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+                @include mobile {
+                  font-size: 1rem;
+                }
+                @include desktop {
+                  font-size: 1.125rem;
+                }
                 span {
                   font-weight: 700;
                 }
@@ -93,11 +127,16 @@
         }
       }
       .unit_2 {
-        width: 38.0625rem;
         padding: 2.25rem;
         min-height: 17.63rem;
         background-color: $background;
         border-radius: 1rem;
+        @include mobile {
+          width: 100%;
+        }
+        @include desktop {
+          width: 38.0625rem;
+        }
         .un_line1 {
           margin-top: 0.5rem;
           //   border: 1px solid red;
@@ -108,7 +147,12 @@
           .un_cell1 {
             @include flex_between();
             justify-content: flex-start;
-            gap: 2rem;
+            @include mobile {
+              gap: 0.5rem;
+            }
+            @include desktop {
+              gap: 2rem;
+            }
             .texts {
               h5 {
                 color: $mainText;
@@ -125,10 +169,15 @@
 
                 /* Desktop/Body 5 */
                 font-family: Lato;
-                font-size: 1.125rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+                @include mobile {
+                  font-size: 1rem;
+                }
+                @include desktop {
+                  font-size: 1.125rem;
+                }
                 span {
                   font-weight: 700;
                 }
@@ -153,11 +202,20 @@
       }
     }
     .di_cell2 {
-      width: 38.0625rem;
-      padding: 2.25rem;
       min-height: 32.46rem;
       background-color: $background;
       border-radius: 1rem;
+      width: 100%;
+      @include mobile {
+        width: 100%;
+        padding: 1.25rem;
+        margin-top: 2rem;
+      }
+      @include desktop {
+        width: 38.0625rem;
+        padding: 2.25rem;
+        margin-top: 0rem;
+      }
       .un_line1 {
         margin-top: 0.5rem;
         //   border: 1px solid red;
@@ -168,7 +226,12 @@
         .un_cell1 {
           @include flex_between();
           justify-content: flex-start;
-          gap: 2rem;
+          @include mobile {
+            gap: 0.5rem;
+          }
+          @include desktop {
+            gap: 2rem;
+          }
           .texts {
             h5 {
               color: $mainText;

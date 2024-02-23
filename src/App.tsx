@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
@@ -45,7 +44,7 @@ function App() {
         !noNav.includes(Path.pathname) &&  <Footer />
      }
       
-      <MobileNav />
+      {/* <MobileNav /> */}
     </div>
   );
 }

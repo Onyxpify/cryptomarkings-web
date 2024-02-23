@@ -1,25 +1,26 @@
-import All from "./All/All";
-import Failed from "./failed/Failed";
-import Pending from "./pending/Pending";
+import AdminFees from "./AdminFees/AdminFees";
+import MyCopiersCommission from "./MyCopiersCommission/MyCopiersCommission";
+import TraderCommission from "./TraderCommission/TraderCommission";
+
 
 let id = 0;
 export const historyTab = [
     {
         id: id++,
-        text: 'All',
+        text: 'Admin Fees',
         class: 'active',
-        component: <All />,
+        component: <AdminFees />,
     },
     {
         id: id++,
-        text: 'Pending',
+        text: 'Trader Commission',
         class: '',
-         component: <Pending />,
+         component: <TraderCommission />,
     },
     {
         id: id++,
-        text: 'Failed',
+        text: 'My Copiers Commission',
         class: '',
-         component: <Failed />,
+         component: <MyCopiersCommission />,
     },
 ]

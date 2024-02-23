@@ -146,7 +146,7 @@ const Dash_line3 = () => {
           </p>
         </div>
       </div>
-      <div className="line3">
+      <div id="Lline3">
         <div className="line1">
           <div className="cell1">
             <h4>Portfolio Value <span> {svgs.alert_circle} </span> </h4>

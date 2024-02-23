@@ -2,10 +2,11 @@ import React from 'react';
 import './dash_line2.scss';
 import MyButton from '../../button/MyButton';
 import Logo from '../../logo/Logo';
+import ScrollX from '../../scrollX/ScrollX';
 
 const Dash_line2 = () => {
   return (
-      <div id='Dash_line2'>
+      <ScrollX className='Dash_line2'>
           <div className="img"></div>
           <div className="cell2">
               <h3>Crypto Gems Signals</h3>
@@ -17,7 +18,7 @@ const Dash_line2 = () => {
           <div className="logo">
               <Logo />
           </div>
-    </div>
+    </ScrollX>
   )
 }
 

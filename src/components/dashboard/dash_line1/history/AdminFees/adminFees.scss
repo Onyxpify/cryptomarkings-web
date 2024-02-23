@@ -1,0 +1,88 @@
+@import "../../../../scss/extends";
+@import "../../../../scss/media-queries";
+@import "../../../../scss/mixims";
+@import "../../../../scss/variables";
+
+#AdminFees {
+  width: 100%;
+  .table {
+    background-color: $background;
+    .row,
+    .header {
+      @include grid(5);
+    }
+    .header {
+      margin-bottom: 1.38rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      div {
+        span {
+          color: $mainText;
+          text-align: center;
+
+          /* Desktop/Heading 5 */
+          font-family: Lato;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+    .row {
+      padding: 1rem;
+      border-bottom: 1px solid $foreground;
+      &:last-child {
+        border-color: transparent;
+      }
+      .text {
+        color: $bodyText;
+
+        /* Desktop/Heading 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .one {
+        @include flex_center();
+        // justify-content: flex-start;
+        // border: 1px solid red;
+        text-align: start;
+        gap: 1rem;
+        .icon {
+          display: none;
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+      .three {
+        .green {
+          color: #10c10c;
+        }
+        .red {
+          color: #a70404;
+        }
+      }
+      .five {
+        .text {
+          @include flex_center();
+          //   color: #10c10c;
+          span {
+            svg {
+              width: 1rem;
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+    @include mobile {
+      display: none;
+    }
+    @include desktop {
+      display: grid;
+    }
+  }
+}

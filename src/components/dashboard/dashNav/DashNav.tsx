@@ -7,6 +7,7 @@ import user1 from '../../../assets/user1.svg';
 import approximately from '../../../assets/approximately.svg'
 import chevrondown from '../../../assets/chevrondown.svg';
 import './dashnav.scss';
+import { svgs } from '../../svgs';
 
 const DashNav = () => {
   return (
@@ -34,7 +35,7 @@ const DashNav = () => {
         }
       </div>
       <div className="line3">
-        <Link className='deposite' to={'#'}>Deposit</Link>
+        <Link className='deposite' to={'#'}> {svgs.deposite} Deposit</Link>
         <Link className='bell'to={'#'}><IoMdNotifications /> <div className="green"></div> </Link>
         <span className="user">
           <img src={user1} alt="user image" />

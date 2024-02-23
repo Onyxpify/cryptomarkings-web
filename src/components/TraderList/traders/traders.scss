@@ -28,19 +28,38 @@
     }
   }
   .line3 {
-    @include flex_center();
-    justify-content: flex-end;
-    margin-right: 5.75rem;
-    margin-top: 2.38rem;
+    @include mobile {
+      @include flex_col();
+      align-items: center;
+      justify-content: center;
+      margin-right: 0rem;
+      margin-top: 2.38rem;
+      padding: 1rem;
+    }
+    @include desktop {
+      @include flex_center();
+      justify-content: flex-end;
+      margin-right: 5.75rem;
+      margin-top: 2.38rem;
+      padding: 0rem;
+    }
     gap: 1rem;
+    // border: 1px solid red;
     fieldset {
-      width: 32.3125rem;
       height: 2.5rem;
       border: none;
       background-color: $background;
       border-radius: 1rem;
-      padding-right: 0.5rem;
       @include flex_center();
+      @include mobile {
+        // padding: 1rem;
+        width: 100%;
+        justify-content: center;
+      }
+      @include desktop {
+        width: 32.3125rem;
+        padding-right: 0.5rem;
+      }
       input {
         padding: 0.5rem 1rem;
         width: 95%;
@@ -69,6 +88,7 @@
     .filter {
       @include flex_between();
       gap: 1rem;
+
       span {
         width: 2.875rem;
         padding: 0.5rem;
@@ -123,11 +143,19 @@
     }
   }
   .all_boxes {
-    @include grid(3);
     // margin-left: 3.5rem;
     // margin-right: 3.5rem;
-    margin-top: 2.38rem;
-    row-gap: 5.12rem;
+    // border: 1px solid red;
+    @include mobile {
+      @include grid(1);
+      margin-top: 1.5rem;
+      row-gap: 1.12rem;
+    }
+    @include desktop {
+      @include grid(3);
+      margin-top: 2.38rem;
+      row-gap: 5.12rem;
+    }
     .card {
       background-color: $background;
       padding: 1rem;

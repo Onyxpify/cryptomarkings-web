@@ -8,11 +8,18 @@
   justify-content: flex-start;
   gap: 4.38rem;
   margin-top: 5.94rem;
+  // border: 1px solid red;
   .Card {
     @include flex_between();
     justify-content: flex-start;
     gap: 1rem;
     align-items: flex-start;
+    @include mobile {
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-direction: row;
+    }
     .Card_cell1 {
       img {
         width: 25.0625rem;

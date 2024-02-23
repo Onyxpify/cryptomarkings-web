@@ -11,7 +11,10 @@ export const direct3Table = [
         cell1: {icon: false, text: 'Referred'  },
         cell2: {icon: false, text: 'Amount'  },
         cell3: {icon: false, text: 'Package'  },
-        cell4: {icon: false, text: 'Percentage'  },
+        cell4: { icon: false, text: 'Percentage' },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -20,6 +23,9 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -27,7 +33,10 @@ export const direct3Table = [
         cell1: {icon: user2, text: 'Igbo'  },
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
-        cell4: {icon: false, text: '25%'  },
+        cell4: { icon: false, text: '25%' },
+         ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -36,6 +45,9 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -44,6 +56,9 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -52,6 +67,9 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -60,6 +78,9 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -68,6 +89,9 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
     {
         id: id++,
@@ -76,5 +100,8 @@ export const direct3Table = [
         cell2: {icon: false, text: '$12.38'  },
         cell3: {icon: false, text: 'Markings 1'  },
         cell4: {icon: false, text: '25%'  },
+        ac: `panel${id}-content`,
+        key: `panel${id}`,
+        open: false,
     },
 ]

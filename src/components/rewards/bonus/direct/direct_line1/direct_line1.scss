@@ -5,10 +5,19 @@
 
 #Direct_Line1 {
   @include flex_between();
-  margin-left: 3rem;
-  margin-right: 3rem;
   margin-top: 4.5rem;
   margin-bottom: 5.62rem;
+  // border: 1px solid red;
+  @include mobile {
+    flex-direction: column;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  @include desktop {
+    flex-direction: row;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
   .cell1 {
     @include flex_between();
     justify-content: flex-start;
@@ -35,9 +44,14 @@
     }
   }
   .cell2 {
-    @include flex_between();
-    justify-content: flex-end;
-    gap: 0.5rem;
+    @include mobile {
+      display: none;
+    }
+    @include desktop {
+      @include flex_between();
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
     .withdraw {
       padding: 1rem 2rem;
       background-color: $primary;

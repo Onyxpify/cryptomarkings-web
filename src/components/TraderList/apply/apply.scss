@@ -4,24 +4,37 @@
 @import "../../scss/variables";
 
 #Apply {
-  width: 61.69rem;
+  @include mobile {
+    width: 100%;
+  }
+  @include desktop {
+    width: 61.69rem;
+    @include flex_between();
+    align-items: flex-start;
+  }
+  gap: 10.06rem;
   min-height: 102rem;
   background-color: $background;
   margin: auto;
   margin-top: 5.13rem;
   border-radius: 1rem;
   padding-bottom: 2.69rem;
-  @include flex_between();
-  align-items: flex-start;
-  gap: 10.06rem;
+  // border: 1px solid red;
+
   .ap_cell1 {
     width: 12.44rem;
     min-height: 10.52rem;
     background-color: $foreground;
     margin-top: 5.06rem;
-    @include flex_col();
-    justify-content: flex-start;
+    @include mobile {
+      display: none;
+    }
+    @include desktop {
+      @include flex_col();
+      justify-content: flex-start;
+    }
     gap: 0.2rem;
+    // border: 1px solid purple;
     .tab {
       padding: 0.62rem;
       p {
@@ -51,8 +64,15 @@
     }
   }
   .ap_cell2 {
-    // border: 1px solid red;
+    // border: 1px solid green;
     height: inherit;
-    width: calc(100% - 10.06rem - 12.44rem);
+    @include mobile {
+      width: calc(100%);
+      padding-left: 0.5rem;
+    }
+    @include desktop {
+      width: calc(100% - 10.06rem - 12.44rem);
+      padding-left: 0rem;
+    }
   }
 }

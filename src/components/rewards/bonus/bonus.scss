@@ -5,10 +5,15 @@
 
 #Bonus {
   margin-top: 5.19rem;
-  height: 33.5rem;
+  min-height: 33.5rem;
   background-color: $background;
   padding: 2.25rem;
-  @include grid(3);
+  @include mobile {
+    @include grid(1);
+  }
+  @include desktop {
+    @include grid(3);
+  }
   .Card {
     padding: 2.25rem;
     @include flex_center();

@@ -5,11 +5,27 @@
 
 #DashNav {
   @include flex_between();
-  padding-right: 2.5rem;
+  @include mobile {
+    padding-right: 0.5rem;
+  }
+  @include desktop {
+    padding-right: 2.5rem;
+  }
+
   .line2 {
-    @include flex_between();
-    column-gap: 4rem;
-    row-gap: 0.25rem;
+    @include mobile {
+      display: none;
+      column-gap: 1rem;
+      row-gap: 0.25rem;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      @include flex_between();
+      column-gap: 4rem;
+      row-gap: 0.25rem;
+    }
     .cell {
       .pair {
         color: $bodyText;
@@ -65,15 +81,23 @@
   }
   .line3 {
     @include flex_center();
-    gap: 2rem;
+    // border: 1px solid red;
+    // gap: 2rem;
     .deposite {
       @include flex_center();
+      gap: 0.5rem;
       width: 8.16669rem;
       padding: 0.5rem;
       border-radius: 0.5rem;
-      background: $secondary;
-      color: $primary;
       text-align: center;
+      @include mobile {
+        color: $foreground;
+        background-color: $primary;
+      }
+      @include desktop {
+        color: $primary;
+        background-color: $secondary;
+      }
 
       /* Desktop/Body 5 */
       font-family: Lato;

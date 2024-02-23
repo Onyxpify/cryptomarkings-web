@@ -4,17 +4,29 @@
 @import "../../../../scss/variables";
 
 #Direct_line2 {
-  @include grid(4);
-  padding-left: 3rem;
-  padding-right: 3rem;
   gap: 1.98rem;
+  @include mobile {
+    @include grid(1);
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  @include desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    @include grid(4);
+  }
   .card {
-    width: 16.625rem;
     padding: 2.25rem;
     @include flex_col();
     justify-content: flex-start;
     background-color: $background;
     border-radius: 1rem;
+    @include mobile {
+      width: 100%;
+    }
+    @include desktop {
+      width: 16.625rem;
+    }
     .img {
       width: 2.25rem;
       height: 2.25rem;

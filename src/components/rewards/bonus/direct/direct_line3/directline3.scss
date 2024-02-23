@@ -4,13 +4,19 @@
 @import "../../../../scss/variables";
 
 #Direct_Line3 {
-  width: 78rem;
   margin: auto;
   margin-top: 1.56rem;
-  padding: 1rem 2.25rem;
   min-height: 39.125rem;
   background-color: $background;
   border-radius: 1rem;
+  @include mobile {
+    width: 100%;
+    padding: 0.3rem;
+  }
+  @include desktop {
+    width: 78rem;
+    padding: 1rem 2.25rem;
+  }
   .table {
     .row,
     .header {
@@ -63,6 +69,20 @@
           color: #10c10c;
         }
       }
+    }
+    @include mobile {
+      display: none;
+    }
+    @include desktop {
+      display: grid;
+    }
+  }
+  .showMobileTable {
+    @include mobile {
+      display: flex;
+    }
+    @include desktop {
+      display: none;
     }
   }
 }

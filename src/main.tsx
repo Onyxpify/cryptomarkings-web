@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from 'recoil';
 
@@ -11,6 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+  {/* @emotion/react @emotion/styled @mui/icons-material @mui/material @mui/x-charts @mui/x-date-pickers chart.js dayjs react-chartjs-2 react-copy-to-clipboard react-toastify react-window recharts */}
     <RecoilRoot>
     <BrowserRouter>
     <App />
@@ -22,4 +22,3 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

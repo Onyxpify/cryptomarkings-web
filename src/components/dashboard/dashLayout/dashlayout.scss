@@ -13,10 +13,10 @@
     background-color: $background;
     // border: 1px solid red;
     @include mobile {
-      display: none;
+      // display: none;
     }
     @include tablet {
-      display: none;
+      // display: none;
     }
     @include desktop {
       display: grid;

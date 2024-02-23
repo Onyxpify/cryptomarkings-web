@@ -4,10 +4,17 @@
 @import "../../../../scss/variables";
 
 #BinaryTree {
-  width: 39.1875rem;
   height: 37.5rem;
   background-color: $background;
-  padding: 2.25rem;
+  // border: 1px solid red;
+  @include mobile {
+    width: 100%;
+    padding: 0.1rem;
+  }
+  @include desktop {
+    padding: 2.25rem;
+    width: 39.1875rem;
+  }
   .line1 {
     @include flex_between();
     // width: 100%;

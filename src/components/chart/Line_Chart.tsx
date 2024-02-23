@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
+import { useMediaQuery } from 'react-responsive'
 
 const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
 const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
@@ -12,6 +13,7 @@ const yLabels = [
 ];
 
 export default function Line_chart() {
+  const mobile = useMediaQuery({ query: '(max-width: 750px)' });
   return (
     <LineChart
      slotProps={{ legend: { hidden: true } }}
@@ -29,8 +31,9 @@ export default function Line_chart() {
           label: 'last Month'
         },
       ]}
-      width={800}
-      height={300}
+      width={mobile?400: 800}
+      height={mobile?300: 300}
+    
       
     />
   );

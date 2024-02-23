@@ -6,6 +6,7 @@
 #ApiBinding {
   .line2 {
     margin-top: 3.25rem;
+
     .cell1 {
       width: fit-content;
       height: 3.125rem;
@@ -63,12 +64,19 @@
     }
   }
   .line3 {
-    width: 36.6rem;
     height: 46.6rem;
     background-color: $background;
     margin: auto;
     margin-top: 3rem;
-    padding: 2.25rem 1rem;
+    // border: 1px solid red;
+    @include mobile {
+      padding: 2.25rem 0.2rem;
+      width: 100%;
+    }
+    @include desktop {
+      padding: 2.25rem 1rem;
+      width: 36.6rem;
+    }
     .cell1 {
       @include flex_between();
       h3 {
@@ -113,14 +121,21 @@
           @include flex_center();
           gap: 0.5rem;
           span {
-            color: #f64646;
+            // color: #f64646;
 
             /* Caption body */
             font-family: Lato;
-            font-size: 0.75rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            @include mobile {
+              color: #a76604;
+              font-size: 0.9rem;
+            }
+            @include desktop {
+              color: #f64646;
+              font-size: 0.75rem;
+            }
           }
         }
         .inp {
@@ -187,15 +202,15 @@
             }
             .red {
               margin-top: 1rem;
-              color: #f64646;
 
               /* Desktop/Heading 5 */
               font-family: Lato;
-              font-size: 1.125rem;
               font-style: normal;
               font-weight: 700;
               line-height: normal;
               text-decoration: none;
+              color: #f64646;
+              font-size: 1.125rem;
             }
           }
         }

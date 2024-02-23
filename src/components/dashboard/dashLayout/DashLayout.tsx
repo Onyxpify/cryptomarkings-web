@@ -7,6 +7,7 @@ import { useRecoilValue } from 'recoil';
 import { sideComps } from '../../atoms/sidebar';
 import Footer from '../../Footer/Footer';
 import { hideSide } from '../../atoms/rewards';
+import DashMobileNav from '../dashMobileNav/DashMobileNav';
 interface p{
     children: any,
     className: string,
@@ -19,6 +20,7 @@ const DashLayout = () => {
           <div id="Line-1">
               <DashNav />
           </div>
+          <DashMobileNav />
           <div className={hide.class} id="Line-2">
             
                    <ScrollY className="left box">
