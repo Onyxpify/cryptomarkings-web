@@ -1,0 +1,292 @@
+{
+  "hero": {
+    "imgUrl": "/images/PreciousWogu.png",
+    "name": "Precious Wogu",
+    "heading": "Hay! I’m Precious",
+    "typingText": ["I'm aN Entreprenuer", 1500, "I'm a Blockchain Expert", 1500,"I'm a Mentor", 1500],
+    "description": "Leading Blockchain Education and Adoption: I envision a future where blockchain technology is accessible to all. Through seminars, scholarships, conferences, and media initiatives, I strive to create mass education, awareness, and adoption of blockchain among individuals and companies. Beyond education, my goal is to be a beacon for the best blockchain solutions, guiding end-users towards decentralized financial empowerment.",
+    "btnText": "Get in touch",
+    "btnUrl": "contactus"
+  },
+  "socialBtns": [
+    {
+      "icon": "fa-brands:facebook-f",
+      "iconBgClass": "facebook",
+      "href": "/"
+    },
+    { "icon": "fa-brands:dribbble", "iconBgClass": "dribbble", "href": "/" },
+    {
+      "icon": "fa-brands:linkedin-in",
+      "iconBgClass": "linkedin",
+      "href": "/"
+    }
+  ],
+  "brands": [
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-1.svg",
+      "alt": "Logolpsum"
+    },
+    {
+      "src": "/images/brand-2.svg",
+      "alt": "Logolpsum"
+    }
+  ],
+  "about": {
+    "imgSrc": "/images/IMG_7.jpg",
+    "miniTitle": "About Us",
+    "title": "I’M an Entreprenuer, <span>Blockchain Expert</span>, Mentor",
+    "description": "A trailblazing blockchain innovator, leader, and mentor with a mission to revolutionize the blockchain and DeFi landscape globally. As the founder of Blockvila Limited, I have achieved significant milestones in reshaping the African blockchain scene and beyond. Blockvila stands as a beacon of DeFi innovation, offering digital asset exchange, both decentralized and centralized wallets, crypto P2P loans, seamless crypto trading, smart contracts solutions and blockchain education. I am committed to pushing the boundaries of what's possible in the ever-evolving blockchain space. Join me on this transformative journey as we shape the future of decentralized finance together. <br /> <br /> <div> <h3> Mission </h3> <p> Empowering Lives Through Blockchain: My mission is to foster financial independence and empower individuals in Africa by providing comprehensive technical and blockchain skills training. Through Corporate Social Responsibility (CSR) initiatives, I have successfully trained over 700 youths, women, and young girls, equipping them with vital blockchain-related skills such as shared ledgers, Hyperledger, tokenization, Web 3.0 basics, smart contracts, and cryptocurrency trading. </p> </div> <div> <h3> Vision </h3> <p> Leading Blockchain Education and Adoption: I envision a future where blockchain technology is accessible to all. Through seminars, scholarships, conferences, and media initiatives, I strive to create mass education, awareness, and adoption of blockchain among individuals and companies. Beyond education, my goal is to be a beacon for the best blockchain solutions, guiding end-users towards decentralized financial empowerment. </p> </div>",
+    "funfacts": [
+      {
+        "title": "Scholarships provided",
+        "number": 10
+      },
+      {
+        "title": "Years Experience",
+        "number": 8
+      },
+      {
+        "title": "Awards & Recognitions",
+        "number": 3
+      }
+    ],
+    "btnText": "Get in touch",
+    "btnUrl": "contactus"
+  },
+  "projects": {
+    "allProjectsHeading": {
+      "miniTitle": "My Work",
+      "title": "RECENT PROJECT"
+    },
+    "upcomingProjectsHeading": {
+      "miniTitle": "Coming SooN",
+      "title": "UPCOMING PROJECTS"
+    },
+    "allProjects": [
+      {
+        "thumbUrl": "/images/popup-project-1.jpg",
+        "title": "PROJECT ONE",
+        "subTitle": "BLOCKVILA",
+        "details": {
+          "title": "BLOCKVILA",
+          "description": "As the Founder and CEO of Blockvila, I lead a pioneering digital finance venture providing DeFi solutions and serving as a premier digital asset exchange based in Nigeria. Established in 2017 as ngexchanger a Subsidiary of Nyxel Integrated Services and later upgraded in 2019 to Blockvila, we offer a comprehensive range of decentralized financial services, including secure digital asset exchange, both decentralized and centralized wallet solutions, peer-to-peer crypto loans, tokenization of digital assets, and smart contract services. Our commitment to innovation and excellence underscores Blockvila's role as a dynamic force in transforming the cryptocurrency landscape, providing users with cutting-edge solutions for their diverse financial needs.",
+          "type": "Website",
+          "langages": "PHP, HTML, CSS, JS",
+          "country": "Nigeria",
+          "url": "www.blockvila.com"
+        }
+      },
+      {
+        "thumbUrl": "/images/popup-project-2.jpg",
+        "title": "PROJECT TWO",
+        "subTitle": "Blockchain and Cryptocurrency Awareness Tour (BCAT)",
+        "details": {
+          "title": "Blockchain and Cryptocurrency Awareness Tour (BCAT)",
+          "description": "As the Co-Founder of BCAT, a collaborative initiative with key stakeholders in Africa's blockchain technology sector, I am deeply engaged in spearheading a transformative campaign. BCAT focuses on educating and mentoring African youths, empowering them to reshape their destinies through blockchain knowledge and skills. Within BCAT, I lead the women empowerment programs, leveraging my leadership to mentor numerous university students. I am dedicated to providing blockchain education across various Nigerian universities, equipping students with essential skills that pave the way for their future success. This initiative is not just about awareness but about actively equipping the younger generation with practical blockchain skills, fostering a new wave of innovation and opportunity in Africa's blockchain landscape.",
+          "country": "Nigeria",
+          "url": "www.bcat.com"
+        }
+      }
+      
+    ],
+    "upcomingProjects": [
+      {
+        "thumbUrl": "/images/popup-project-1.jpg",
+        "title": "CryptoMarkings",
+        "subTitle": "CryptoMarkings - Empowering Crypto Traders with AI",
+        "details": {
+          "title": "CryptoMarkings - Empowering Crypto Traders with AI",
+          "description": "As the visionary behind CryptoMarkings, derived from the name &ldquo;Crypto Market Kings,&ldquo; I am currently leading a cutting-edge project aimed at revolutionizing the cryptocurrency trading landscape. CryptoMarkings is designed to empower crypto traders by automating trading strategies and technical analysis through the implementation of artificial intelligence. By harnessing the power of AI, this project seeks to streamline and enhance the efficiency of traders' decision-making processes, reducing the effort required for comprehensive trade analysis. Stay tuned for the unveiling of this innovative platform, poised to redefine the way traders engage with the dynamic world of cryptocurrency."
+         
+        }
+      },
+      {
+        "thumbUrl": "/images/popup-project-2.jpg",
+        "title": "MediaBlast",
+        "subTitle": "MediaBlast - Blockchain-Powered Social Media Mastery",
+        "details": {
+          "title": "MediaBlast - Blockchain-Powered Social Media Mastery",
+          "description": "In my ongoing endeavors, I am actively involved in the development of MediaBlast—an all-in-one social media management platform that seamlessly integrates blockchain technology. MediaBlast employs blockchain to timestamp and authenticate shared content, empowering users with ownership and control, thus mitigating the risk of content theft. Smart contracts are intelligently woven into the platform, facilitating transparent and automated advertising transactions between advertisers and content creators. Additionally, AI functionality is harnessed to streamline social media management, allowing users to schedule and automate postings efficiently. MediaBlast represents a forward-thinking approach, blending blockchain, smart contracts, and AI to redefine the landscape of social media management."
+          
+        }
+      }
+      
+    ]
+  },
+  
+  "service": {
+    "sectionHeading": {
+      "miniTitle": "SERVICES",
+      "title": "Design <span>services</span> I am providing"
+    },
+    "allService": [
+      {
+        "imgUrl": "/images/service-01.jpg",
+        "title": "Website Design",
+        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+        "icon": "bi:brush-fill",
+        "ratings": 5
+      },
+      {
+        "imgUrl": "/images/service-02.jpg",
+        "title": "Website Design",
+        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+        "icon": "bi:code-square",
+        "ratings": 4.5
+      },
+      {
+        "imgUrl": "/images/service-03.jpg",
+        "title": "SEO Marketing",
+        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+        "icon": "bi:speedometer2",
+        "ratings": 5
+      },
+      {
+        "imgUrl": "/images/service-04.jpg",
+        "title": "Graphic Design",
+        "subTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+        "icon": "bi:palette",
+        "ratings": 5
+      }
+    ]
+  },
+  "experience": {
+    "sectionHeading": {
+      "miniTitle": "Experience",
+      "title": "My Work <span>Experience</span>"
+    },
+    "allExperience": [
+      {
+        "designation": "Front-end Developer",
+        "company": "WELAB | REMOTE",
+        "duration": "JAN 2019 - PRESENT",
+        "jobType": "Full time",
+        "companyTitle": "About Company",
+        "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ."
+      },
+      {
+        "designation": "Front-end Developer",
+        "company": "WELAB | REMOTE",
+        "duration": "JAN 2019 - PRESENT",
+        "jobType": "Full time",
+        "companyTitle": "About Company",
+        "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ."
+      },
+      {
+        "designation": "Front-end Developer",
+        "company": "WELAB | REMOTE",
+        "duration": "JAN 2019 - PRESENT",
+        "jobType": "Full time",
+        "companyTitle": "About Company",
+        "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ."
+      }
+    ]
+  },
+  "testimonial": {
+    "sectionHeading": {
+      "miniTitle": "Testimonial",
+      "title": "Over <span>8,000+</span> <br /> PEOPLE TRUST ME"
+    },
+    "allTestimonial": [
+      {
+        "reviewText": "Donec tellus sem, tempor ac purus a, porttitor lobortis purus. Etiam quis nisl eget ex pulvinar consectetur. Suspendisse potenti. Cras non elementum risus. Fusce massa tellus, consequat a rutrum et, aliquam a lacus. Quisque viverra egestas tincidunt. Nunc nec nisi sed enim consectetur ullamcorper. Vestibulum at neque tortor. Pellentesque urna enim, ultricies at tortor eu, elementum egestas leo. In hac habitasse platea dictumst.",
+        "avatarImg": "/images/avatar-1.jpg",
+        "avatarName": "Pamela Anders",
+        "avatarCompany": "Company Name"
+      },
+      {
+        "reviewText": "Donec tellus sem, tempor ac purus a, porttitor lobortis purus. Etiam quis nisl eget ex pulvinar consectetur. Suspendisse potenti. Cras non elementum risus. Fusce massa tellus, consequat a rutrum et, aliquam a lacus. Quisque viverra egestas tincidunt. Nunc nec nisi sed enim consectetur ullamcorper. Vestibulum at neque tortor. Pellentesque urna enim, ultricies at tortor eu, elementum egestas leo. In hac habitasse platea dictumst.",
+        "avatarImg": "/images/avatar-2.jpg",
+        "avatarName": "Pamela Anders",
+        "avatarCompany": "Company Name"
+      },
+      {
+        "reviewText": "Donec tellus sem, tempor ac purus a, porttitor lobortis purus. Etiam quis nisl eget ex pulvinar consectetur. Suspendisse potenti. Cras non elementum risus. Fusce massa tellus, consequat a rutrum et, aliquam a lacus. Quisque viverra egestas tincidunt. Nunc nec nisi sed enim consectetur ullamcorper. Vestibulum at neque tortor. Pellentesque urna enim, ultricies at tortor eu, elementum egestas leo. In hac habitasse platea dictumst.",
+        "avatarImg": "/images/avatar-3.jpg",
+        "avatarName": "Pamela Anders",
+        "avatarCompany": "Company Name"
+      }
+    ]
+  },
+  "contact": {
+    "sectionHeading": {
+      "title": "WANT TO COLLABORATE? ",
+      "subTitle": "Let’s work together. We can achieve great things. Feel free to contact me"
+    },
+    "contactImg": "/images/contact-us.png",
+    "contactInfo": [
+      { "title": "Write an e-mail", "email": "hello@preciouswogu.com" },
+      { "title": "Telephone", "tel": "available soon" }
+    ]
+  },
+  "galaries":{
+    "title": "Galary",
+    "images": [
+      {
+        "src":"/images/IMG_1.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_2.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_3.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_4.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_5.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_8.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_9.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/IMG_6.jpg",
+        "alt": "Picture"
+        
+      }
+     
+    ]
+  }
+}
