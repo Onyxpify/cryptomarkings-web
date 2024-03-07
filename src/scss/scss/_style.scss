@@ -250,17 +250,31 @@ a {
     .section-heading {
       margin-bottom: 25px;
     }
-    p {
+    #scrollP {
       color: var(--px-white);
       height: 45vh;
       overflow-y: scroll;
+
+      padding-right: 1rem;
+      text-wrap: wrap;
+
       &::-webkit-scrollbar {
-        display: none;
+        display: inline-block;
+        background-color: $px-white;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $px-black;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
       }
 
       /* Hide scrollbar for IE, Edge and Firefox */
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: 2px; /* IE and Edge */
+      scrollbar-width: 2px; /* Firefox */
     }
   }
   .review-box {

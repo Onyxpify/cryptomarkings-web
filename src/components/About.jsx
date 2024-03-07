@@ -54,7 +54,7 @@ export default function About({ data }) {
 
                 {title && <h2>{parser(title)}</h2>}
               </div>
-              <p>{parser(description)}</p>
+              <div id="scrollP">{parser(description)}</div>
               <div className="review-box">
                 {funfacts?.map((item, index) => (
                   <div className="r-box" key={index}>

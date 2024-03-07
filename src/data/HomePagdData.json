@@ -4,7 +4,7 @@
     "name": "Precious Wogu",
     "heading": "Hay! I’m Precious",
     "typingText": ["I'm aN Entreprenuer", 1500, "I'm a Blockchain Expert", 1500,"I'm a Mentor", 1500],
-    "description": "Leading Blockchain Education and Adoption: I envision a future where blockchain technology is accessible to all. Through seminars, scholarships, conferences, and media initiatives, I strive to create mass education, awareness, and adoption of blockchain among individuals and companies. Beyond education, my goal is to be a beacon for the best blockchain solutions, guiding end-users towards decentralized financial empowerment.",
+    "description": "A trailblazing blockchain innovator, leader, and mentor with a mission to revolutionize the blockchain and DeFi landscape globally. As the founder of Blockvila Limited, I have achieved significant milestones in reshaping the African blockchain scene and beyond. Blockvila stands as a beacon of DeFi innovation, offering digital asset exchange, both decentralized and centralized wallets, crypto P2P loans, seamless crypto trading, smart contracts solutions and blockchain education. I am committed to pushing the boundaries of what's possible in the ever-evolving blockchain space. Join me on this transformative journey as we shape the future of decentralized finance together.",
     "btnText": "Get in touch",
     "btnUrl": "contactus"
   },
@@ -59,7 +59,7 @@
     "imgSrc": "/images/IMG_7.jpg",
     "miniTitle": "About Us",
     "title": "I’M an Entreprenuer, <span>Blockchain Expert</span>, Mentor",
-    "description": "A trailblazing blockchain innovator, leader, and mentor with a mission to revolutionize the blockchain and DeFi landscape globally. As the founder of Blockvila Limited, I have achieved significant milestones in reshaping the African blockchain scene and beyond. Blockvila stands as a beacon of DeFi innovation, offering digital asset exchange, both decentralized and centralized wallets, crypto P2P loans, seamless crypto trading, smart contracts solutions and blockchain education. I am committed to pushing the boundaries of what's possible in the ever-evolving blockchain space. Join me on this transformative journey as we shape the future of decentralized finance together. <br /> <br /> <div> <h3> Mission </h3> <p> Empowering Lives Through Blockchain: My mission is to foster financial independence and empower individuals in Africa by providing comprehensive technical and blockchain skills training. Through Corporate Social Responsibility (CSR) initiatives, I have successfully trained over 700 youths, women, and young girls, equipping them with vital blockchain-related skills such as shared ledgers, Hyperledger, tokenization, Web 3.0 basics, smart contracts, and cryptocurrency trading. </p> </div> <div> <h3> Vision </h3> <p> Leading Blockchain Education and Adoption: I envision a future where blockchain technology is accessible to all. Through seminars, scholarships, conferences, and media initiatives, I strive to create mass education, awareness, and adoption of blockchain among individuals and companies. Beyond education, my goal is to be a beacon for the best blockchain solutions, guiding end-users towards decentralized financial empowerment. </p> </div>",
+    "description": "<div> <h3> Mission </h3> <p> Empowering Lives Through Blockchain: My mission is to foster financial independence and empower individuals in Africa by providing comprehensive technical and blockchain skills training. Through Corporate Social Responsibility (CSR) initiatives, I have successfully trained over 700 youths, women, and young girls, equipping them with vital blockchain-related skills such as shared ledgers, Hyperledger, tokenization, Web 3.0 basics, smart contracts, and cryptocurrency trading. </p> </div> <div> <h3> Vision </h3> <p> Leading Blockchain Education and Adoption: I envision a future where blockchain technology is accessible to all. Through seminars, scholarships, conferences, and media initiatives, I strive to create mass education, awareness, and adoption of blockchain among individuals and companies. Beyond education, my goal is to be a beacon for the best blockchain solutions, guiding end-users towards decentralized financial empowerment. </p> </div>",
     "funfacts": [
       {
         "title": "Scholarships provided",
@@ -239,8 +239,7 @@
     },
     "contactImg": "/images/contact-us.png",
     "contactInfo": [
-      { "title": "Write an e-mail", "email": "hello@preciouswogu.com" },
-      { "title": "Telephone", "tel": "available soon" }
+      { "title": "Write an e-mail", "email": "hello@preciouswogu.com" }
     ]
   },
   "galaries":{
@@ -283,6 +282,71 @@
       },
       {
         "src":"/images/IMG_6.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/10.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/11.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/12.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/13.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/14.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/15.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/16.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/17.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/18.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/19.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/20.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/21.jpg",
+        "alt": "Picture"
+        
+      },
+      {
+        "src":"/images/22.jpg",
         "alt": "Picture"
         
       }
