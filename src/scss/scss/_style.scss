@@ -317,12 +317,18 @@ a {
   border-radius: 10px;
   background: var(--px-white);
   .project-media {
+    // border: 1px solid red;
+    // min-height: 40vh;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     img {
       transition: ease all 0.35s;
       transform: scale(1);
+      height: 40vh;
+      object-position: center !important;
+      object-fit: cover;
+      width: 100%;
     }
     .gallery-link {
       position: absolute;

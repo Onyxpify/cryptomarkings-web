@@ -88,7 +88,7 @@
     },
     "allProjects": [
       {
-        "thumbUrl": "/images/popup-project-1.jpg",
+        "thumbUrl": "/images/project1.png",
         "title": "PROJECT ONE",
         "subTitle": "BLOCKVILA",
         "details": {
@@ -101,12 +101,12 @@
         }
       },
       {
-        "thumbUrl": "/images/popup-project-2.jpg",
+        "thumbUrl": "/images/project2.jpeg",
         "title": "PROJECT TWO",
         "subTitle": "Blockchain and Cryptocurrency Awareness Tour (BCAT)",
         "details": {
           "title": "Blockchain and Cryptocurrency Awareness Tour (BCAT)",
-          "description": "As the Co-Founder of BCAT, a collaborative initiative with key stakeholders in Africa's blockchain technology sector, I am deeply engaged in spearheading a transformative campaign. BCAT focuses on educating and mentoring African youths, empowering them to reshape their destinies through blockchain knowledge and skills. Within BCAT, I lead the women empowerment programs, leveraging my leadership to mentor numerous university students. I am dedicated to providing blockchain education across various Nigerian universities, equipping students with essential skills that pave the way for their future success. This initiative is not just about awareness but about actively equipping the younger generation with practical blockchain skills, fostering a new wave of innovation and opportunity in Africa's blockchain landscape.",
+          "description": "A collaborative initiative with key stakeholders in Africa's blockchain technology sector, I am deeply engaged in spearheading a transformative campaign. BCAT focuses on educating and mentoring African youths, empowering them to reshape their destinies through blockchain knowledge and skills. Within BCAT, I lead the women empowerment programs, leveraging my leadership to mentor numerous university students. I am dedicated to providing blockchain education across various Nigerian universities, equipping students with essential skills that pave the way for their future success. This initiative is not just about awareness but about actively equipping the younger generation with practical blockchain skills, fostering a new wave of innovation and opportunity in Africa's blockchain landscape.",
           "country": "Nigeria",
           "url": "www.bcat.com"
         }
@@ -115,7 +115,7 @@
     ],
     "upcomingProjects": [
       {
-        "thumbUrl": "/images/popup-project-1.jpg",
+        "thumbUrl": "/images/cryptomarkings.PNG",
         "title": "CryptoMarkings",
         "subTitle": "CryptoMarkings - Empowering Crypto Traders with AI",
         "details": {
