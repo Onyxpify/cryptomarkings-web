@@ -5,12 +5,23 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs, { Dayjs } from 'dayjs';
 import { useState } from 'react';
 
-const MonthPicker = () => {
-    const [value, setValue] = useState(('2020-03'));
+
+interface p{
+  show?: any;
+  start?: any;
+}
+
+const MonthPicker = ({show,start}:p) => {
+    const [value, setValue] = useState((start?start: '2020-03'));
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>       
+    <LocalizationProvider    dateAdapter={AdapterDayjs}>       
         <DatePicker    
-              onChange={(newValue: any) => { setValue(`${newValue.year()}-${newValue.month()}`);}} defaultValue={dayjs(value)} views={['month', 'year']} />
+              onChange={(newValue: any) => { setValue(`${newValue.year()}-${newValue.month()}`);}} defaultValue={dayjs(value)} views={[show?show: 'month', 'year']}
+              format="YYYY/MM/DD"
+              
+              openTo="year"
+              sx={{width: 'fit-content'}}
+               />
     </LocalizationProvider>
   )
 }

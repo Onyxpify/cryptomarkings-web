@@ -4,12 +4,22 @@ import { adminFeeData } from './adminFeeData';
 import './adminFees.scss';
 import MobileTable2 from '../../../../mobileTable/MobileTable2';
 
+import ExpandMore from '@mui/icons-material/ExpandMore';
+// icon={<img src={ChevronDown} alt="open" />}
+// items={[
+//   {value: 'one',text: 'one'},
+//   {value: 'two',text: 'two'},
+//   {value: 'three',text: 'three'},
+// ]}
+
 const AdminFees = () => {
   let [table, setTable] = useState(adminFeeData);
   return (
     <div id='AdminFees'>
       <div className="AdminFees_line1">
-        <MySelect />
+        <MySelect 
+         
+         />
 
       </div>
       <div className="table">

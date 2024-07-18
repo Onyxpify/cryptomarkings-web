@@ -1,6 +1,7 @@
 import React from 'react';
 import './provider.scss';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Switch } from '@mui/material';
+import { ToggleButtonTw } from '../../../toggleButton/ToggleButtonTw';
 
 const Provider = () => {
     const [copier, setCopier] = React.useState("");
@@ -18,21 +19,13 @@ const Provider = () => {
           </div>
           <div className="line1">
               <span className="label">What  percentage commission do you want to charge copiers</span>
-               <FormControlLabel
-                  value="Facebook"
-                  className={`${facebook.state ? "facebook" : "not-active"}`}
-                  control={
-                    <Switch
-                      checked={facebook.state}
-                      onChange={(e) => {
-                        setFacebook({ state: e.target.checked, url: "" });
-                      }}
-                      inputProps={{ "aria-label": "controlled" }}
-                    />
-                  }
-                  label=" Setting . "
-                  labelPlacement="start"
-                />
+
+              <div className="b flex items-start justify-start gap-1">
+              <div className="label font-lato font-bold leading-5 text-xs text-mainText">Enable Copy</div>
+            <div className="">
+             <ToggleButtonTw big={{}} small={{}}  />
+            </div>
+            </div>
           </div>
           <div className="line2">
         <FormControl>
