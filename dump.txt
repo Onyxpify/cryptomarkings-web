@@ -1,0 +1,6 @@
+ {
+      "icon": "fa-brands:facebook-f",
+      "iconBgClass": "facebook",
+      "href": "/"
+    },
+    { "icon": "fa-brands:dribbble", "iconBgClass": "dribbble", "href": "/" },
