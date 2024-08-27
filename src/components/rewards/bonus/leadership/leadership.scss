@@ -8,6 +8,8 @@
   .di_line1 {
     margin-top: 6rem;
     @include flex_between();
+    flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
     // background-color: red;
     // border: 1px solid red;
@@ -24,6 +26,7 @@
     }
     .di_cell1 {
       // border: 1px solid green;
+      margin-bottom: 2rem;
       @include flex_col();
       gap: 2.06rem;
       @include mobile {

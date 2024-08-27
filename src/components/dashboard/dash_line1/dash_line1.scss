@@ -7,20 +7,24 @@
   // border: 1px solid red;
   @include mobile {
     @include grid(1);
-    place-items: left;
+    place-items: center;
     gap: 2rem;
     padding: 0.2rem;
   }
   @include desktop {
     @include flex_center();
-    gap: 14.3125rem;
+    flex-wrap: wrap;
+    gap: 14.3125vw;
     padding: 2.25rem;
     width: 100%;
+    // border: 1px solid red;
   }
   border-radius: 1rem;
   background: $background;
   .boxa {
     @include flex_between();
+    flex-wrap: wrap;
+    // border: 1px solid red;
     gap: 1rem;
     img {
       width: 6rem;
@@ -62,6 +66,8 @@
   }
   .boxb {
     @include flex_between();
+    flex-wrap: wrap;
+    // border: 1px solid red;
     @include mobile {
       gap: 0.2rem;
     }

@@ -8,19 +8,22 @@ export const marketTab = [
     {
         id: id++,
         text: 'Manual',
-        class: 'active',
+        bg: 'bg-sec',
+        color: 'text-pri',
         component: <NewManual />,
     },
     {
         id: id++,
         text: 'Knight Robot',
-        class: '',
-         component: <NewKnight />,
+      color: 'text-bodyText',
+      bg: 'bg-white',
+      component: <NewKnight />,
     },
     {
         id: id++,
         text: 'Centurion Robot',
-        class: '',
+        bg: 'bg-white',
+        color: 'text-bodyText',
          component: <NewCenturion />,
     },
 ]

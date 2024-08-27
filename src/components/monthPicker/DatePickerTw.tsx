@@ -1,7 +1,13 @@
+import classNames from "classnames";
 import { useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker"; 
 
-const DatePickerTw = () => { 
+interface p{
+    width?: any;
+    bg?: any;
+}
+
+const DatePickerTw = ({width,bg}:p) => { 
 
 const [value, setValue] = useState({ 
 
@@ -18,11 +24,11 @@ setValue(newValue);
 
 return (
 <Datepicker 
-containerClassName="w-fit" 
-inputClassName='w-fit bg-transparent'
+containerClassName={classNames(`w-${width?width:'[113px]'} p-[8px] rounded `)} 
+inputClassName={classNames(`w-${width?width:'[113px]'} p-[8px] bg-${bg?bg:'white'} `)}
 asSingle={true} 
 useRange={false}
-popoverDirection="down" 
+// popoverDirection="down" 
 value={value} 
 onChange={handleValueChange} 
 placeholder="12-12-2024"

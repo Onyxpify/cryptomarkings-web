@@ -12,7 +12,8 @@
     @include grid(1);
   }
   @include desktop {
-    @include grid(3);
+    @include gridFluid(80px);
+   
   }
   .Card {
     padding: 2.25rem;

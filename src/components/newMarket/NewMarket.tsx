@@ -1,43 +1,51 @@
-import React,{useRef,useState} from 'react';
-import './newmarket.scss';
-import { marketTab } from './newMarketData';
+import { marketTab } from "./newMarketData";
+import SearchTw from "../search/SearchTw";
+import wallet from "../../assets/wallet.svg";
+import { useTab } from "../hooks/useTab";
+import { useState } from "react";
 
 const NewMarket = () => {
-     let [tab, setTab] = useState(marketTab);
-    let comp = useRef(tab[0].component);
-     function handleActive(id: number) {
-    let upd = tab.map((each: any) => {
-      if (each.id === id) {
-        each.class = "active";
-        comp.current= each.component
-      } else {
-        each.class = "";
-      }
-      return each;
-    });
-    setTab(upd);
-  }
-  return (
-      <div id='NewMarket'>
-          <h3>Spot</h3>
-           <div className="newM_line1">
-        {tab.map((each: any) => {
-          return (
-            <div
-              onClick={(e) => handleActive(each.id)}
-              key={each.id}
-              className={`tab ${each.class}`}
-            >
-              <span className="text"> {each.text} </span>
-            </div>
-          );
-        })}
-      </div>
-      {
-        comp.current
-        }
-    </div>
-  )
-}
+  let [data, setData] = useState({
+    user_price: "$10,000",
+    user_profit: "$59.55",
+  });
+  let { tab, component } = useTab({ data: marketTab, render: "market" });
 
-export default NewMarket
+  return (
+    <div className="px-1 md:px-12 ">
+      {/* line 1 */}
+      {/* a */}
+      <div className="flex flex-wrap items-center justify-between gap-10 md:flex-nowrap ">
+        <div className="flex flex-col items-center justify-end w-full ">
+          {/* boxa */}
+          {tab}
+          {/* boxb */}
+          <div className="mt-9">
+            <SearchTw />
+          </div>
+        </div>
+        {/* b */}
+        <div className="">
+          <div className="b2 w-[209px] min-h-[169px] p-4 bg-white rounded-2xl">
+            <img src={wallet} alt="wallet icon" />
+            <div className="mt-4">
+              <p className="font-bold font-lato leading-12 text-[40px] text-mainText  ">
+                {" "}
+                {data.user_profit}{" "}
+              </p>
+              <p className="font-lato mt-2 font-bold leading-5 text-[18px] text-bodyText ">
+                {" "}
+                Today’s Profit{" "}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* tab show */}
+      <div className="">{component}</div>
+    </div>
+  );
+};
+
+export default NewMarket;

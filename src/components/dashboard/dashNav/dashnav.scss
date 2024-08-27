@@ -95,8 +95,8 @@
         background-color: $primary;
       }
       @include desktop {
-        color: $primary;
-        background-color: $secondary;
+        color: $secondary;
+        background-color: $primary;
       }
 
       /* Desktop/Body 5 */

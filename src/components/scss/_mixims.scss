@@ -19,6 +19,12 @@
   grid-template-columns: repeat($number, 1fr);
   place-items: center;
 }
+@mixin gridFluid($gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(200px,1fr));
+  gap: $gap;
+  flex-wrap: wrap
+}
 @mixin gridDyn($n, $w) {
   display: grid;
   grid-template-columns: repeat($n, $w);

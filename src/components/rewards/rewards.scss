@@ -20,6 +20,8 @@
     }
     // border: 1px solid red;
     @include flex_between();
+    flex-wrap: wrap;
+    gap: 50px;
     @include mobile {
       flex-direction: column;
     }

@@ -6,7 +6,7 @@ import ScrollX from '../../scrollX/ScrollX';
 
 const Dash_line2 = () => {
   return (
-      <ScrollX className='Dash_line2'>
+      <div className='Dash_line2'>
           <div className="img"></div>
           <div className="cell2">
               <h3>Crypto Gems Signals</h3>
@@ -18,7 +18,7 @@ const Dash_line2 = () => {
           <div className="logo">
               <Logo />
           </div>
-    </ScrollX>
+    </div>
   )
 }
 

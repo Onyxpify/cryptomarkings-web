@@ -13,7 +13,7 @@
   @include desktop {
     padding-left: 3rem;
     padding-right: 3rem;
-    @include grid(4);
+    @include gridFluid(80px);
   }
   .card {
     padding: 2.25rem;

@@ -5,6 +5,7 @@
 
 #Direct_Line1 {
   @include flex_between();
+  flex-wrap: wrap;
   margin-top: 4.5rem;
   margin-bottom: 5.62rem;
   // border: 1px solid red;

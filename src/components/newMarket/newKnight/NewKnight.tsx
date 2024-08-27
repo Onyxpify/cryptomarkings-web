@@ -1,8 +1,11 @@
-import React from 'react'
+import { newKightTable } from '../newManual/newManualData'
+import TableIconsTw from '../../table/TableIconsTw'
 
 const NewKnight = () => {
   return (
-    <div>NewKnight</div>
+    <div className="mt-9 ">
+    <TableIconsTw data={newKightTable}  />
+    </div>
   )
 }
 
