@@ -23,4 +23,4 @@ const Register_4 = ({ setPage }: p) => {
   )
 }
 
-export default Register_4
+export default React.memo(Register_4)

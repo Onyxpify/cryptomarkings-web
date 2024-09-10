@@ -3,14 +3,25 @@
 @import "../scss/variables";
 @import "../scss/mixims";
 
+.err {
+  animation: blinker 4s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 #Onboarding {
+  
   background: $primary;
-  width: 100%;
-  min-height: 100vh;
+ width: 100%;
+  min-height: 1024px;
   @include grid(1);
   padding-bottom: 1rem;
   .circle {
-    width: 23.125rem;
+    max-width: 23.125rem;
     height: 23.125rem;
     // border: 1px solid red;
     position: absolute;
@@ -25,29 +36,33 @@
     filter: blur(40px);
   }
   .line1 {
+    
     .img {
       width: 7.6875rem;
       height: 4.45831rem;
       //   border: 1px solid red;
       @include image("/footerLogo.svg");
+     
     }
   }
   .content {
     @include mobile {
-      width: 90%;
+      width: 100%;
       min-height: 80.37vh;
       margin-bottom: 3rem;
-      padding: 2rem 0rem;
+      margin-top: 1rem;
+      padding: 2rem 1rem;
     }
     @include tablet {
-      min-height: 80.37vh;
+      min-height: 20.37vh;
       width: 90%;
       margin-bottom: 3rem;
-      padding: 2rem 0rem;
+      padding: 2rem 1rem;
+      margin-top: unset;
     }
     @include desktop {
-      min-height: 80.37vh;
-      width: 78rem;
+      min-height: 760px;
+      max-width: 1248px;
       margin-bottom: unset;
       padding: 0rem 0rem;
     }
@@ -65,5 +80,36 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  .err{
+    color: crimson;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.ask {
+  margin-top: 53px;
+  color: $mainText;
+  // border: 1px solid red;
+
+  /* Desktop/Body 5 */
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  a {
+    color: $primary;
+
+    /* Desktop/Heading 5 */
+    font-family: Lato;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
   }
 }

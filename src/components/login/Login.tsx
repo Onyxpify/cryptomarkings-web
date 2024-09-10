@@ -45,7 +45,7 @@ const Login = () => {
                     </span>
                 
             </fieldset>
-            <fieldset >
+            <fieldset className="BtN" >
               <Btn />
                 <Link className="_4got" href={'#'} >Forgot  Password?</Link>              
               <span className="ask">Don’t have an account? <Link href='/register'>Register here</Link> </span>

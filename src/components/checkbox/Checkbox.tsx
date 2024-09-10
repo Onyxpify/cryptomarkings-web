@@ -6,9 +6,10 @@ import './checkbox.scss';
 interface p {
     styles?: string,
     setState?: Function,
+    data?: any,
 }
 
-const Checkbox = ({ styles,setState }: p) => {
+const Checkbox = ({ styles,setState,data }: p) => {
     let [toggle, setToggle] = useState(false);
     function handleToggle() {
         if (toggle) {
@@ -21,9 +22,10 @@ const Checkbox = ({ styles,setState }: p) => {
         }
     }
   return (
-      <button aria-required='true' onClick={(e) => { handleToggle(); e.preventDefault(); }} id={styles} className='Checkbox'>
+       <button aria-required='true' onClick={(e) => { handleToggle(); e.preventDefault(); data.setFieldValue('terms',!toggle); data.validateTerms(!toggle) }} id={styles} className='Checkbox'>
           {toggle && <FaCheck />}
     </button>
+   
   )
 }
 

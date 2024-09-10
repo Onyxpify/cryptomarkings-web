@@ -1,19 +1,24 @@
 'use client';
 import React from 'react';
 import './btn.scss';
+import Linearprogress from '../progress/LinearProgress';
 
 interface p{
     setState?: Function,
     styles?: string,
-    text?: string
+    text?: string,
+    action?:any
+    isSubmitting?:any
+    isValid?:any
 }
-const Btn = ({ setState, styles, text }: p) => {
+const Btn = ({ setState, styles, text,action,isSubmitting,isValid }: p) => {
     function handleClick() {
         setState && setState()
     }
   return (
-      <button onClick={(e)=> handleClick()} id={styles} className='Btn'>
-          {text?text:'Log In'}
+      <button type='button' onClick={(e)=> handleClick()} id={styles} className='Btn'>
+          {isSubmitting && isValid?'Submitting':text?text:'Log In'}
+          {isSubmitting && isValid && <Linearprogress />}
     </button>
   )
 }

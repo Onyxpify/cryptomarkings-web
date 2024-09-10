@@ -4,11 +4,12 @@
 @import "../scss/variables";
 
 #CountrySelect {
-  //   background-color: red;
+    // background-color: red;
+    width: 100%;
   @include flex_col();
   justify-content: flex-start;
   gap: 0.5rem;
-  width: 24.75rem;
+  // width: 24.75rem;
   outline: none;
   border: none;
   label {
@@ -22,7 +23,7 @@
     line-height: normal;
   }
   .line {
-    width: 24.75rem;
+    // width: 24.75rem;
     height: 3.3125rem;
     border-radius: 1rem;
     border: 1px solid $primary;
