@@ -41,7 +41,7 @@ const JoinUs = () => {
               <div className="box">
                   <h3>Download the mobile app to start exploring</h3>
                   <p>Download the app to monitor strategy statistics, activate bots, and close orders.
-                      Whether you're at home or on the go, position management is at your fingertips.</p>
+                      Whether you&apos;re at home or on the go, position management is at your fingertips.</p>
                   <FourBtn style='join-btns' />
               </div>
 

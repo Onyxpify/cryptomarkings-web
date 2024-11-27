@@ -6,10 +6,11 @@ interface p {
     styles?: 'string',
     eye?: any,
     eyeSlash?: any,
-    label?: string
+    label?: string,
+    data?:any,
    
 }
-const PasswordInp = ({ styles, eye,eyeSlash, label }: p) => {
+const PasswordInp = ({ styles, eye,eyeSlash, label,data }: p) => {
     let [toggle, setToggle] = useState('password');
     let [focus, setFocus] = useState('');
     function handleToggle() {
@@ -28,10 +29,11 @@ const PasswordInp = ({ styles, eye,eyeSlash, label }: p) => {
                   <input
                       required
                       autoComplete='true'
-                      onBlur={(e) => setFocus('')}
+                      onBlur={(e) => {setFocus('');data?.validatePassword(e.target.value)}}
                       onFocus={(e) => { setFocus('focus-inp') }}
+                      onChange={(e)=> {data?.setFieldValue(label || 'password',e.target.value); data?.validatePassword(e.target.value)}}
                       type={toggle}
-                      name={label ? label : 'Password'} id={label ? label : 'Password'} />
+                      name={label ? label : 'password'} id={label ? label : 'password'} />
                   <span onClick={(e)=> handleToggle()} className="icon">
                       {toggle === "password"? eyeSlash?eyeSlash:<FaEyeSlash />: eye?eye:<FaEye />}
                   </span>

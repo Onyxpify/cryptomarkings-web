@@ -11,7 +11,7 @@ const Informed = () => {
               
           </div>
           <div className="text">
-              <h3>Stay Informed with Cryptomarkings' Blog</h3>
+              <h3>Stay Informed with Cryptomarkings&apos; Blog</h3>
               <p>For the latest crypto updates and popular trading strategies.</p>
           </div>
           <div className="icons">

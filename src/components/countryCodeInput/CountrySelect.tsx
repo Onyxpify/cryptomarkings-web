@@ -4,7 +4,6 @@ import { FaChevronDown, FaSearch } from "react-icons/fa";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import ScrollY from "../scrolly/ScrollY";
 import "./countryselect.scss";
 import { Field } from "formik";
 interface p{

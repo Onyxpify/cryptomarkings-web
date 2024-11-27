@@ -3,6 +3,21 @@
 @import "../scss/variables";
 @import "../scss/mixims";
 
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+}
+
+.flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .SecurityCheck {
   @include mobile {
     @include grid(1);
@@ -29,17 +44,20 @@
   @include desktop {
     @include grid(2);
 
-    gap: 10.37rem;
+
+    gap: 10.37vw;
     width: unset;
     .left {
       padding-left: 6.69rem;
-      order: 1;
+      order: unset;
     }
     .right {
-      order: 2;
+      order: unset;
     }
   }
   .left {
+    // border: 1px solid red;
+    width: 100%;
     .line1 {
       h3 {
         color: $primary;
@@ -63,17 +81,28 @@
       }
     }
     .img {
-      width: 25.375rem;
       height: 12.75rem;
+      // border: 4px groove red;
       @include image("/puzzle.svg");
       background-position: left;
       background-size: cover;
       margin-top: 3.19rem;
+      @include mobile{
+        width: 100%;
+        // border: 4px groove blue;
+        
+      }
+      @include tablet{
+        max-width: 25.375rem;
+
+      }
+
       @include flex_center();
       ._line {
         padding-left: unset;
         @include flex_between();
-        width: 25.375rem;
+        gap: 15vw;
+        // max-width: 25.375rem;
         margin: auto;
         // border: 1px solid red;
         .mdi {
@@ -89,10 +118,10 @@
       }
     }
     .line2 {
-      width: 25.375rem;
+      // width: 25.375rem;
       height: 5.9375rem;
       @include flex_between();
-      gap: 7.38rem;
+      gap: 7.38vw;
       justify-content: flex-start;
       .icon {
         @include image("/arrowForward.svg");
@@ -100,6 +129,8 @@
         // border: 1px solid red;
         width: 3rem;
         height: 3rem;
+        border: 0;
+        outline: 0;
       }
       .text {
         color: $mainText;
@@ -116,11 +147,21 @@
     }
   }
   .right {
-    width: 22.91063rem;
-    height: 22.91063rem;
     @include image("/locked.svg");
     background-color: rgb(149, 206, 165, 0.1);
     border-radius: 50%;
-    background-size: 60%;
+    // border: 1px solid red;
+    @include mobile{
+      width: 10rem;
+      height: 10rem;
+      background-size: 40%;
+      
+    }
+    @include tablet{
+      height: 22.91063rem;
+      background-size: 60%;
+      width: 22.91063rem;
+
+    }
   }
 }

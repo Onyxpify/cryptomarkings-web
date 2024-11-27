@@ -3,11 +3,54 @@ import "./register_3.scss";
 import Btn from "@/components/btn/Btn";
 import Link from "next/link";
 import { Field, Form, Formik } from "formik";
+import axios from "axios";
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL_ACCOUNT;
 interface p {
   setPage: any;
   user: any;
 }
 const Register_3 = ({ setPage, user }: p) => {
+
+  const notify = (text:any) => toast.info(text, {
+    position: "bottom-center",
+    autoClose: 600000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    transition: Bounce,
+    });
+
+    const dismissAll = () =>  toast.dismiss();
+
+  function resendEmail(email:any) {
+    notify('Please Wait...');
+    axios.post(baseUrl+'/GetVerificationCode',{email})
+    .then(resp=> {
+      if(resp.data.success === true) {
+        dismissAll();
+        notify('Verification code sent successfully to your email');
+        setTimeout(() => {
+          dismissAll();
+          
+        }, 3100);
+
+      }
+    })
+    .catch(err=>{
+      dismissAll();
+      notify(err.message);
+      setTimeout(() => {
+        dismissAll();
+        
+      }, 3100);
+    })
+  }
+  
   function handleNext() {
     setPage((prev: any) => prev + 1);
   }
@@ -27,13 +70,33 @@ const Register_3 = ({ setPage, user }: p) => {
     <>
       <Formik
         initialValues={{
-          verify: "",
+          verification_code: "",
         }}
         onSubmit={(values) => {
           // same shape as initial values
           // setPage((prev: any) => prev + 1);
+          notify('Please Wait...')
           user.current = { ...user.current, ...values };
-          console.log(user.current)
+          axios
+            .post(
+              baseUrl+"/Register",
+              user.current
+            )
+            .then((resp) => {
+              // console.log(resp.data)
+              if (resp.data.success === true) {
+                dismissAll();
+                notify("Signed up Successfully.");
+                setTimeout(() => {
+                  dismissAll();
+                  setPage((prev: any) => prev + 1);
+                }, 3100);
+              }
+            })
+            .catch((err) => {
+              notify(err.message);
+              setTimeout(() => {}, 3100);
+            });
         }}
       >
         {({
@@ -55,9 +118,9 @@ const Register_3 = ({ setPage, user }: p) => {
           id="verify"
           minLength={6}
         /> */}
-              <Field id="verify" name="verify" validate={validateVerify} />
-              {errors.verify && touched.verify && (
-                <div className="err">{errors.verify}</div>
+              <Field id="verification_code" name="verification_code" validate={validateVerify} />
+              {errors.verification_code && touched.verification_code && (
+                <div className="err">{errors.verification_code}</div>
               )}
             </fieldset>
             <div onClick={() => handleSubmit()}>
@@ -68,8 +131,8 @@ const Register_3 = ({ setPage, user }: p) => {
             )}
             <div className="ask">
               <p>
-                Didn’t receive code?
-                <Link href={"#"}>Send again</Link>{" "}
+                Didn&apos;t receive code?
+                <Link onClick={()=> resendEmail(user.current.email)} href={"#"}>Send again</Link>{" "}
               </p>
             </div>
 
@@ -77,6 +140,7 @@ const Register_3 = ({ setPage, user }: p) => {
           </Form>
         )}
       </Formik>
+      <ToastContainer />
     </>
   );
 };

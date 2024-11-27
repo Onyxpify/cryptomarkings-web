@@ -16,7 +16,6 @@
 #Onboarding {
   
   background: $primary;
- width: 100%;
   min-height: 1024px;
   @include grid(1);
   padding-bottom: 1rem;
@@ -52,6 +51,7 @@
       margin-bottom: 3rem;
       margin-top: 1rem;
       padding: 2rem 1rem;
+      
     }
     @include tablet {
       min-height: 20.37vh;
@@ -64,7 +64,7 @@
       min-height: 760px;
       max-width: 1248px;
       margin-bottom: unset;
-      padding: 0rem 0rem;
+      padding: unset;
     }
     border-radius: 1.875rem;
     border: 3px solid #0cbc8b;

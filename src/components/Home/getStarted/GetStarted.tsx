@@ -2,6 +2,7 @@ import React from 'react';
 import './getstarted.scss';
 import { steps } from './getstartedData';
 import FourBtn from '../fourBtn/FourBtn';
+import Image from 'next/image';
 
 const GetStarted = () => {
   return (
@@ -23,7 +24,7 @@ const GetStarted = () => {
                               return (
                                   <div className='step' key={each.id}>
                                       <div className="cell1">
-                                          <div className="img"> <img src={each.icon} alt="icon" /> </div>
+                                          <div className="img"> <Image width={'48'} height={'48'} src={each.icon} alt="icon" /> </div>
                                           <div className="text">
                                               <p> {each.text} </p>
                                           </div>

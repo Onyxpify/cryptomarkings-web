@@ -9,8 +9,10 @@ import Register_3 from "./register_3/Register_3";
 import Register_4 from "./register_4/Register_4";
 
 import { Formik, Form, Field } from "formik";
-
-const Register_1 = () => {
+interface p{
+  username?: any,
+}
+const Register_1 = ({username}:p) => {
   let [page, setPage] = useState(1);
   let [H3, setH3] = useState("Register");
   let isFormat = useRef(false);
@@ -65,7 +67,7 @@ const Register_1 = () => {
                 }}
                 onSubmit={(values) => {
                   // same shape as initial values
-                  user.current =(values);
+                  user.current ={...values,username};
                   setPage((prev: any) => prev + 1);
                 }}
               >

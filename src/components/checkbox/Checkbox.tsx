@@ -22,7 +22,7 @@ const Checkbox = ({ styles,setState,data }: p) => {
         }
     }
   return (
-       <button aria-required='true' onClick={(e) => { handleToggle(); e.preventDefault(); data.setFieldValue('terms',!toggle); data.validateTerms(!toggle) }} id={styles} className='Checkbox'>
+       <button  onClick={(e) => { handleToggle(); e.preventDefault(); data?.setFieldValue('terms',!toggle); data?.validateTerms(!toggle) }} id={styles} className='Checkbox'>
           {toggle && <FaCheck />}
     </button>
    

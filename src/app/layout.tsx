@@ -21,7 +21,7 @@ export default function RootLayout({
       <link rel="icon" href="/blockvilla.svg" sizes="32x32" />
       </head>
       <body className={inter.className}>
-       <MyLayout children={children} />
+       <MyLayout > {children} </MyLayout>
       </body>
     </html>
   )

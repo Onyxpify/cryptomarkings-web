@@ -1,18 +1,40 @@
-import React, { useRef } from "react";
+
+import React, { useEffect, useRef, useState } from "react";
 import "./register_2.scss";
 import Checkbox from "@/components/checkbox/Checkbox";
-import CountryCodeInput from "@/components/countryCodeInput/CountryCodeInput";
 import CountrySelect from "@/components/countryCodeInput/CountrySelect";
 import { Field, Form, Formik } from "formik";
 import Btn from "@/components/btn/Btn";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { useSearchParams } from 'next/navigation';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL_ACCOUNT;
 interface p {
   setPage: any;
   user: any;
 }
-const Register_2 = ({ setPage,user }: p) => {
+const Register_2 = ({ setPage, user }: p) => {
   let getPassword = useRef("");
   let isTerm = useRef(false);
+   let userName = useRef<undefined | string>();
+  const searchParams = useSearchParams();
+  let [loading,setLoading] = useState(false);
 
+  const notify =  (text: any) => 
+    toast.info(text, {
+      position: "bottom-center",
+      autoClose: 600000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
+
+    const dismissAll = () =>  toast.dismiss();
 
   function validatePassword(value: any) {
     let error;
@@ -96,24 +118,55 @@ const Register_2 = ({ setPage,user }: p) => {
     }
     return error;
   }
+  useEffect(()=> {
+  let  data = String(searchParams.get('username'));
+  if(data) {
+    userName.current = (data);
+  }
+  setLoading(true);
+  
+  },[]) // eslint-disable-next-line react-hooks/exhaustive-deps
   return (
     <>
-      <Formik
+      {
+        loading &&
+        <Formik
         initialValues={{
           username: "",
           phone: "",
           country: "",
           password: "",
           confirmp: "",
-          referrer: "Cryptomarkings",
+          referral_code:  userName.current || 'Cryptomarkings', 
           terms: "",
-          "client_id": "VILA_BOT",
-          "position": "LEFT",
+          client_id: "VILA_BOT",
+          position: "LEFT",
         }}
         onSubmit={(values) => {
           // same shape as initial values
-          setPage((prev: any) => prev + 1);
-          user.current = {...user.current,...values};
+          user.current = { ...user.current, ...values };
+          notify('Please wait...');
+          console.log(user.current)
+          axios
+            .post(
+              baseUrl+"/GetVerificationCode",
+              { email: user.current.email }
+            )
+            .then((resp) => {
+              // console.log(resp.data)
+              if (resp.data.success === true) {
+                dismissAll();
+                notify("Verification code sent successfully to your email");
+                setTimeout(() => {
+                  dismissAll()
+                  setPage((prev: any) => prev + 1);
+                }, 3100);
+              }
+            })
+            .catch((err) => {
+              notify(err.message);
+              setTimeout(() => {}, 3100);
+            });
         }}
       >
         {({
@@ -164,12 +217,12 @@ const Register_2 = ({ setPage,user }: p) => {
             <fieldset className="fieldSet">
               <label htmlFor="referrer">Referral Code</label>
               <Field
-                id="referrer"
-                name="referrer"
+                id="referral_code"
+                name="referral_code"
                 validate={validateReferrer}
               />
-              {errors.referrer && touched.referrer && (
-                <div className="err">{errors.referrer}</div>
+              {errors.referral_code && touched.referral_code && (
+                <div className="err">{errors.referral_code}</div>
               )}
             </fieldset>
             <fieldset id="Line">
@@ -192,6 +245,9 @@ const Register_2 = ({ setPage,user }: p) => {
           </Form>
         )}
       </Formik>
+      }
+      <ToastContainer />
+      {/* <Alert severity="success">This is a success Alert.</Alert> */}
     </>
   );
 };

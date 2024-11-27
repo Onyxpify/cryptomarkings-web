@@ -2,6 +2,7 @@ import React from 'react';
 import './best.scss';
 import { bestRates, bestRobots } from './bestData';
 import ScrollX from '../scrollX/ScrollX';
+import Image from 'next/image';
 
 const Best = () => {
   return (
@@ -12,7 +13,7 @@ const Best = () => {
                   bestRobots.map((robot: any) => {
                       return (
                           <div className='robot' key={robot.id} >
-                              <img src={robot.img} alt={robot.text} />
+                              <Image width='350' height={'307'} src={robot.img} alt={robot.text} />
                               <p> {robot.text} </p>
                           </div>
                       )

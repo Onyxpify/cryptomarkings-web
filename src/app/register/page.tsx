@@ -1,3 +1,4 @@
+
 import Register_1 from '@/components/register/Register_1'
 import React from 'react'
 
