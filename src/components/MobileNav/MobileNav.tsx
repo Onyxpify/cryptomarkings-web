@@ -5,6 +5,7 @@ import { MobileNavData } from './mobileNavData';
 import './mobilenav.scss';
 import Link from 'next/link';
 
+
 const MobileNav = () => {
     let [list, setList] = useState(MobileNavData);
     function handleActive(id:number) {

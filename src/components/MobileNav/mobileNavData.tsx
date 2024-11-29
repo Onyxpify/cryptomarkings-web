@@ -5,6 +5,7 @@ import {
 } from "react-icons/io5";
 import { TbGridDots } from "react-icons/tb";
 import { CiCircleMore } from "react-icons/ci";
+const reactUrl = process.env.NEXT_PUBLIC_reactUrl
 export const MobileNavData = [
   {
     icon: <IoHomeOutline id="icon" />,
@@ -18,27 +19,27 @@ export const MobileNavData = [
     id: 2,
     text: "Market",
     active: "",
-    to: 'http://localhost:3000/market'
+    to: reactUrl+'/dashboard'
   },
   {
     icon: <IoPeopleOutline id="icon" />,
     id: 3,
     text: "Trader List",
     active: "",
-    to: 'http://localhost:3000/traderlist'
+    to: reactUrl+'/dashboard'
   },
   {
     icon: <TbGridDots id="icon" />,
     id: 4,
     text: "Expore",
     active: "",
-    to: 'http://localhost:3000/explore'
+    to: reactUrl+'/dashboard'
   },
   {
     icon: <CiCircleMore id="icon" />,
     id: 5,
     text: "More",
     active: "",
-    to: 'http://localhost:3000/more',
+    to: reactUrl+'/dashboard',
   },
 ];
