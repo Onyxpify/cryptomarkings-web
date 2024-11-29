@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Mymodal from '../modal/Mymodal'
 import Image from "next/image";
 import logo from '../../../public/blockvilla.svg';
-const reactUrl = process.env.NEXT_PUBLIC_reactUrl
+const REACT_URL = process.env.NEXT_PUBLIC_REACT_URL
 
 
 const SecurityCheck = () => {
@@ -34,7 +34,7 @@ const SecurityCheck = () => {
 
     function handleNext() {
         handleOpen()
-        push(reactUrl+'/dashboard')
+        push(REACT_URL+'/dashboard')
         
     }
   return (

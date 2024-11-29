@@ -1,4 +1,4 @@
-const reactUrl = process.env.NEXT_PUBLIC_reactUrl
+const REACT_URL = process.env.NEXT_PUBLIC_REACT_URL
 export const NavData = [
   {
     id: 1,
@@ -11,21 +11,21 @@ export const NavData = [
     id: 2,
     text: "Market",
     active: "",
-      to: reactUrl+'/dashboard',
+      to: REACT_URL+'/dashboard',
     class: 'market'
   },
   {
     id: 3,
     text: "Trader List",
     active: "",
-      to: reactUrl+'/dashboard',
+      to: REACT_URL+'/dashboard',
     class: 'traderlist'
   },
   {
     id: 4,
     text: "Expore",
     active: "",
-      to: reactUrl+'/dashboard',
+      to: REACT_URL+'/dashboard',
     class: 'explore'
   },
   {
