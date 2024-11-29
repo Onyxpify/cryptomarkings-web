@@ -2,7 +2,7 @@ import user1 from '../../../../../assets/user1.svg';
 import user2 from '../../../../../assets/user2.svg';
 import user3 from '../../../../../assets/user3.svg';
 
-let id = 0;
+var id = 0;
 export const direct3Table = [
     {
         id: id++,

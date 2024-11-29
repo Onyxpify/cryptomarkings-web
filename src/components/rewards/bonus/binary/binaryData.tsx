@@ -1,7 +1,7 @@
 import { sideSvgs } from "../../../dashboard/sidebar/sidebarSvgs";
 import user4 from '../../../../assets/user4.svg'
 
-let id = 0;
+var id = 0;
 export const referralList = [
     {
         id: id++,

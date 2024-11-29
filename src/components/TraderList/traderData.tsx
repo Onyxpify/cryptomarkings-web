@@ -11,24 +11,23 @@ import Provider from "./manager/provider/Provider";
 import Settings from "./manager/settings/Settings";
 import Chats from "./manager/chats/Chats";
 
-let id = 0;
 export const traderTab = [
     {
-        id: id++,
+        id: 1,
         text: 'Traders',
         icon: sideSvgs.traderlist,
         class: 'active',
         component: <Traders />,
     },
     {
-        id: id++,
+        id: 2,
         text: 'Manager',
         icon: svgs.manager,
         class: '',
          component: <Manager />,
     },
     {
-        id: id++,
+        id: 3,
         text: 'Apply',
         icon: svgs.apply,
         class: '',
@@ -36,17 +35,16 @@ export const traderTab = [
     },
 ]
 
-let idd = 0;
 export const managerTab2 = [
     {
-        id: idd++,
+        id:1,
         text: 'Strategy Copier',
         icon: svgs.star3,
         class: '',
         component: <Copier />,
     },
     {
-        id: idd++,
+        id:2,
         text: 'Strategy Provider',
         icon: svgs.star3,
         class: 'active',
@@ -54,17 +52,16 @@ export const managerTab2 = [
     },
    
 ]
-let idd1 = 0;
 export const managerTab1 = [
     {
-        id: idd1++,
+        id: 1,
         text: 'Settings',
         icon: svgs.settings,
         class: 'active',
         component: <Settings />,
     },
     {
-        id: idd1++,
+        id: 2,
         text: 'Chats',
         icon: svgs.chats,
         class: '',
@@ -72,36 +69,34 @@ export const managerTab1 = [
     },
    
 ]
-let id1 = 0;
 export const searchFilter = [
     {
-        id: id1++,
+        id: 1,
         text: '1D',
         active: '',
     },
     {
-        id: id1++,
+        id: 2,
         text: '1W',
         active: '',
     },
     {
-        id: id1++,
+        id: 3,
         text: '1M',
         active: 'active',
     },
     {
-        id: id1++,
+        id: 4,
         text: '1Y',
         active: '',
     },
 ]
 
 
-let id2 = 0;
 
 export const all = [
     {
-        id: id2++,
+        id: 1,
         userIcon: user1,
         name: 'Emcode',
         star: svgs.star1,
@@ -132,7 +127,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 2,
         userIcon: user2,
         name: 'Amadi',
         star: svgs.star,
@@ -162,7 +157,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 3,
         userIcon: user3,
         name: 'Emcode',
         star: svgs.star,
@@ -192,7 +187,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 4,
         userIcon: user1,
         name: 'Emcode',
         star: svgs.star1,
@@ -223,7 +218,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 5,
         userIcon: user2,
         name: 'Emcode',
         star: svgs.star,
@@ -253,7 +248,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 6,
         userIcon: user3,
         name: 'Emcode',
         star: svgs.star,
@@ -283,7 +278,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 7,
         userIcon: user1,
         star_col: '#95CEA5',
         name: 'Emcode',
@@ -314,7 +309,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 8,
         userIcon: user2,
         name: 'Emcode',
         star: svgs.star,
@@ -344,7 +339,7 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id2++,
+        id: 8,
         userIcon: user3,
         name: 'Emcode',
         star: svgs.star,
@@ -374,11 +369,10 @@ export const all = [
          star_dyn: svgs.star_dyn
     },
 ]
-let id3 = 0;
 
 export const popular = [
     {
-        id: id3++,
+        id: 1,
         userIcon: user1,
         name: 'Emcode',
         star: svgs.star1,
@@ -409,7 +403,7 @@ export const popular = [
         star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 2,
         userIcon: user2,
         name: 'Emcode',
         star: svgs.star,
@@ -439,7 +433,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 3,
         userIcon: user3,
         name: 'Emcode',
         star: svgs.star,
@@ -469,7 +463,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 4,
         userIcon: user1,
         name: 'Emcode',
         star: svgs.star1,
@@ -500,7 +494,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 5,
         userIcon: user2,
         name: 'Emcode',
         star: svgs.star,
@@ -530,7 +524,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 6,
         userIcon: user3,
         name: 'Emcode',
         star: svgs.star,
@@ -560,7 +554,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 7,
         userIcon: user1,
         star_col: '#95CEA5',
         name: 'Emcode',
@@ -591,7 +585,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 8,
         userIcon: user2,
         name: 'Emcode',
         star: svgs.star,
@@ -621,7 +615,7 @@ export const popular = [
          star_dyn: svgs.star_dyn
     },
     {
-        id: id3++,
+        id: 9,
         userIcon: user3,
         name: 'Emcode',
         star: svgs.star,

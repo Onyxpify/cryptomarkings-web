@@ -10,7 +10,7 @@ import Subscription from "../../subscription/Subscription";
 import Dashboard from "../Dashboard";
 import { sideSvgs } from "./sidebarSvgs";
 
-let id = 0;
+var id = 0;
 export const sideList = [
     {
         id: id++,

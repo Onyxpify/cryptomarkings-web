@@ -79,7 +79,7 @@ export const gemSignalTable = [
     
 ]
 
-let id = 0;
+var id = 0;
 export const gemTab = [
     {
         id: id++,

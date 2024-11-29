@@ -3,7 +3,7 @@ import NewKnight from "./newKnight/NewKnight";
 import NewManual from "./newManual/NewManual";
 
 
-let id = 0;
+var id = 0;
 export const marketTab = [
     {
         id: id++,

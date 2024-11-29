@@ -5,7 +5,7 @@ import Loading from "../loading/Loading";
 const Referral = () => {
     let {username} = useParams();
     useEffect(()=> {
-        window.location.href = import.meta.env.VITE_nextUrl+"/register/referral/"+username;
+        window.location.href = import.meta.env.VITE_NEXT_URL+"/register/referral/"+username;
     },[])
   return (
    <Loading />

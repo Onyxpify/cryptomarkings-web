@@ -4,7 +4,7 @@ import Faq from "./faq/Faq";
 import Help from "./help/Help";
 
 
-let id = 0;
+var id = 0;
 export const exploreTab = [
     {
         id: id++,
@@ -26,7 +26,7 @@ export const exploreTab = [
     },
 ]
 
-let i = 0;
+var i = 0;
 export const allData = [
     {
         id: i++,

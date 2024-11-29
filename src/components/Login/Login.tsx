@@ -1,7 +1,7 @@
 import React from "react";
 
 const Login = () => {
-   window.location.href = import.meta.env.VITE_nextUrl+"/login";
+   window.location.href = import.meta.env.VITE_NEXT_URL+"/login";
   return (
     <div></div>
   )

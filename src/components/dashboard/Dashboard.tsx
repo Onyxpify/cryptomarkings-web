@@ -30,7 +30,7 @@ const Dashboard = () => {
         }
       }else{
         if(!userData.current.user_id) {
-          window.location.href = import.meta.env.VITE_nextUrl+"/login";
+          window.location.href = import.meta.env.VITE_NEXT_URL+"/login";
 
         }
   
@@ -46,7 +46,7 @@ const Dashboard = () => {
       })
       .catch(()=> {
        if(!userData.current.user_id) {
-         window.location.href = import.meta.env.VITE_nextUrl+"/login";
+         window.location.href = import.meta.env.VITE_NEXT_URL+"/login";
 
        }
       })

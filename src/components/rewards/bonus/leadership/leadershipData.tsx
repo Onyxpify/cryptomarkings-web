@@ -18,7 +18,7 @@ export const currentRank = {
   progress: "50%",
 };
 
-let id = 0;
+var id = 0;
 export const topReferrals = [
     {
         id: id++,
@@ -43,7 +43,7 @@ export const topReferrals = [
     },
 ]
 
-let i = 0;
+var i = 0;
 export const leadershipRank = [
      {
         id: i++,
@@ -96,7 +96,7 @@ export const leadershipRank = [
 ]
 
 
-let j = 0;
+var j = 0;
 export const leadershipTable = [
     {
         id: j++,
