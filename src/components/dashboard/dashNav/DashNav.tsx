@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../../logo/Logo'
 import { dashNavList } from './dashNavData'
 import { Link } from 'react-router-dom'
@@ -8,6 +7,7 @@ import approximately from '../../../assets/approximately.svg'
 import chevrondown from '../../../assets/chevrondown.svg';
 import './dashnav.scss';
 import { svgs } from '../../svgs';
+import React from 'react';
 
 const DashNav = () => {
   return (
@@ -46,4 +46,4 @@ const DashNav = () => {
   )
 }
 
-export default DashNav
+export default React.memo(DashNav)

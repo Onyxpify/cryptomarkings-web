@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTab } from '../hooks/useTab'
 import { gemTab } from './gemData'
 
@@ -11,4 +12,4 @@ const Gem = () => {
   )
 }
 
-export default Gem
+export default React.memo(Gem)

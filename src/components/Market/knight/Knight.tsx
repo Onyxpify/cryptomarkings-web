@@ -1,4 +1,3 @@
-import { BiSearch } from 'react-icons/bi'
 import '../manual/manual.scss';
 import { useState,useRef, useEffect } from 'react';
 import { manualTrades } from '../manual/manualTrades';
@@ -53,7 +52,7 @@ const Knight = () => {
         {
           list.filter(each=> (each.id >= count.start) && (each.id <= count.end)).map(each => {
             return (
-              <div onClick={(e) => { redir(`/coinsettings/Knight_${each.id}`);console.log(each.id) }} className='coin' key={each.id}>
+              <div onClick={() => { redir(`/coinsettings/Knight_${each.id}`);console.log(each.id) }} className='coin' key={each.id}>
                 <div className="block">
                   <div className="cell1">
                   <span className={each.class}> {each.name} </span>

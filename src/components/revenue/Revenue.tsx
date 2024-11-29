@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import { tab } from "./revenueData"
 import classNames from "classnames";
 
@@ -37,4 +37,4 @@ const Revenue = () => {
   )
 }
 
-export default Revenue
+export default React.memo(Revenue)

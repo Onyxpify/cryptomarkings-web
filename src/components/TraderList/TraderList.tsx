@@ -1,6 +1,6 @@
-import React, { useState,useRef } from "react";
+import  React, { useState,useRef } from "react";
 import "./traderlist.scss";
-import { all, popular, searchFilter, traderTab } from "./traderData";
+import { traderTab } from "./traderData";
 
 
 const TraderList = () => {
@@ -27,7 +27,7 @@ const TraderList = () => {
         {tab.map((each: any) => {
           return (
             <div
-              onClick={(e) => handleActive(each.id)}
+              onClick={() => handleActive(each.id)}
               key={each.id}
               className={`tab ${each.class}`}
             >
@@ -52,4 +52,4 @@ const TraderList = () => {
   );
 };
 
-export default TraderList;
+export default React.memo(TraderList);

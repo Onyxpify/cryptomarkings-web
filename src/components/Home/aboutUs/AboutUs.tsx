@@ -1,11 +1,7 @@
-import React from 'react';
 import './aboutus.scss';
 import { Link } from 'react-router-dom';
 
-interface props {
-    index: any,
-    style:any,
-}
+
  
 
 const AboutUs = () => {

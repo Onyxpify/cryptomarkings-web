@@ -1,5 +1,5 @@
 
-import React,{useState,useRef} from 'react';
+import React, {useState} from 'react';
 import './newmanualtable.scss';
 import Paginate from '../../../pagination/Paginate';
 interface p{
@@ -8,7 +8,7 @@ interface p{
     tableHead:any
 }
 const NewManualTable = ({ data, min,tableHead }: p) => {
-    let [table, setTable] = useState(data);
+    let [table, ] = useState(data);
      let [count, setCount] = useState({
     start: 1,
     end: min,
@@ -73,4 +73,4 @@ const NewManualTable = ({ data, min,tableHead }: p) => {
   )
 }
 
-export default NewManualTable
+export default React.memo(NewManualTable)

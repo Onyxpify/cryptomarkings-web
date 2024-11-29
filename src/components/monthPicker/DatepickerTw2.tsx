@@ -1,3 +1,4 @@
+import React from "react"
 
 const DatepickerTw2 = () => {
   return (
@@ -16,4 +17,4 @@ const DatepickerTw2 = () => {
   )
 }
 
-export default DatepickerTw2
+export default React.memo(DatepickerTw2)

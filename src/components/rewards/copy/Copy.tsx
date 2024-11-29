@@ -1,10 +1,9 @@
-import React from 'react'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
  import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import { svgs } from '../../svgs';
 import './copy.scss';
-import { textSpanIntersectsWithPosition } from 'typescript';
+import React from 'react';
 interface p{
     text: string,
     copy: string,
@@ -23,4 +22,4 @@ const Copy = ({text,copy}:p) => {
   )
 }
 
-export default Copy
+export default React.memo(Copy)

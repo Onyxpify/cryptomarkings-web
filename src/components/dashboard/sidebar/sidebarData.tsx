@@ -9,7 +9,6 @@ import Rewards from "../../rewards/Rewards";
 import Subscription from "../../subscription/Subscription";
 import Dashboard from "../Dashboard";
 import { sideSvgs } from "./sidebarSvgs";
-import { PiDotsNineLight } from "react-icons/pi";
 
 let id = 0;
 export const sideList = [

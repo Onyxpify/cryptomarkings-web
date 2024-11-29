@@ -1,8 +1,8 @@
-import React from 'react'
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import React from 'react';
+import Box from '@mui/material/Box';
 
 interface p{
     value?: number,
@@ -12,7 +12,7 @@ interface p{
     radius?: number
 }
 const MyLinearProgressBar = ({value,bg,bg_progress,height,radius}:p) => {
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+const BorderLinearProgress = styled(LinearProgress)(({  }) => ({
   height: height?height:15,
   borderRadius:  radius?radius:36,
   [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -32,4 +32,4 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   )
 }
 
-export default MyLinearProgressBar
+export default React.memo(MyLinearProgressBar)

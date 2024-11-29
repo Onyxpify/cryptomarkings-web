@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import  React, { useState } from 'react';
 import MySelect from '../../../../select/MySelect';
 import { adminFeeData } from './adminFeeData';
 import './adminFees.scss';
 import MobileTable2 from '../../../../mobileTable/MobileTable2';
 
-import ExpandMore from '@mui/icons-material/ExpandMore';
 // icon={<img src={ChevronDown} alt="open" />}
 // items={[
 //   {value: 'one',text: 'one'},
@@ -13,7 +12,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 // ]}
 
 const AdminFees = () => {
-  let [table, setTable] = useState(adminFeeData);
+  let [table, ] = useState(adminFeeData);
   return (
     <div id='AdminFees'>
       <div className="AdminFees_line1">
@@ -89,4 +88,4 @@ const AdminFees = () => {
   )
 }
 
-export default AdminFees
+export default React.memo(AdminFees)

@@ -24,7 +24,7 @@ const NewCenturion = () => {
       <div className='w-full mt-10 flex flex-row items-center justify-center gap-4 ' >
       {
         Tab.map((each:any)=> (
-          <button onClick={(e)=> handleClick(each.id)} key={each.id} className={classnames(' p-[10px] font-lato text-[18px] font-normal rounded-2xl ',{
+          <button onClick={()=> handleClick(each.id)} key={each.id} className={classnames(' p-[10px] font-lato text-[18px] font-normal rounded-2xl ',{
             'bg-pri text-sec ': each.state,
             'bg-inactive text-white ': false,
           })} > {each.text} </button>  
@@ -38,4 +38,4 @@ const NewCenturion = () => {
   )
 }
 
-export default NewCenturion
+export default React.memo(NewCenturion)

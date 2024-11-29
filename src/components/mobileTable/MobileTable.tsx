@@ -24,7 +24,7 @@ const MobileTable = ({
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    (panel: string) => ({}, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
   return (
@@ -91,7 +91,7 @@ const MobileTable = ({
   );
 };
 
-export default MobileTable;
+export default React.memo(MobileTable);
 
 // import React from 'react'
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import  React, { useState } from 'react'
 import './navbar.scss'
 import { Link, useLocation } from 'react-router-dom'
 import { NavData } from './navbarData';
@@ -6,7 +6,7 @@ import { NavData } from './navbarData';
 
 
 const Navbar = () => {
-  let [list, setList] = useState(NavData);
+  let [list, ] = useState(NavData);
   let { pathname } = useLocation();
    
   return (
@@ -28,4 +28,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default React.memo(Navbar)

@@ -3,7 +3,6 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import { svgs } from '../svgs';
@@ -23,7 +22,7 @@ interface p{
   action: any
 }
 
-export default function AlertDialogSlideConfirm({open,handleClose,action}:p) {
+export default React.memo(function AlertDialogSlideConfirm({open,handleClose,action}:p) {
   
 
   return (
@@ -55,4 +54,4 @@ export default function AlertDialogSlideConfirm({open,handleClose,action}:p) {
       </Dialog>
     </React.Fragment>
   );
-}
+});

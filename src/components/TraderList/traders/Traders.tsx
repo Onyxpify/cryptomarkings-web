@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import { all, popular, searchFilter } from "../traderData";
-import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -10,10 +9,11 @@ import { useRecoilState } from 'recoil';
 import { hideSide } from '../../atoms/rewards';
 import { sideComps } from '../../atoms/sidebar';
 import Profile from './Profile';
+import Box from "@mui/material/Box";
 
 const Traders = () => {
-  let [hide, setHide] = useRecoilState(hideSide);
-  let [comp,setComp] = useRecoilState(sideComps);
+  let [, setHide] = useRecoilState(hideSide);
+  let [,setComp] = useRecoilState(sideComps);
   const [tradeType, setTradeType] = React.useState("Spot Manual");
       let [filt, setFilt] = useState(searchFilter);
 
@@ -62,7 +62,7 @@ const Traders = () => {
           {filt.map((each: any) => {
             return (
               <span
-                onClick={(e) => handleActiveFilt(each.id)}
+                onClick={() => handleActiveFilt(each.id)}
                 key={each.id}
                 className={`filt ${each.active}`}
               >
@@ -183,4 +183,4 @@ const Traders = () => {
   )
 }
 
-export default Traders
+export default React.memo(Traders)

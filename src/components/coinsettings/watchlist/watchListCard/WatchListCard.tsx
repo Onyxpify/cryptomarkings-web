@@ -1,9 +1,9 @@
-import React from "react";
 import MyButton from "../../../button/MyButton";
 import CloseIcon from "@mui/icons-material/Close";
 import "./watchlistcard.scss";
 import { useRecoilState } from "recoil";
 import { watchList } from "../../../atoms/market";
+import React from "react";
 
 const WatchListCard = () => {
   let [list, setList] = useRecoilState(watchList);
@@ -40,4 +40,4 @@ const WatchListCard = () => {
   );
 };
 
-export default WatchListCard;
+export default React.memo(WatchListCard);

@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, { useState } from 'react'
 import './setdiag.scss';
 import Switch from '@mui/material/Switch';
 import MyButton from '../../button/MyButton';
@@ -7,9 +7,9 @@ import { watchList } from '../../atoms/market';
 import Close from '../../close/Close';
 
 interface props {
-  setAdd: Function,
+  setAdd: any,
   pair: any,
-  redir: Function,
+  redir: any,
 
 }
 
@@ -86,4 +86,4 @@ const SetDiag = ({ setAdd, pair, redir }: props) => {
   )
 }
 
-export default SetDiag
+export default  React.memo(SetDiag)

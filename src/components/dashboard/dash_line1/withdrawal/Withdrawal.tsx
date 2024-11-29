@@ -1,9 +1,9 @@
-import React from "react";
 import DepositeLine1 from "../deposite/depositeLine1/DepositeLine1";
 import Dashboard from "../../Dashboard";
 import "./withdrawal.scss";
 import { svgs } from "../../../svgs";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const Withdrawal = () => {
   return (
@@ -52,4 +52,4 @@ const Withdrawal = () => {
   );
 };
 
-export default Withdrawal;
+export default React.memo(Withdrawal);

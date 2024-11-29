@@ -1,10 +1,10 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { msgData } from "./gemData"
 import classNames from "classnames";
 import { svgs } from "../svgs";
 
 const Messages = () => {
-  let [data,setData] = useState(msgData);
+  let [data,] = useState(msgData);
   return (
     <div className="mt-[53px] p-4 bg-white rounded-2xl ">
        {
@@ -43,4 +43,4 @@ const Messages = () => {
   )
 }
 
-export default Messages
+export default React.memo(Messages)

@@ -1,10 +1,11 @@
+import React from "react";
 
 interface p {
   data: any;
   unit?: any;
 }
 
-const TableTw = ({ data,unit }: any) => {
+const TableTw = ({ data,unit }: p) => {
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -12,7 +13,7 @@ const TableTw = ({ data,unit }: any) => {
           <thead className="text-xs text-mainText uppercase bg-white dark:bg-gray-700 dark:text-gray-400 border-b dark:border-gray-700">
             <tr>
               {data
-                .filter((each: any, index: number) => each.id <= 1)
+                .filter((each: any,) => each.id <= 1)
                 .map((each: any) => (
                   <>
                     {each.cols.map((each: any, i: number) => (
@@ -26,7 +27,7 @@ const TableTw = ({ data,unit }: any) => {
           </thead>
           <tbody>
             {data
-              .filter((each: any, index: number) => each.id > 1)
+              .filter((each: any,) => each.id > 1)
               .map((each: any) => (
                     <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 ">
                 <>
@@ -45,4 +46,4 @@ const TableTw = ({ data,unit }: any) => {
   );
 };
 
-export default TableTw;
+export default React.memo(TableTw);

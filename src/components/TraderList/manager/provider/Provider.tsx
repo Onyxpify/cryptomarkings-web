@@ -1,11 +1,11 @@
 import React from 'react';
 import './provider.scss';
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Switch } from '@mui/material';
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 import { ToggleButtonTw } from '../../../toggleButton/ToggleButtonTw';
 
 const Provider = () => {
     const [copier, setCopier] = React.useState("");
-      const [facebook, setFacebook] = React.useState({ state: false, url: "" });
+      // const [facebook, setFacebook] = React.useState({ state: false, url: "" });
 
 
     const handleCopier = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -104,4 +104,4 @@ const Provider = () => {
   )
 }
 
-export default Provider
+export default React.memo(Provider)

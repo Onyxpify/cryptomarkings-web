@@ -1,16 +1,16 @@
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import MySelect from "../select/MySelect";
-import FormDialog from "../dialog/FormDialog";
-import { useState } from "react";
+import React, { useState } from "react";
 import searchIcon from "../../assets/search-pri.svg";
 import wallet from "../../assets/wallet.svg";
 import DatePickerMui from "../monthPicker/DatePickerMui";
+import FormDialog from "../dialog/FormDialog";
+import MySelect from "../select/MySelect";
 import TableTw from "../table/TableTw";
 import { DollarTable } from "./dollarTableData";
 
 const Percent = () => {
   let [open, setOpen] = useState(false);
-  let [data, setData] = useState({
+  let [data, ] = useState({
     user_price: "%10,000",
     user_profit: "%59.55",
   });
@@ -115,4 +115,4 @@ const Percent = () => {
   );
 };
 
-export default Percent;
+export default React.memo(Percent);

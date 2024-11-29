@@ -1,14 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import DatePickerMui from "../../monthPicker/DatePickerMui";
 import searchIcon from "../../../assets/search-pri.svg";
 import FormDialog from "../../dialog/FormDialog";
 import { openTradesData } from "./centurionData";
-import classNames from "classnames";
 import { useMarketTable2 } from "../../hooks/useMarketTable2";
 
 const Openned = () => {
   let [open, setOpen] = useState(false);
-  let [data, setData] = useState(openTradesData);
+  // let [data, setData] = useState(openTradesData);
   return (
     <div>
       <div className="flex flex-row flex-wrap items-center justify-between gap-10 mt-9 ">
@@ -58,4 +57,4 @@ const Openned = () => {
   );
 };
 
-export default Openned;
+export default React.memo(Openned);

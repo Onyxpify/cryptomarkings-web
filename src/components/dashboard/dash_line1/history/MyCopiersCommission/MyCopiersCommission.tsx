@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const MyCopiersCommission = () => {
   return (
@@ -6,4 +6,4 @@ const MyCopiersCommission = () => {
   )
 }
 
-export default MyCopiersCommission
+export default React.memo(MyCopiersCommission)

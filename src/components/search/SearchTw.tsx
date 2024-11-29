@@ -1,3 +1,5 @@
+import React from "react";
+
 const SearchTw = () => {
   return (
     <div>
@@ -40,4 +42,4 @@ const SearchTw = () => {
   );
 };
 
-export default SearchTw;
+export default React.memo(SearchTw);

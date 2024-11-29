@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const TraderCommission = () => {
   return (
@@ -6,4 +6,4 @@ const TraderCommission = () => {
   )
 }
 
-export default TraderCommission
+export default React.memo(TraderCommission)

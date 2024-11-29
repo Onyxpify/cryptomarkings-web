@@ -31,4 +31,4 @@ const MobileTable2 = ({ array }: p) => {
   )
 }
 
-export default MobileTable2
+export default React.memo(MobileTable2)

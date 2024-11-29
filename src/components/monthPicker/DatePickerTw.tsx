@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useState } from "react";
+import React, { useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker"; 
 
 interface p{
@@ -37,4 +37,4 @@ displayFormat={"DD-MM-YYYY"}
 
 );
 }; 
-export default DatePickerTw;
+export default React.memo(DatePickerTw);

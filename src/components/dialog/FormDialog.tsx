@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 interface p{
@@ -12,7 +11,7 @@ interface p{
   setOpen:any;
 }
 
-export default function FormDialog({open,setOpen}: p) {
+export default React.memo(function FormDialog({open,setOpen}: p) {
 
 
   const handleClose = () => {
@@ -64,4 +63,4 @@ export default function FormDialog({open,setOpen}: p) {
       </Dialog>
     </React.Fragment>
   );
-}
+})

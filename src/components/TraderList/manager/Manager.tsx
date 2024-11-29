@@ -1,16 +1,13 @@
 import React, { useRef, useState } from 'react';
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { managerTab1, managerTab2, searchFilter, traderTab } from '../traderData';
+import { managerTab1, managerTab2} from '../traderData';
+import Box from "@mui/material/Box";
 import './manager.scss';
 
 const Manager = () => {
   const [tradeType, setTradeType] = React.useState("Spot Manual");
-  let [filt, setFilt] = useState(searchFilter);
   let [tab1, setTab1] = useState(managerTab1);
   let [tab2, setTab2] = useState(managerTab2);
   let comp = useRef(tab1[0].component);
@@ -63,7 +60,7 @@ const Manager = () => {
         {tab1.map((each: any) => {
           return (
             <div
-              onClick={(e) => handleActive1(each.id)}
+              onClick={() => handleActive1(each.id)}
               key={each.id}
               className={`tab ${each.class}`}
             >
@@ -83,7 +80,7 @@ const Manager = () => {
         {tab2.map((each: any) => {
           return (
             <div
-              onClick={(e) => handleActive2(each.id)}
+              onClick={() => handleActive2(each.id)}
               key={each.id}
               className={`tab ${each.class}`}
             >
@@ -106,4 +103,4 @@ const Manager = () => {
   )
 }
 
-export default Manager
+export default React.memo(Manager)

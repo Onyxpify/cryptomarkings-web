@@ -1,8 +1,4 @@
-import { sideSvgs } from "../dashboard/sidebar/sidebarSvgs";
 import exploreIcon from '../../assets/exploreIcon.svg';
-import user2 from '../../assets/user2.svg';
-import user3 from '../../assets/user3.svg';
-import { svgs } from "../svgs";
 import All from "./all/All";
 import Faq from "./faq/Faq";
 import Help from "./help/Help";

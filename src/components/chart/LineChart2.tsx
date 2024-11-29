@@ -1,6 +1,6 @@
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, registerables } from 'chart.js';
-import { Chart } from 'react-chartjs-2'
+import React from 'react';
 ChartJS.register(...registerables);
 
 const LineChart2 = () => {
@@ -45,4 +45,4 @@ const LineChart2 = () => {
   );
 };
 
-export default LineChart2;
+export default React.memo(LineChart2);

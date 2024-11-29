@@ -1,9 +1,9 @@
-import React from 'react';
 import { svgs } from '../../../../svgs'
 import { useRecoilState } from 'recoil';
 import { hideSide } from '../../../../atoms/rewards';
 import Copy from '../../../copy/Copy';
 import './direct_line1.scss';
+import React from 'react';
 interface p{
     icon: any,
     title: string,
@@ -11,11 +11,11 @@ interface p{
 }
 
 const Direct_Line1 = ({icon,title,link}:p) => {
-    let [hide, setHide] = useRecoilState(hideSide);
+    let [, setHide] = useRecoilState(hideSide);
   return (
     <div id="Direct_Line1">
         <div className="cell1">
-              <span className='back' onClick={(e) => setHide({ class: '', comp: <></> })} > {svgs.ld} </span>
+              <span className='back' onClick={() => setHide({ class: '', comp: <></> })} > {svgs.ld} </span>
               <span className="icon"> {icon} </span>
               <span className="title"> {title} </span>
               <span className="alert"> {svgs.alert_circle2} </span>
@@ -29,4 +29,4 @@ const Direct_Line1 = ({icon,title,link}:p) => {
   )
 }
 
-export default Direct_Line1
+export default React.memo(Direct_Line1)

@@ -2,6 +2,7 @@ import './faq.scss';
 import ScrollX from '../../scrollX/ScrollX';
 import MyAccordion from '../../accordion/Accordion';
 import { faqs } from './faqData';
+import React from 'react';
 
 const Faq = () => {
   return (
@@ -19,4 +20,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default React.memo(Faq)

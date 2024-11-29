@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Dash_line1 from '../dashboard/dash_line1/Dash_line1'
+import  React, { useState } from 'react'
 import { svgs } from '../svgs';
 import './apibinding.scss';
-import Copy from '../rewards/copy/Copy';
 import { Link } from 'react-router-dom';
+import Dash_line1 from '../dashboard/dash_line1/Dash_line1'
+import Copy from '../rewards/copy/Copy';
 
 const ApiBinding = () => {
   let [bg, setBg] = useState({ bnd: 'active', byt: 'not-active' })
@@ -19,11 +19,11 @@ const ApiBinding = () => {
       <Dash_line1 />
       <div className="line2">
         <div className="cell1">
-          <button onClick={(e)=> handleBg('bnd')} style={{backgroundColor:''}} className={`binance ${bg.bnd}`}>
+          <button onClick={()=> handleBg('bnd')} style={{backgroundColor:''}} className={`binance ${bg.bnd}`}>
             <span className='icon'> {svgs.bnd} </span>
             <span>Binance</span>
           </button>
-          <button onClick={(e)=> handleBg('byt')} className={`bybit ${bg.byt}`}>
+          <button onClick={()=> handleBg('byt')} className={`bybit ${bg.byt}`}>
             <span className='icon'>  </span>
             <span>Bybit</span>
           </button>
@@ -66,4 +66,4 @@ const ApiBinding = () => {
   )
 }
 
-export default ApiBinding
+export default React.memo(ApiBinding)

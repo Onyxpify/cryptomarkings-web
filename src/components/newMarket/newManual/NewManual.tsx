@@ -1,4 +1,5 @@
 
+import React from 'react';
 import TableIconsTw from '../../table/TableIconsTw';
 import { newManualTable } from './newManualData';
 
@@ -13,4 +14,4 @@ const NewManual = () => {
   )
 }
 
-export default NewManual
+export default React.memo(NewManual)

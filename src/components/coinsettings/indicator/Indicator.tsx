@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import  React, { useState } from 'react'
 import './indicator.scss';
-import Close from '../../close/Close';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MyButton from '../../button/MyButton';
+import Close from '../../close/Close';
 
 
 interface props{
     setIndicator: any,
 }
-const Indicator: any = ({ setIndicator }: props) => {
+const Indicator = ({ setIndicator }: props) => {
     const [age, setAge] = useState('30ms');
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -95,4 +94,4 @@ const Indicator: any = ({ setIndicator }: props) => {
   )
 }
 
-export default Indicator
+export default React.memo(Indicator)

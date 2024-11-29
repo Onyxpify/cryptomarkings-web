@@ -1,8 +1,8 @@
-import React, { useReducer, useState } from 'react'
 import './coinwatchlist.scss';
 import WatchListCard from './watchListCard/WatchListCard';
 import { useRecoilValue } from 'recoil';
 import { watchList } from '../../atoms/market';
+import React from 'react';
 
 const CoinWatchList = () => {
   let list = useRecoilValue(watchList);
@@ -15,4 +15,4 @@ const CoinWatchList = () => {
   )
 }
 
-export default CoinWatchList
+export default React.memo(CoinWatchList)

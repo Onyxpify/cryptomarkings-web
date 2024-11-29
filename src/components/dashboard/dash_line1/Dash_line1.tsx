@@ -1,19 +1,19 @@
-import React from 'react';
 import './dash_line1.scss';
 import user1 from '../../../assets/user1.svg';
 import { FaRegEyeSlash } from "react-icons/fa";
-import IconTextBtn from '../../IconTextBtn/IconTextBtn';
 import { svgs } from '../../svgs';
-import Deposite from './deposite/Deposite';
 import { useRecoilState } from 'recoil';
 import { hideSide } from '../../atoms/rewards';
 import { sideComps } from '../../atoms/sidebar';
+import Deposite from './deposite/Deposite';
+import IconTextBtn from '../../IconTextBtn/IconTextBtn';
 import Withdrawal from './withdrawal/Withdrawal';
 import History from './history/History';
+import React from 'react';
 
 const Dash_line1 = () => {
-    let [hide, setHide] = useRecoilState(hideSide);
-    let [comp,setComp] = useRecoilState(sideComps);
+    let [, setHide] = useRecoilState(hideSide);
+    let [,setComp] = useRecoilState(sideComps);
     
 
   return (
@@ -38,4 +38,4 @@ const Dash_line1 = () => {
   )
 }
 
-export default Dash_line1
+export default React.memo(Dash_line1)

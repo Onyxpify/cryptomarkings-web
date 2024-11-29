@@ -10,7 +10,7 @@ export const useAccordion = (data: any[], render: string) => {
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
   const [Data, setData] = useState(data);
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    (panel: string) => ({}, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
       let upd = Data.map((each) => {
         if (panel.toString().includes(each.id + 1) && isExpanded === true) {

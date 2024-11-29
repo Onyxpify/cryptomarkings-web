@@ -1,8 +1,7 @@
-import React from 'react';
 import './dash_line2.scss';
 import MyButton from '../../button/MyButton';
 import Logo from '../../logo/Logo';
-import ScrollX from '../../scrollX/ScrollX';
+import React from 'react';
 
 const Dash_line2 = () => {
   return (
@@ -22,4 +21,4 @@ const Dash_line2 = () => {
   )
 }
 
-export default Dash_line2
+export default React.memo(Dash_line2)

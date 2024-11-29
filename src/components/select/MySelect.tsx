@@ -1,21 +1,19 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Box from "@mui/material/Box";
 
 {/* <img src={ChevronDown} alt="open" /> */}
 
 // import ChevronDown from "../../assets/chevron-down.svg";
-import { ArrowDropDownIcon } from "@mui/x-date-pickers";
 
 interface p {
   items?: any;
   icon?: any;
 }
 
-export default function MySelect({ items,icon }: p) {
+export default React.memo(function MySelect({ items,icon }: p) {
   const [age, setAge] = React.useState(items?items[0].text: 'Today');
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -65,4 +63,4 @@ export default function MySelect({ items,icon }: p) {
       </FormControl>
     </Box>
   );
-}
+})

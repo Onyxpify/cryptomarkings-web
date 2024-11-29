@@ -1,5 +1,5 @@
 import "./sidebar.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 import { sideList } from "./sidebarData";
 import { useRecoilState } from "recoil";
 import { selectedSide, sideComps } from "../../atoms/sidebar";
@@ -10,8 +10,8 @@ interface p{
 }
 const Sidebar = ({id,setSelected,setDrop}:p) => {
   let [list, setList] = useState(sideList);
-  let [comps, setComps] = useRecoilState(sideComps);
-  let [clicked, setClicked] = useRecoilState(selectedSide);
+  let [, setComps] = useRecoilState(sideComps);
+  let [, setClicked] = useRecoilState(selectedSide);
   function handleClick(id: any) {
     let upd: any = list.map((each) => {
       if (each.id === id) {
@@ -32,7 +32,7 @@ const Sidebar = ({id,setSelected,setDrop}:p) => {
       {list.map((each) => {
         return (
           <div
-            onClick={(e) => {
+            onClick={() => {
               handleClick(each.id);
             }}
             key={each.id}
@@ -47,4 +47,4 @@ const Sidebar = ({id,setSelected,setDrop}:p) => {
   );
 };
 
-export default Sidebar;
+export default React.memo(Sidebar);

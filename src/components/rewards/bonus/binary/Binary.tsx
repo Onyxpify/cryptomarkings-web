@@ -1,12 +1,11 @@
-import React from "react";
-import Direct_Line1 from "../direct/direct_line1/Direct_Line1";
 import { svgs } from "../../../svgs";
+import "./binary.scss";
+import { referralList } from "./binaryData";
 import Direct_Line2 from "../direct/direct_line2/Direct_Line2";
 import BinaryTree from "./binaryTree/BinaryTree";
-import "./binary.scss";
-import LearnMore from "../../../learnMore/LearnMore";
-import { referralList } from "./binaryData";
+import Direct_Line1 from "../direct/direct_line1/Direct_Line1";
 import Binary_Line1 from "./binary_line1/Binary_Line1";
+import React from "react";
 
 const Binary = () => {
   return (
@@ -50,4 +49,4 @@ const Binary = () => {
   );
 };
 
-export default Binary;
+export default React.memo(Binary);

@@ -2,10 +2,10 @@ import { marketTab } from "./newMarketData";
 import SearchTw from "../search/SearchTw";
 import wallet from "../../assets/wallet.svg";
 import { useTab } from "../hooks/useTab";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const NewMarket = () => {
-  let [data, setData] = useState({
+  let [data, ] = useState({
     user_price: "$10,000",
     user_profit: "$59.55",
   });
@@ -48,4 +48,4 @@ const NewMarket = () => {
   );
 };
 
-export default NewMarket;
+export default React.memo(NewMarket);

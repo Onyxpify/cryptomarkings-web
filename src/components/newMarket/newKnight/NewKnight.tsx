@@ -1,5 +1,6 @@
 import { newKightTable } from '../newManual/newManualData'
 import TableIconsTw from '../../table/TableIconsTw'
+import React from 'react'
 
 const NewKnight = () => {
   return (
@@ -9,4 +10,4 @@ const NewKnight = () => {
   )
 }
 
-export default NewKnight
+export default React.memo(NewKnight)

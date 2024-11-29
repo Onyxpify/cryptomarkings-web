@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  React, { useState } from "react";
 import "./directline3.scss";
 import MobileTable from "../../../../mobileTable/MobileTable";
 import { direct3Table } from "./direct3Data";
@@ -6,8 +6,8 @@ interface p {
   data: any;
   min?: number;
 }
-const Direct_Line3 = ({ data, min }: p) => {
-  let [table, setTable] = useState(data);
+const Direct_Line3 = ({ data, }: p) => {
+  let [table,] = useState(data);
   return (
     <div id="Direct_Line3">
       <div className="table">
@@ -73,4 +73,4 @@ const Direct_Line3 = ({ data, min }: p) => {
   );
 };
 
-export default Direct_Line3;
+export default React.memo(Direct_Line3);

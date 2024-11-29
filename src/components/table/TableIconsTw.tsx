@@ -6,7 +6,7 @@ interface p {
   unit?: any;
 }
 
-const TableIconsTw = ({ data,unit }: any) => {
+const TableIconsTw = ({ data, }: p) => {
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -14,7 +14,7 @@ const TableIconsTw = ({ data,unit }: any) => {
           <thead className="text-xs uppercase bg-white border-b text-mainText dark:bg-gray-700 dark:text-gray-400 dark:border-gray-700">
             <>
               {data
-                .filter((each: any, index: number) => each.id <= 1)
+                .filter((each: any,) => each.id <= 1)
                 .map((each: any,j:number) => (
                   <tr key={j} >
                     {each.cols.map((each: any, i: number) => (
@@ -29,7 +29,7 @@ const TableIconsTw = ({ data,unit }: any) => {
           </thead>
           <tbody>
             {data
-              .filter((each: any, index: number) => each.id > 1)
+              .filter((each: any,) => each.id > 1)
               .map((each: any) => (
                     <tr key={each.id} className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 ">
                 <>
@@ -51,4 +51,4 @@ const TableIconsTw = ({ data,unit }: any) => {
   );
 };
 
-export default TableIconsTw;
+export default React.memo(TableIconsTw);

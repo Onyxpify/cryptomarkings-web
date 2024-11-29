@@ -1,15 +1,14 @@
 import { svgs } from "../../svgs"
 
 import { Formik, Form, Field, } from 'formik';
-import { useState } from "react";
-import * as Yup from 'yup';
+import React, { useState } from "react";
 
-const integerValidation = (value:any) => {
-  if (!Number.isInteger(value) || String(value).includes('.')) {
-    return false;
-  }
-  return true;
-}
+// const integerValidation = (value:any) => {
+//   if (!Number.isInteger(value) || String(value).includes('.')) {
+//     return false;
+//   }
+//   return true;
+// }
 
 function validateNumber(value:any) {
   let error;
@@ -73,4 +72,4 @@ const Robot = () => {
   )
 }
 
-export default Robot
+export default React.memo(Robot)

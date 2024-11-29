@@ -1,4 +1,3 @@
-import { svgs } from "../../../../svgs";
 import user1 from '../../../../../assets/user1.svg';
 import user2 from '../../../../../assets/user2.svg';
 import user3 from '../../../../../assets/user3.svg';

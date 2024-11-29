@@ -1,4 +1,3 @@
-import { BiSearch } from 'react-icons/bi'
 import './manual.scss';
 import { useEffect, useRef, useState } from 'react';
 import { manualTrades } from './manualTrades';

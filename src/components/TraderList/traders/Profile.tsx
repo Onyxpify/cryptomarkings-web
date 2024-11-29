@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import DepositeLine1 from '../../dashboard/dash_line1/deposite/depositeLine1/DepositeLine1'
 import Dashboard from '../../dashboard/Dashboard'
 import Profile_start from './Profile_start'
@@ -23,4 +23,4 @@ const Profile = ({ each }: p) => {
     )
 }
 
-export default Profile
+export default React.memo(Profile)

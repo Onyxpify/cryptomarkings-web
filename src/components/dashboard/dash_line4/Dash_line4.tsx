@@ -1,10 +1,10 @@
-import React from "react";
 import "./dashline4.scss";
 import { svgs } from "../../svgs";
 import LearnMore from "../../learnMore/LearnMore";
 import { topRobotList, topTraderList } from "./dash4Data";
 import { Link } from "react-router-dom";
 import toptraderIcon from "../../../assets/toptraderIcon.svg";
+import React from "react";
 
 const Dash_line4 = () => {
   return (
@@ -83,4 +83,4 @@ const Dash_line4 = () => {
   );
 };
 
-export default Dash_line4;
+export default React.memo(Dash_line4);

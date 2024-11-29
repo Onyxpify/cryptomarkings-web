@@ -1,18 +1,18 @@
-import * as React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
+import React from 'react';
 import { useMediaQuery } from 'react-responsive'
 
-const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
-const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
-const amtData = [2400, 2210, 2290, 2000, 2181, 2500, 2100];
-const xLabels = [
-  1,5,10,15,20,25,30
-];
-const yLabels = [
-  '100', '300', '600', '700', '1200', '900', '1500'
-];
+// const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
+// const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300];
+// const amtData = [2400, 2210, 2290, 2000, 2181, 2500, 2100];
+// const xLabels = [
+//   1,5,10,15,20,25,30
+// ];
+// const yLabels = [
+//   '100', '300', '600', '700', '1200', '900', '1500'
+// ];
 
-export default function Line_chart() {
+export default React.memo(function Line_chart() {
   const mobile = useMediaQuery({ query: '(max-width: 750px)' });
   return (
     <LineChart
@@ -37,4 +37,4 @@ export default function Line_chart() {
       
     />
   );
-}
+})

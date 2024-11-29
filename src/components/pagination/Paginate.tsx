@@ -1,8 +1,6 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+
+import React, { useState } from "react";
 import "./paginate.scss";
-import { FaLessThan, FaGreaterThan } from "react-icons/fa";
 import eastArrow from '../../assets/ChevronRightOutline.svg'
 
 interface p{
@@ -12,7 +10,7 @@ interface p{
   setCount:any,
   style?:any
 }
-const Paginate = ({ size, perPage, count, setCount, style }:p) => {
+const Paginate = ({ size, perPage, setCount, style }:p) => {
   let [num, setNum] = useState([...possiblePags(size, perPage)]);
 
   function possiblePags(size:number, perPage:number) {
@@ -32,7 +30,7 @@ const Paginate = ({ size, perPage, count, setCount, style }:p) => {
   }
 
   function handleUserClick(id:number) {
-    let upd = num.map((each, i) => {
+    let upd = num.map((each) => {
       if (each.text === id) {
         each.class = "round active";
         //1-8,9-16,17-24,25-32
@@ -63,7 +61,7 @@ const Paginate = ({ size, perPage, count, setCount, style }:p) => {
       setNum(upd);
     }
     if (dir === "<") {
-      let upd = num.map((each, i) => {
+      let upd = num.map((each,) => {
         if (num[num.length - 1].text === 3) {
           return each;
         } else {
@@ -79,7 +77,7 @@ const Paginate = ({ size, perPage, count, setCount, style }:p) => {
     <div className="Paginate" style={style}>
       <div className="btns">
         <button
-          onClick={(e) => handleNext("<")}
+          onClick={() => handleNext("<")}
           className="round arrow westArrow"
         >
           {" "}
@@ -88,7 +86,7 @@ const Paginate = ({ size, perPage, count, setCount, style }:p) => {
         {num.map((each) => {
           return (
             <button
-              onClick={(e) => {
+              onClick={() => {
                 handleUserClick(each.text);
               }}
               className={each.class}
@@ -100,7 +98,7 @@ const Paginate = ({ size, perPage, count, setCount, style }:p) => {
           );
         })}
         {Math.round(size / perPage) > 3 && <button className="elipses"> <span>...</span> <span>{Math.round(size / perPage)}</span> </button>}
-        <button onClick={(e) => handleNext(">")} className="round arrow">
+        <button onClick={() => handleNext(">")} className="round arrow">
           {" "}
           <img src={eastArrow} alt="east Arrow" />
         </button>
@@ -109,4 +107,4 @@ const Paginate = ({ size, perPage, count, setCount, style }:p) => {
   );
 };
 
-export default Paginate;
+export default React.memo(Paginate);

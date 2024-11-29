@@ -1,7 +1,7 @@
-import React from 'react';
 import './learnmore.scss';
 import { Link } from 'react-router-dom';
 import { svgs } from '../svgs';
+import React from 'react';
 interface p{
   text?: string,
 }
@@ -16,4 +16,4 @@ const LearnMore = ({text}:p) => {
   )
 }
 
-export default LearnMore
+export default React.memo(LearnMore)

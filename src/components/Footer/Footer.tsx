@@ -3,6 +3,7 @@ import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import ScrollX from "../scrollX/ScrollX";
 import { Link } from "react-router-dom";
+import React from "react";
 interface p {
   bg?: string;
   color?: string;
@@ -66,4 +67,4 @@ const Footer = ({ bg, color }: p) => {
   );
 };
 
-export default Footer;
+export default React.memo(Footer);

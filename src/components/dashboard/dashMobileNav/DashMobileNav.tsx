@@ -1,8 +1,8 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import './dashmobilenav.scss';
-import Sidebar from '../sidebar/Sidebar';
 import { sideSvgs } from '../sidebar/sidebarSvgs';
 import Dashboard from '../Dashboard';
+import Sidebar from '../sidebar/Sidebar';
 import { svgs } from '../../svgs';
 
 const DashMobileNav = () => {
@@ -25,4 +25,4 @@ const DashMobileNav = () => {
   )
 }
 
-export default DashMobileNav
+export default React.memo(DashMobileNav)

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
 const Login = () => {
-   window.location.href = "http://localhost:4000/login";
+   window.location.href = import.meta.env.VITE_nextUrl+"/login";
   return (
     <div></div>
   )
 }
 
-export default Login
+export default React.memo(Login)

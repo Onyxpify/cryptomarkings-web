@@ -73,7 +73,7 @@ const TaskVerification = () => {
       </div>
 
       <div className="pri_line8">
-        <button onClick={(e) => handleNext()}>Submit</button>
+        <button onClick={() => handleNext()}>Submit</button>
       </div>
       <div className="pri_line9">
         <div className={applyStage > 1 ? "level" : "not-level"}></div>
@@ -85,4 +85,4 @@ const TaskVerification = () => {
   );
 };
 
-export default TaskVerification;
+export default React.memo(TaskVerification);

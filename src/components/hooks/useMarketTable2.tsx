@@ -7,7 +7,7 @@ interface p{
 }
 
 export const useMarketTable2 = ({data,render}:p) => {
-   let [Data,setData] = useState(data);
+   let [Data,] = useState(data);
 
     if(render === 'openned') {
         return (

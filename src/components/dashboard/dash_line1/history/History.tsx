@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react'
+import React, {useState,useRef} from 'react'
 import DepositeLine1 from '../deposite/depositeLine1/DepositeLine1'
 import Dashboard from '../../Dashboard';
 import './history.scss';
@@ -29,7 +29,7 @@ const History = () => {
           {tab.map((each: any) => {
             return (
               <div
-                onClick={(e) => handleActive(each.id)}
+                onClick={() => handleActive(each.id)}
                 key={each.id}
                 className={`tab ${each.class}`}
               >
@@ -52,4 +52,4 @@ const History = () => {
   )
 }
 
-export default History
+export default React.memo(History)

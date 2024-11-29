@@ -1,3 +1,4 @@
+import React from "react"
 import { useMarketTable2 } from "../hooks/useMarketTable2"
 import { gemSignalTable } from "./gemData"
 
@@ -12,4 +13,4 @@ const Signals = () => {
   )
 }
 
-export default Signals
+export default React.memo(Signals)

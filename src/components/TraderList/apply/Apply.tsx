@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import  React, { useState, useRef, useEffect } from "react";
 import "./apply.scss";
 import { applyTab } from "./applyData";
 import { useRecoilValue } from "recoil";
@@ -42,4 +42,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default React.memo(Apply);

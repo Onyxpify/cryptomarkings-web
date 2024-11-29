@@ -1,11 +1,11 @@
-import React from 'react'
-import Dash_line1 from '../dashboard/dash_line1/Dash_line1';
 import './rewards.scss';
 
+import Dash_line1 from '../dashboard/dash_line1/Dash_line1';
 import Bonus from './bonus/Bonus';
 import Copy from './copy/Copy';
 import { useRecoilValue } from 'recoil';
 import { hideSide } from '../atoms/rewards';
+import React from 'react';
 
 const Rewards = () => {
   let hide = useRecoilValue(hideSide);
@@ -34,4 +34,4 @@ const Rewards = () => {
   )
 }
 
-export default Rewards
+export default React.memo(Rewards)

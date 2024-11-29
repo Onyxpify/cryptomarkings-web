@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import  React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import Header from '../header/Header';
 import TuneIcon from '@mui/icons-material/Tune';
 import './coinsettings.scss';
 import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 
 import { manualTrades } from '../Market/manual/manualTrades';
 
+import Header from '../header/Header';
 import SetTrades from './setTrades/SetTrades';
 import SetDiag from './setDiag/SeDiag';
 import MySignals from './mysignals/MySignals';
@@ -64,4 +64,4 @@ const CoinSettings = () => {
   )
 }
 
-export default CoinSettings
+export default React.memo(CoinSettings)

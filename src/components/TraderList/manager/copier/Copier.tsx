@@ -2,9 +2,9 @@ import { svgs } from '../../../svgs';
 import { ToggleButtonTw } from '../../../toggleButton/ToggleButtonTw';
 import './copier.scss';
 import user from '../../../../assets/user5.svg';
-import { useState } from 'react';
 import MySelect from '../../../select/MySelect';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import React from 'react';
 
 const Copier = () => {
   return (
@@ -84,4 +84,4 @@ const Copier = () => {
   )
 }
 
-export default Copier
+export default React.memo(Copier)

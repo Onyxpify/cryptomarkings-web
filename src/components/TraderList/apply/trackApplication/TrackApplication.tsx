@@ -1,22 +1,17 @@
 
-import React, { useState } from 'react';
+import  React, { useState } from 'react';
 import './trackapplication.scss';
 import { useRecoilState } from "recoil";
 import { applyLevel } from "../../../atoms/apply";
 import applicationSuccess from '../../../../assets/applicationSuccess.svg';
-import { useNavigate } from 'react-router-dom';
 import { sideComps } from '../../../atoms/sidebar';
-import Dashboard from '../../../dashboard/Dashboard';
 import { sideList } from '../../../dashboard/sidebar/sidebarData';
 
 const TrackApplication = () => {
   const [applyStage, setApplyStage] = useRecoilState(applyLevel);
-  let redir = useNavigate();
-  let [comps, setComps] = useRecoilState(sideComps);
+  let [, setComps] = useRecoilState(sideComps);
 let [list, setList] = useState(sideList);  
-  function handleNext() {
-    setApplyStage(applyStage + 1);
-  }
+ 
 
    function handleClick(id: any) {
        let upd:any= list.map(each => {
@@ -49,7 +44,7 @@ let [list, setList] = useState(sideList);
       </div>
 
       <div className="pri_line8">
-        <button onClick={(e) => { handleClick(0);  setApplyStage(1)}}>Done</button>
+        <button onClick={() => { handleClick(0);  setApplyStage(1)}}>Done</button>
       </div>
       <div className="pri_line9">
         <div className={applyStage > 1 ? "level" : "not-level"}></div>
@@ -61,4 +56,4 @@ let [list, setList] = useState(sideList);
   )
 }
 
-export default TrackApplication
+export default React.memo(TrackApplication)

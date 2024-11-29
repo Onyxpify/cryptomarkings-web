@@ -11,9 +11,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { styled } from "@mui/material/styles";
-import Switch, { SwitchProps } from "@mui/material/Switch";
-import { red } from "@mui/material/colors";
+import Switch from "@mui/material/Switch";
 import { useRecoilState } from "recoil";
 import { applyLevel } from "../../../atoms/apply";
 
@@ -39,7 +37,7 @@ const PrimaryDetails = () => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    (panel: string) => ({},isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
@@ -238,7 +236,7 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${facebook ? "panel1" : ""}`}
-            onChange={handleChange("panel1")}
+            onChange={()=>handleChange("panel1")}
             className='social-accordion'
           >
             <AccordionSummary
@@ -284,7 +282,7 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${instagram.state ? "panel2" : ""}`}
-            onChange={handleChange("panel2")}
+            onChange={()=>handleChange("panel2")}
             className='social-accordion'
           >
             <AccordionSummary
@@ -329,7 +327,7 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${telegram.state ? "panel3" : ""}`}
-            onChange={handleChange("panel3")}
+            onChange={()=>handleChange("panel3")}
             className='social-accordion'
           >
             <AccordionSummary
@@ -374,7 +372,7 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${discord.state ? "panel4" : ""}`}
-            onChange={handleChange("panel4")}
+            onChange={()=>handleChange("panel4")}
             className='social-accordion'
           >
             <AccordionSummary
@@ -419,7 +417,7 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${youtube.state ? "panel5" : ""}`}
-            onChange={handleChange("panel5")}
+            onChange={()=>handleChange("panel5")}
             className='social-accordion'
           >
             <AccordionSummary
@@ -588,7 +586,7 @@ const PrimaryDetails = () => {
         </FormControl>
       </div>
       <div className="pri_line8">
-        <button onClick={(e) => handleNext()}>Next</button>
+        <button onClick={() => handleNext()}>Next</button>
       </div>
       <div className="pri_line9">
         <div className={applyStage === 1 ? "level" : "not-level"}></div>
@@ -600,4 +598,4 @@ const PrimaryDetails = () => {
   );
 };
 
-export default PrimaryDetails;
+export default React.memo(PrimaryDetails);

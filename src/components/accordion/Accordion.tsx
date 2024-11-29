@@ -1,4 +1,4 @@
-"use client";
+import React from 'react';
 import { useAccordion } from '../hooks/useAccordion';
 
 
@@ -18,4 +18,4 @@ const MyAccordion = ({data,render}:p) => {
   )
 }
 
-export default MyAccordion
+export default React.memo(MyAccordion)

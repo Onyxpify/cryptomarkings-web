@@ -2,6 +2,7 @@ import "./chats.scss";
 import { svgs } from "../../../svgs";
 import { chatsData } from "./chatsData";
 import bullrun from '../../../../assets/chatsbg.svg'
+import React from "react";
 
 const Chats = () => {
   return (
@@ -63,4 +64,4 @@ const Chats = () => {
   );
 };
 
-export default Chats;
+export default React.memo(Chats);

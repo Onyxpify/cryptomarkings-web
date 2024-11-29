@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../../Navbar/Navbar';
 import './hero.scss';
 import { Link } from 'react-router-dom';
@@ -22,4 +22,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default React.memo(Hero)

@@ -13,4 +13,4 @@ const Close = ({setHook}:props) => {
   )
 }
 
-export default Close
+export default React.memo(Close)

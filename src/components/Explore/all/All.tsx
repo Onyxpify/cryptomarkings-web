@@ -1,7 +1,7 @@
-import React from 'react'
 import { allData } from '../exploreData'
 import LearnMore from '../../learnMore/LearnMore'
 import './all.scss';
+import React from 'react';
 
 const All = () => {
   return (
@@ -26,4 +26,4 @@ const All = () => {
   )
 }
 
-export default All
+export default React.memo(All)

@@ -1,6 +1,6 @@
-import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import './search.scss';
+import React from 'react';
 
 const Search = (props:any) => {
   return (
@@ -15,4 +15,4 @@ const Search = (props:any) => {
   )
 }
 
-export default Search
+export default React.memo(Search)
