@@ -1,3 +1,4 @@
+
 export const NavData = [
   {
     id: 1,
@@ -10,21 +11,21 @@ export const NavData = [
     id: 2,
     text: "Market",
     active: "",
-      to: '/market',
+      to: '/dashboard',
     class: 'market'
   },
   {
     id: 3,
     text: "Trader List",
     active: "",
-      to: '/traderlist',
+      to: '/dashboard',
     class: 'traderlist'
   },
   {
     id: 4,
     text: "Expore",
     active: "",
-      to: '/explore',
+      to: '/dashboard',
     class: 'explore'
   },
   {

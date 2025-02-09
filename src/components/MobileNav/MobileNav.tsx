@@ -1,7 +1,11 @@
+'use client';
+
 import React, { useState } from 'react'
 import { MobileNavData } from './mobileNavData';
 import './mobilenav.scss';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+const reactUrl = process.env.NODE_ENV === 'development'? process.env.NEXT_PUBLIC_REACT_URL_DEV:process.env.NEXT_PUBLIC_REACT_URL
+
 
 const MobileNav = () => {
     let [list, setList] = useState(MobileNavData);
@@ -21,7 +25,7 @@ const MobileNav = () => {
           {
               list.map(item => {
                   return (
-                      <Link onClick={()=>  handleActive(item.id)} id={item.active} to={item.to} className={`items`} key={item.id}>
+                      <Link onClick={()=>  handleActive(item.id)} id={item.active} href={reactUrl+item.to} className={`items`} key={item.id}>
                           <span className='icons'> {item.icon} </span>
                           <span className='text'> {item.text} </span>
                       </Link>

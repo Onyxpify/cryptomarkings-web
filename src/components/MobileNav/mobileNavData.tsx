@@ -18,27 +18,27 @@ export const MobileNavData = [
     id: 2,
     text: "Market",
     active: "",
-    to: '/market'
+    to: '/dashboard'
   },
   {
     icon: <IoPeopleOutline id="icon" />,
     id: 3,
     text: "Trader List",
     active: "",
-    to: '/traderlist'
+    to: '/dashboard'
   },
   {
     icon: <TbGridDots id="icon" />,
     id: 4,
     text: "Expore",
     active: "",
-    to: '/explore'
+    to: '/dashboard'
   },
   {
     icon: <CiCircleMore id="icon" />,
     id: 5,
     text: "More",
     active: "",
-    to: '/more',
+    to: '/dashboard',
   },
 ];

@@ -15,17 +15,17 @@
   }
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
     height: 5px;
   }
   scrollbar-width: thin;
   scrollbar-color: $primary;
   &::-webkit-scrollbar-track {
-    background: white;
+    background: transparent;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $secondary;
-    border-radius: 50%;
-    border: 25px solid transparent;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 0px solid transparent;
   }
 }

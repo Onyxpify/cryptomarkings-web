@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/register/:referral", "destination": "/register/:referral" },{ "source": "/(.*)", "destination": "/" }]
+}

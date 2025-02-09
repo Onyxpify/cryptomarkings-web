@@ -1,0 +1,76 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+.Informed {
+  width: 90%;
+  margin: auto;
+  margin-top: 3.25rem;
+  background-size: cover;
+  height: 11.5rem;
+  //   border: 2px solid red;
+  @include image("/informedBg.svg");
+  background-color: rgb(0, 61, 43, 1);
+  background-size: cover;
+  position: relative;
+  fill: $background;
+  z-index: 1;
+  .centent {
+    background-color: rgb(0, 61, 43, 0.8);
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    width: 100%;
+    height: inherit;
+    @include grid(3);
+    gap: 2rem;
+    padding: 1rem;
+    .img {
+      width: 10.61375rem;
+      height: 7.625rem;
+      @include image("/Newsletter.svg");
+    }
+    .text {
+      width: 100%;
+      h3 {
+        color: $secondary;
+
+        /* Desktop/Heading 3 */
+        font-family: Lato;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-wrap: nowrap;
+      }
+      p {
+        color: $background;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-wrap: nowrap;
+      }
+    }
+    .icons {
+      #informed-bt {
+        .bt {
+          display: none;
+        }
+        .stores {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+// #ScrollX {
+//   overflow-x: scroll;
+// }

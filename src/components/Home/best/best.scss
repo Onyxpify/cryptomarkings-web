@@ -1,0 +1,134 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Best {
+  padding-top: 3.62rem;
+  width: 100%;
+  @include mobile {
+    padding-left: 1rem;
+  }
+  @include tablet {
+    padding-left: 1rem;
+  }
+  @include desktop {
+    padding-left: 5.69rem;
+    padding-right: 6.19rem;
+  }
+  h3 {
+    color: $mainText;
+
+    /* Desktop/Heading 3 */
+    font-family: Lato;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mobile {
+      text-align: left;
+    }
+    @include tablet {
+      text-align: left;
+    }
+    @include desktop {
+      text-align: center;
+    }
+  }
+  .line1 {
+    // border: 1px solid red;
+    width: 100%;
+    min-height: 21.75rem;
+    margin-top: 2.94rem;
+    width: 100%;
+
+    @include flex_between();
+    gap: 1.94rem;
+    position: relative;
+    .robot {
+      @include grid(1);
+      img {
+        @include mobile {
+          width: 24.75rem;
+        }
+        @include tablet {
+          width: 24.75rem;
+        }
+        @include desktop {
+          width: 100%;
+        }
+        height: 21.75rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-top: -5.98rem;
+        padding-left: 1.37rem;
+        width: 100%;
+        // border: 1px solid red;
+        color: $background;
+
+        /* Desktop/Heading 3 */
+        font-family: Lato;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+  .line2 {
+    @include grid(4);
+    margin-top: 4rem;
+    margin-bottom: 4.06rem;
+    gap: 0rem;
+    .rate {
+      @include mobile {
+        width: 13rem;
+      }
+      @include tablet {
+        width: 100%;
+      }
+      @include desktop {
+        width: 100%;
+      }
+      height: 4.625rem;
+      @include grid(1);
+      border-right: 1px solid $bodyText;
+      &:last-child {
+        border-right-color: transparent;
+      }
+      // border: 1px solid red;
+      h3 {
+        color: $primary;
+        text-align: center;
+
+        /* Desktop/Heading 2 */
+        font-family: Lato;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 100%;
+      }
+      .box {
+        @include flex_between();
+        justify-content: center;
+        gap: 0.25rem;
+        width: 100%;
+        .icon {
+          @include flex_center();
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        color: $mainText;
+
+        /* Desktop/Body 5 */
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
