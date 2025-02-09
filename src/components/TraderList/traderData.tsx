@@ -6,6 +6,10 @@ import { svgs } from "../svgs";
 import Traders from "./traders/Traders";
 import Manager from "./manager/Manager";
 import Apply from "./apply/Apply";
+import Copier from "./manager/copier/Copier";
+import Provider from "./manager/provider/Provider";
+import Settings from "./manager/settings/Settings";
+import Chats from "./manager/chats/Chats";
 
 let id = 0;
 export const traderTab = [
@@ -30,6 +34,43 @@ export const traderTab = [
         class: '',
          component: <Apply />,
     },
+]
+
+let idd = 0;
+export const managerTab2 = [
+    {
+        id: idd++,
+        text: 'Strategy Copier',
+        icon: svgs.star3,
+        class: '',
+        component: <Copier />,
+    },
+    {
+        id: idd++,
+        text: 'Strategy Provider',
+        icon: svgs.star3,
+        class: 'active',
+         component: <Provider />,
+    },
+   
+]
+let idd1 = 0;
+export const managerTab1 = [
+    {
+        id: idd1++,
+        text: 'Settings',
+        icon: svgs.settings,
+        class: 'active',
+        component: <Settings />,
+    },
+    {
+        id: idd1++,
+        text: 'Chats',
+        icon: svgs.chats,
+        class: '',
+         component: <Chats />,
+    },
+   
 ]
 let id1 = 0;
 export const searchFilter = [
@@ -76,12 +117,24 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+        Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
         userIcon: user2,
-        name: 'Emcode',
+        name: 'Amadi',
         star: svgs.star,
         avg_text: 'Average Returns',
         avg_rate: '0.00%',
@@ -94,7 +147,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -112,7 +177,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -131,7 +208,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -149,7 +238,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -167,7 +268,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -186,7 +299,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -204,7 +329,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id2++,
@@ -222,7 +359,19 @@ export const all = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
 ]
 let id3 = 0;
@@ -245,7 +394,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+        star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -263,7 +424,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -281,7 +454,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -300,7 +485,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -318,7 +515,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -336,7 +545,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -355,7 +576,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -373,7 +606,19 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
     {
         id: id3++,
@@ -391,6 +636,18 @@ export const popular = [
         comm_icon: svgs.dollar,
         total_text: 'Total Profit',
         total_rate: '1.95%',
-        total_icon: svgs.total
+        total_icon: svgs.total,
+         Wallet_Overview: '$0.00',
+        Wallet_overview_text: 'Wallet Overview',
+        watllet_Overview_icon: svgs.wallect_overview,
+        Trader_Balance: '0.00%',
+        Trader_Balance_text: 'Trader Balance',
+        Closed_Trades: '5',
+        Closed_Trades_icon: svgs.Closed_Trades,
+        Closed_Trades_text: 'Closed Trades',
+        Running_Trades: '3',
+        Running_Trades_text: 'Running Trades',
+        Running_Trades_icon: svgs.Running_Trades,
+         star_dyn: svgs.star_dyn
     },
 ]

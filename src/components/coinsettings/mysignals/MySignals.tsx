@@ -1,7 +1,7 @@
-import React from 'react';
 import './mysignals.scss';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
+import React from 'react';
 
 const MySignals = () => {
   return (
@@ -34,4 +34,4 @@ const MySignals = () => {
   )
 }
 
-export default MySignals
+export default React.memo(MySignals)

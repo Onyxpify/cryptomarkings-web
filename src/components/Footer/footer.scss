@@ -5,51 +5,93 @@
 
 .FooTer {
   .line1 {
-    display: flex;
     width: 100%;
-    height: max-content;
+    // height: max-content;
     background: $primary;
     // margin-top: 6rem;
-    @include grid(4);
-    padding-top: 2rem;
-    .box {
-      // width: 21rem;
-      margin-top: 5.12rem;
+    @include mobile {
+      @include grid(1);
+      padding-top: 0.2rem;
+      place-items: start;
+      padding-left: 1rem;
+    }
+    @include desktop {
+      @include grid(4);
+      padding-top: 2rem;
+      padding-left: 0rem;
+    }
+    ._box {
+      @include mobile {
+        margin-top: 1rem;
+        // border: 1px solid red;
+        width: 100%;
+        min-height: 10vh;
+      }
+      @include desktop {
+        margin-top: 5.12rem;
+        width: unset;
+      }
       @include flex_col();
       .linkes {
         @include flex_col();
         gap: 1.5rem;
       }
       h3 {
-        color: $secondary;
+        @include mobile {
+          color: $primary;
+        }
+        @include desktop {
+          color: $secondary;
+        }
 
         /* Desktop/Paragraph 2 */
         font-family: Inter;
-        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         margin-bottom: 2.44rem;
+        @include mobile {
+          font-size: 2.5rem;
+        }
+        @include desktop {
+          font-size: 1rem;
+        }
       }
       a {
         color: $background;
 
         /* Desktop/Paragraph 2 */
         font-family: Inter;
-        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         text-decoration: none;
+        @include mobile {
+          font-size: 1.3rem;
+        }
+        @include desktop {
+          font-size: 1rem;
+        }
       }
     }
     .boxa {
+      @include mobile {
+        order: 4;
+      }
+      @include desktop {
+        order: 1;
+      }
       @include grid(1);
       .img {
         width: 13.96875rem;
         height: 9.3125rem;
         @include image("../../assets/footerLogo1.svg");
-        margin-bottom: 4.38rem;
+        @include mobile {
+          margin-bottom: 1.38rem;
+        }
+        @include desktop {
+          margin-bottom: 4.38rem;
+        }
       }
       .icons {
         @include flex_center();
@@ -62,6 +104,30 @@
         }
       }
     }
+    .boxb {
+      @include mobile {
+        order: 1;
+      }
+      @include desktop {
+        order: 2;
+      }
+    }
+    .boxc {
+      @include mobile {
+        order: 2;
+      }
+      @include desktop {
+        order: 3;
+      }
+    }
+    .boxd {
+      @include mobile {
+        order: 3;
+      }
+      @include desktop {
+        order: 4;
+      }
+    }
   }
   .line2 {
     padding: 1.56rem 0rem;
@@ -72,10 +138,15 @@
 
       /* Desktop/Paragraph 3 */
       font-family: Inter;
-      font-size: 0.875rem;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      @include mobile {
+        font-size: 1rem;
+      }
+      @include desktop {
+        font-size: 0.875rem;
+      }
     }
   }
 }

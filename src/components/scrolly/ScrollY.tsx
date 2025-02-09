@@ -14,4 +14,4 @@ const ScrollY = ({children,className}:props) => {
   )
 }
 
-export default ScrollY
+export default React.memo(ScrollY)

@@ -13,10 +13,10 @@
     background-color: $background;
     // border: 1px solid red;
     @include mobile {
-      display: none;
+      // display: none;
     }
     @include tablet {
-      display: none;
+      // display: none;
     }
     @include desktop {
       display: grid;
@@ -41,7 +41,7 @@
     .left {
       background-color: $primary;
       // border-radius: 0rem 2rem 0rem 0rem;
-      border-radius: 0rem 12% 0rem 0rem;
+      border-radius: 0px 16px 0px 0px;
       @include mobile {
         display: none;
       }

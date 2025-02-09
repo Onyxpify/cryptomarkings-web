@@ -7,8 +7,19 @@
   width: 100%;
   height: 55.9375rem;
   background-color: $background;
-  margin-top: 3.88rem;
-  padding: 2.69rem 3.81rem;
+  @include mobile {
+    padding: 0.2rem;
+    margin-top: 0.88rem;
+    @include grid(1);
+    // place-items: start;
+  }
+  @include desktop {
+    margin-top: 3.88rem;
+    padding: 2.69rem 3.81rem;
+    @include grid(1);
+    place-items: start;
+  }
+
   .line1 {
     .css-19tsvvk {
       @include flex_between();
@@ -22,12 +33,26 @@
         @include flex_center();
       }
     }
+    @include mobile {
+      // order: 3;
+      display: none;
+    }
+    @include desktop {
+      order: 3;
+      display: flex;
+    }
   }
   .line2 {
     @include flex_between();
     .boxa {
       @include flex_between();
       justify-content: flex-start;
+      @include mobile {
+        display: none;
+      }
+      @include desktop {
+        display: flex;
+      }
       gap: 2.56rem;
       .circle-box {
         width: 12.5rem;
@@ -233,12 +258,26 @@
         }
       }
     }
+    @include mobile {
+      order: 2;
+    }
+    @include desktop {
+      order: 2;
+    }
   }
-  .line3 {
+  #Lline3 {
     margin-top: 5rem;
     // color: #8080801a;
     .line1 {
       @include flex_between();
+      flex-direction: column;
+      // border: 1px solid red;
+      @include mobile {
+        display: none;
+      }
+      @include desktop {
+        display: flex;
+      }
       .cell1 {
         h4 {
           @include flex_between();
@@ -255,7 +294,9 @@
         }
       }
       .cell2 {
+        // border: 1px solid blue;
         @include flex_between();
+        // flex-direction: column;
         justify-content: flex-start;
         gap: 1.88rem;
         .line {
@@ -269,6 +310,7 @@
           justify-content: flex-start;
           width: 12rem;
           height: 1.875rem;
+          // flex-direction: column;
         }
         a {
           text-decoration: none;
@@ -283,6 +325,12 @@
           text-transform: uppercase;
         }
       }
+    }
+    @include mobile {
+      order: 1;
+    }
+    @include desktop {
+      order: 3;
     }
   }
 }

@@ -1,8 +1,8 @@
-import React from 'react';
 import './applicationstatus.scss';
 import { useRecoilState } from "recoil";
 import { applyLevel } from "../../../atoms/apply";
 import applicationSuccess from '../../../../assets/applicationSuccess.svg';
+import React from 'react';
 
 const ApplicationStatus = () => {
   const [applyStage, setApplyStage] = useRecoilState(applyLevel);
@@ -28,7 +28,7 @@ const ApplicationStatus = () => {
       </div>
 
       <div className="pri_line8">
-        <button onClick={(e) => handleNext()}>Track</button>
+        <button onClick={() => handleNext()}>Track</button>
       </div>
       <div className="pri_line9">
         <div className={applyStage > 1 ? "level" : "not-level"}></div>
@@ -40,4 +40,4 @@ const ApplicationStatus = () => {
   )
 }
 
-export default ApplicationStatus
+export default React.memo(ApplicationStatus)

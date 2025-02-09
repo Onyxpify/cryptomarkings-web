@@ -7,14 +7,24 @@
   margin-top: 2.75rem;
   @include flex_center();
   align-items: flex-start;
-
+  @include mobile {
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
   gap: 1.6rem;
 
   .boxa {
-    width: 38rem;
-    height: 24rem;
+    min-height: 24rem;
     background-color: $background;
     padding: 2.25rem;
+    @include mobile {
+      width: 100%;
+    }
+    @include desktop {
+      width: 38rem;
+    }
     .cell1 {
       @include flex_between();
       h3 {
@@ -35,6 +45,7 @@
       gap: 0.5rem;
       .list {
         @include flex_between();
+        gap: 2rem;
 
         border-bottom: 1.5px solid #ece9f1;
         &:last-child {
@@ -42,8 +53,15 @@
         }
         .unit1 {
           @include flex_between();
-          gap: 2rem;
+
+          @include mobile {
+            gap: 0.5rem;
+          }
+          @include desktop {
+            gap: 2rem;
+          }
           .texts {
+            // border: 1px solid red;
             h5 {
               color: $mainText;
 
@@ -63,8 +81,16 @@
               font-style: normal;
               font-weight: 400;
               line-height: normal;
-              @include flex_between();
+              // @include flex_between();
               justify-content: flex-start();
+              .rate {
+                @include mobile {
+                  display: none;
+                }
+                @include desktop {
+                  display: flex;
+                }
+              }
             }
           }
         }
@@ -87,7 +113,7 @@
   }
   .boxb {
     width: 25.1rem;
-    height: 15rem;
+    min-height: 15rem;
     background-color: $background;
     padding: 2.25rem;
     .cell1 {

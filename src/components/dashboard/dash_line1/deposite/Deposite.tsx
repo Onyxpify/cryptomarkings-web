@@ -1,10 +1,9 @@
-import React from 'react'
 import DepositeLine1 from './depositeLine1/DepositeLine1'
 import Dashboard from '../../Dashboard'
 import { svgs } from '../../../svgs'
-import { Link } from 'react-router-dom';
 import './deposite.scss'
 import Copy from '../../../rewards/copy/Copy';
+import React from 'react';
 
 const Deposite = () => {
   return (
@@ -47,4 +46,4 @@ const Deposite = () => {
   )
 }
 
-export default Deposite
+export default React.memo(Deposite)

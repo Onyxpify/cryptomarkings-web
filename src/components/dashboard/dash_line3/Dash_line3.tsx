@@ -2,43 +2,41 @@ import React, { useState } from "react";
 import "./dash_line3.scss";
 import { overviewCoins } from "./dash3Data";
 import { useRef } from "react";
-import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { svgs } from "../../svgs";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import MonthPicker from "../../monthPicker/MonthPicker";
-import LineChart2 from "../../chart/LineChart2";
-import { LineData } from "../../chart/LineChartData";
 import Line_chart from "../../chart/Line_Chart";
+import Box from "@mui/material/Box";
 
 
 const Dash_line3 = () => {
-  let [list, setList] = useState(overviewCoins);
+  let [list, ] = useState(overviewCoins);
   let labelIcon = useRef(list[0].coin);
   let selectData = useRef(list[0]);
   const [age, setAge] = React.useState(list[0].text);
-  let [data, setData] = useState({
-    labels: LineData.map((each) => each.month),
-    datasets: [
-      {
-        label: "Pending",
-        data: LineData.map((each) => each.pending),
-        backgroundColor: ["#FFCC00"],
-      },
-      {
-        label: "Rejected",
-        data: LineData.map((each) => each.rejected),
-        backgroundColor: ["#EF4444"],
-      },
-      {
-        label: "Approved",
-        data: LineData.map((each) => each.approved),
-        backgroundColor: ["#3CD856"],
-      },
-    ],
-  });
+  // let [data, setData] = useState({
+  //   labels: LineData.map((each) => each.month),
+  //   datasets: [
+  //     {
+  //       label: "Pending",
+  //       data: LineData.map((each) => each.pending),
+  //       backgroundColor: ["#FFCC00"],
+  //     },
+  //     {
+  //       label: "Rejected",
+  //       data: LineData.map((each) => each.rejected),
+  //       backgroundColor: ["#EF4444"],
+  //     },
+  //     {
+  //       label: "Approved",
+  //       data: LineData.map((each) => each.approved),
+  //       backgroundColor: ["#3CD856"],
+  //     },
+  //   ],
+  // });
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
@@ -68,7 +66,7 @@ const Dash_line3 = () => {
             {list.map((each: any) => {
               return (
                 <MenuItem
-                  onClick={(e) => handleClick(each)}
+                  onClick={() => handleClick(each)}
                   key={each.id}
                   value={each.text}
                 >
@@ -146,7 +144,7 @@ const Dash_line3 = () => {
           </p>
         </div>
       </div>
-      <div className="line3">
+      <div id="Lline3">
         <div className="line1">
           <div className="cell1">
             <h4>Portfolio Value <span> {svgs.alert_circle} </span> </h4>
@@ -167,4 +165,4 @@ const Dash_line3 = () => {
   );
 };
 
-export default Dash_line3;
+export default React.memo(Dash_line3);

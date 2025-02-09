@@ -1,7 +1,7 @@
-import React from 'react'
-
+import React from "react";
+const nextUrl = import.meta.env.MODE === "development"? import.meta.env.VITE_NEXT_URL_DEV:import.meta.env.VITE_NEXT_URL;
 const Home = () => {
-  window.location.href = "http://localhost:4000/";
+  window.location.href = nextUrl+"/";
   return (
     <div>
       
@@ -9,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default React.memo(Home)

@@ -4,12 +4,20 @@
 @import "../../scss/mixims";
 #copy {
   @include flex_between();
-  justify-content: flex-start;
   gap: 1.06rem;
-  height: 3.375rem;
+  min-height: 3.375rem;
   background-color: $background;
-  padding-right: 1rem;
   border-radius: 1rem;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0rem;
+  }
+  @include desktop {
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-right: 1rem;
+  }
   .link {
     border-radius: 1rem;
     background: $secondary;
@@ -22,6 +30,18 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    // border: 1px solid red;
+    width: 100%;
+    @include mobile {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    @include desktop {
+      text-align: center;
+      margin-bottom: 0rem;
+      margin-top: 0rem;
+    }
   }
   button {
     @include flex_center();

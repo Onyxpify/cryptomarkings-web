@@ -1,10 +1,6 @@
-import React, { ReactComponentElement } from "react";
 import { Link } from "react-router-dom";
 import "./icontextbtn.scss";
-import { useRecoilState } from "recoil";
-import { hideSide } from "../atoms/rewards";
-import Deposite from "../dashboard/dash_line1/deposite/Deposite";
-import { sideComps } from "../atoms/sidebar";
+import React from "react";
 
 interface p {
   bg?: string;
@@ -15,11 +11,11 @@ interface p {
     action?:any
 }
 const IconTextBtn = ({ bg, icon, text, color, href,action }: p) => {
-    let [hide, setHide] = useRecoilState(hideSide);
-    let [comp,setComp] = useRecoilState(sideComps);
+    // let [hide, setHide] = useRecoilState(hideSide);
+    // let [comp,setComp] = useRecoilState(sideComps);
   return (
     <Link
-          onClick={(e) => { action && action() }}
+          onClick={() => { action && action() }}
       style={{ backgroundColor: bg, color: color }}
       to={href}
       id="IconTextBtn"
@@ -30,4 +26,4 @@ const IconTextBtn = ({ bg, icon, text, color, href,action }: p) => {
   );
 };
 
-export default IconTextBtn;
+export default React.memo(IconTextBtn);

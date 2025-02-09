@@ -1,6 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import './header.scss';
+import React from 'react';
 
 const Header = (props:any) => {
   return (
@@ -21,4 +21,4 @@ const Header = (props:any) => {
   )
 }
 
-export default Header
+export default React.memo(Header)

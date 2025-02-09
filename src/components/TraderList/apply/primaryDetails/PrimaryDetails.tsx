@@ -11,9 +11,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { styled } from "@mui/material/styles";
-import Switch, { SwitchProps } from "@mui/material/Switch";
-import { red } from "@mui/material/colors";
+import Switch from "@mui/material/Switch";
 import { useRecoilState } from "recoil";
 import { applyLevel } from "../../../atoms/apply";
 
@@ -22,12 +20,12 @@ const PrimaryDetails = () => {
   const [profit, setProfit] = React.useState("");
   const [strategy, setStrategy] = React.useState("");
   const [copier, setCopier] = React.useState("");
-  const [facebook, setFacebook] = React.useState({state: false, url: ''});
-  const [instagram, setInstagram] = React.useState({state: false, url: ''});
-  const [telegram, setTelegram] = React.useState({state: false, url: ''});
-  const [discord, setDiscord] = React.useState({state: false, url: ''});
-  const [youtube, setYoutube] = React.useState({ state: false, url: '' });
-  const [myRatingScale,setMyRatingScale] = useState(0)
+  const [facebook, setFacebook] = React.useState({ state: false, url: "" });
+  const [instagram, setInstagram] = React.useState({ state: false, url: "" });
+  const [telegram, setTelegram] = React.useState({ state: false, url: "" });
+  const [discord, setDiscord] = React.useState({ state: false, url: "" });
+  const [youtube, setYoutube] = React.useState({ state: false, url: "" });
+  const [myRatingScale, setMyRatingScale] = useState(0);
   const [applyStage, setApplyStage] = useRecoilState(applyLevel);
 
   const AccordionStyle = {
@@ -39,7 +37,7 @@ const PrimaryDetails = () => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    (panel: string) => ({},isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
 
@@ -66,7 +64,7 @@ const PrimaryDetails = () => {
       telegram,
       discord,
       youtube,
-      myRatingScale
+      myRatingScale,
     };
     console.log(upd);
     setApplyStage(applyStage + 1);
@@ -150,7 +148,9 @@ const PrimaryDetails = () => {
           sx={{ color: "#003D2B" }}
           max={10}
           min={0}
-          onChange={(e:any)=> {setMyRatingScale(e.target.value)}}
+          onChange={(e: any) => {
+            setMyRatingScale(e.target.value);
+          }}
           valueLabelDisplay="on"
         />
       </div>
@@ -236,7 +236,8 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${facebook ? "panel1" : ""}`}
-            onChange={handleChange("panel1")}
+            onChange={()=>handleChange("panel1")}
+            className='social-accordion'
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -251,7 +252,7 @@ const PrimaryDetails = () => {
                     <Switch
                       checked={facebook.state}
                       onChange={(e) => {
-                        setFacebook({state:e.target.checked,url:''});
+                        setFacebook({ state: e.target.checked, url: "" });
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -265,7 +266,15 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="facebook">Username/Link</label>
-                  <input value={facebook.url} onChange={(e)=> setFacebook({...facebook,url: e.target.value})} type="text" name="facebook" id="facebook" />
+                  <input
+                    value={facebook.url}
+                    onChange={(e) =>
+                      setFacebook({ ...facebook, url: e.target.value })
+                    }
+                    type="text"
+                    name="facebook"
+                    id="facebook"
+                  />
                 </span>
               </Typography>
             </AccordionDetails>
@@ -273,7 +282,8 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${instagram.state ? "panel2" : ""}`}
-            onChange={handleChange("panel2")}
+            onChange={()=>handleChange("panel2")}
+            className='social-accordion'
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -288,7 +298,7 @@ const PrimaryDetails = () => {
                     <Switch
                       checked={instagram.state}
                       onChange={(e) => {
-                        setInstagram({state: e.target.checked, url: ''});
+                        setInstagram({ state: e.target.checked, url: "" });
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -302,15 +312,23 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="instagram">Username/Link</label>
-                  <input onChange={(e)=> setInstagram({...instagram,url: e.target.value})} type="text" name="instagram" id="instagram" />
+                  <input
+                    onChange={(e) =>
+                      setInstagram({ ...instagram, url: e.target.value })
+                    }
+                    type="text"
+                    name="instagram"
+                    id="instagram"
+                  />
                 </span>
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
             sx={AccordionStyle}
-            expanded={expanded === `${telegram .state? "panel3" : ""}`}
-            onChange={handleChange("panel3")}
+            expanded={expanded === `${telegram.state ? "panel3" : ""}`}
+            onChange={()=>handleChange("panel3")}
+            className='social-accordion'
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -325,7 +343,7 @@ const PrimaryDetails = () => {
                     <Switch
                       checked={telegram.state}
                       onChange={(e) => {
-                        setTelegram({state:e.target.checked, url: ''});
+                        setTelegram({ state: e.target.checked, url: "" });
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -339,7 +357,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="telegram">Username/Link</label>
-                  <input onChange={(e)=> setTelegram({...telegram,url: e.target.value})} type="text" name="telegram" id="telegram" />
+                  <input
+                    onChange={(e) =>
+                      setTelegram({ ...telegram, url: e.target.value })
+                    }
+                    type="text"
+                    name="telegram"
+                    id="telegram"
+                  />
                 </span>
               </Typography>
             </AccordionDetails>
@@ -347,7 +372,8 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${discord.state ? "panel4" : ""}`}
-            onChange={handleChange("panel4")}
+            onChange={()=>handleChange("panel4")}
+            className='social-accordion'
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -362,7 +388,7 @@ const PrimaryDetails = () => {
                     <Switch
                       checked={discord.state}
                       onChange={(e) => {
-                        setDiscord({state:e.target.checked,url: ''});
+                        setDiscord({ state: e.target.checked, url: "" });
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -376,7 +402,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="discord">Username/Link</label>
-                  <input onChange={(e)=> setDiscord({...discord,url: e.target.value})} type="text" name="discord" id="discord" />
+                  <input
+                    onChange={(e) =>
+                      setDiscord({ ...discord, url: e.target.value })
+                    }
+                    type="text"
+                    name="discord"
+                    id="discord"
+                  />
                 </span>
               </Typography>
             </AccordionDetails>
@@ -384,7 +417,8 @@ const PrimaryDetails = () => {
           <Accordion
             sx={AccordionStyle}
             expanded={expanded === `${youtube.state ? "panel5" : ""}`}
-            onChange={handleChange("panel5")}
+            onChange={()=>handleChange("panel5")}
+            className='social-accordion'
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -399,7 +433,7 @@ const PrimaryDetails = () => {
                     <Switch
                       checked={youtube.state}
                       onChange={(e) => {
-                        setYoutube({state:e.target.checked,url: ''});
+                        setYoutube({ state: e.target.checked, url: "" });
                       }}
                       inputProps={{ "aria-label": "controlled" }}
                     />
@@ -413,7 +447,14 @@ const PrimaryDetails = () => {
               <Typography>
                 <span className="fieldset">
                   <label htmlFor="youtube">Username/Link </label>
-                  <input onChange={(e)=> setYoutube({...youtube,url: e.target.value})} type="text" name="youtube" id="youtube" />
+                  <input
+                    onChange={(e) =>
+                      setYoutube({ ...youtube, url: e.target.value })
+                    }
+                    type="text"
+                    name="youtube"
+                    id="youtube"
+                  />
                 </span>
               </Typography>
             </AccordionDetails>
@@ -545,7 +586,7 @@ const PrimaryDetails = () => {
         </FormControl>
       </div>
       <div className="pri_line8">
-        <button onClick={(e) => handleNext()}>Next</button>
+        <button onClick={() => handleNext()}>Next</button>
       </div>
       <div className="pri_line9">
         <div className={applyStage === 1 ? "level" : "not-level"}></div>
@@ -557,4 +598,4 @@ const PrimaryDetails = () => {
   );
 };
 
-export default PrimaryDetails;
+export default React.memo(PrimaryDetails);

@@ -7,13 +7,27 @@
   .His_inline {
     @include flex_center();
     // border: 1px solid red;
-    padding-right: 6.22rem;
+    @include mobile {
+      padding-right: 0rem;
+      width: 100%;
+    }
+    @include desktop {
+      padding-right: 6.22rem;
+      width: unset;
+    }
     .historyLine1 {
-      @include flex_center();
       background-color: $background;
-      width: fit-content;
       margin: auto;
       border-radius: 2rem;
+      // border: 1px solid red;
+      @include mobile {
+        @include flex_center();
+        width: fit-content;
+      }
+      @include desktop {
+        @include flex_center();
+        width: fit-content;
+      }
       .tab {
         @include flex_center();
         padding: 0.5rem 1rem;
@@ -22,12 +36,18 @@
 
         /* Desktop/Heading 5 */
         font-family: Lato;
-        font-size: 1.125rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
         color: $bodyText;
         cursor: pointer;
+        text-wrap: nowrap;
+        @include mobile {
+          font-size: 0.8rem;
+        }
+        @include desktop {
+          font-size: 1.125rem;
+        }
       }
       div.active {
         background: $secondary;
@@ -35,10 +55,21 @@
       }
     }
     #LearnMore {
+      @include mobile {
+        display: none;
+      }
+      @include desktop {
+        display: flex;
+      }
     }
   }
   .comps {
     margin-top: 11.31rem;
-    padding: 0rem 9.5rem;
+    @include mobile {
+      padding: 0rem;
+    }
+    @include desktop {
+      padding: 0rem 9.5rem;
+    }
   }
 }

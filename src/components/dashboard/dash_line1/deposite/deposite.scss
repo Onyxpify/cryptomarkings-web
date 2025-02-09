@@ -5,13 +5,18 @@
 
 #Deposite {
   .withdrawal_line1 {
-    width: 38.0625rem;
     min-height: 57.625rem;
     border-radius: 1rem;
     background: $background;
     margin: auto;
     margin-top: 5.75rem;
     padding-bottom: 4.62rem;
+    @include mobile {
+      width: 100%;
+    }
+    @include desktop {
+      width: 38.0625rem;
+    }
     .coin {
       width: 6.25rem;
       height: 6.25rem;
@@ -64,6 +69,10 @@
           font-size: 1.5rem;
           padding: 0.5rem 1.38rem;
         }
+      }
+      .scan {
+        // border: 1px solid red;
+        @include flex_center();
       }
     }
   }

@@ -16,4 +16,4 @@ const ScrollX = ({children,className,bg,color}:props) => {
   )
 }
 
-export default ScrollX
+export default React.memo(ScrollX)

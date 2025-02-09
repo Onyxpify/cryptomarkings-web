@@ -1,6 +1,5 @@
-import { BiSearch } from 'react-icons/bi'
 import '../manual/manual.scss';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { manualTrades } from '../manual/manualTrades';
 import Search from '../../search/Search';
 const Centurion = () => {
@@ -84,4 +83,4 @@ const Centurion = () => {
   )
 }
 
-export default Centurion
+export default React.memo(Centurion)

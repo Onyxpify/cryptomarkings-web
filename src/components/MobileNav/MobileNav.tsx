@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  React, { useState } from 'react'
 import { MobileNavData } from './mobileNavData';
 import './mobilenav.scss';
 import { Link } from 'react-router-dom';
@@ -32,4 +32,4 @@ const MobileNav = () => {
   )
 }
 
-export default MobileNav
+export default React.memo(MobileNav)

@@ -1,5 +1,5 @@
 
-import React, { useState,useRef } from "react";
+import  { useState,useRef } from "react";
 import "./explore.scss";
 import {  exploreTab } from "./exploreData";
 
@@ -28,7 +28,7 @@ const Explore = () => {
         {tab.map((each: any) => {
           return (
             <div
-              onClick={(e) => handleActive(each.id)}
+              onClick={() => handleActive(each.id)}
               key={each.id}
               className={`tab ${each.class}`}
             >

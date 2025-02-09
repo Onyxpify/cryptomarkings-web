@@ -1,6 +1,6 @@
 import { svgs } from "../../svgs";
 
-let id = 0;
+var id = 0;
 export const overviewCoins = [
     {
         id: id++,

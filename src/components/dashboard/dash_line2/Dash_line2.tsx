@@ -1,11 +1,11 @@
-import React from 'react';
 import './dash_line2.scss';
 import MyButton from '../../button/MyButton';
 import Logo from '../../logo/Logo';
+import React from 'react';
 
 const Dash_line2 = () => {
   return (
-      <div id='Dash_line2'>
+      <div className='Dash_line2'>
           <div className="img"></div>
           <div className="cell2">
               <h3>Crypto Gems Signals</h3>
@@ -21,4 +21,4 @@ const Dash_line2 = () => {
   )
 }
 
-export default Dash_line2
+export default React.memo(Dash_line2)

@@ -9,13 +9,27 @@
     align-items: flex-start;
     gap: 1.75rem;
     margin-top: 5.13rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    @include mobile {
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-direction: row;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
     .cell2 {
-      width: 39.1875rem;
       height: 19.1rem;
-      padding: 2.25rem;
       background-color: $background;
+      @include mobile {
+        width: 100%;
+        padding: 1.25rem;
+      }
+      @include desktop {
+        padding: 2.25rem;
+        width: 39.1875rem;
+      }
     }
   }
   .bin2 {

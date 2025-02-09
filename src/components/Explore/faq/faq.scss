@@ -23,17 +23,20 @@
 
     /* Desktop/Heading 3 */
     font-family: Lato;
-    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     @include mobile {
-      text-align: left;
+      text-align: center;
+      text-wrap: nowrap;
+      font-size: 1.5rem;
     }
     @include tablet {
+      font-size: 2rem;
       text-align: left;
     }
     @include desktop {
+      font-size: 2rem;
       text-align: center;
     }
   }

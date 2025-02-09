@@ -1,7 +1,8 @@
-import React from 'react';
 import './faq.scss';
-import MyAccordion from './accordion/Accordion';
 import ScrollX from '../../scrollX/ScrollX';
+import MyAccordion from '../../accordion/Accordion';
+import { faqs } from './faqData';
+import React from 'react';
 
 const Faq = () => {
   return (
@@ -9,7 +10,7 @@ const Faq = () => {
           <h3>Frequently Asked Questions?</h3>
           <ScrollX className="line1">
               <div className="qa">
-              <MyAccordion />
+              <MyAccordion data={faqs} render='faqs' />
           </div>
           <div className="icon">
               
@@ -19,4 +20,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default React.memo(Faq)

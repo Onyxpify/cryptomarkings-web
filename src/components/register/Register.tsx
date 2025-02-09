@@ -1,10 +1,10 @@
-import React from 'react'
-
+import React from "react";
+const nextUrl = import.meta.env.MODE === "development"? import.meta.env.VITE_NEXT_URL_DEV:import.meta.env.VITE_NEXT_URL;
 const Register = () => {
-   window.location.href = "http://localhost:4000/register";
+   window.location.href = nextUrl+"/register";
   return (
     <div></div>
   )
 }
 
-export default Register
+export default React.memo(Register)

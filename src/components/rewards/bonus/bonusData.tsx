@@ -3,7 +3,7 @@ import Binary from "./binary/Binary";
 import Direct from "./direct/Direct";
 import Leadership from "./leadership/Leadership";
 
-let id = 0;
+var id = 0;
 export const bonusCard = [
     {
         id: id++,

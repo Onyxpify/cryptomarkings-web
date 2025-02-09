@@ -1,12 +1,12 @@
-import React from 'react'
-import Direct_Line1 from '../direct/direct_line1/Direct_Line1'
 import { svgs } from '../../../svgs'
-import Direct_Line2 from '../direct/direct_line2/Direct_Line2';
 import './leadership.scss';
-import Binary_Line1 from '../binary/binary_line1/Binary_Line1';
 import { currentRank, leadershipRank, leadershipTable, topReferrals } from './leadershipData';
+import Direct_Line2 from '../direct/direct_line2/Direct_Line2';
+import Binary_Line1 from '../binary/binary_line1/Binary_Line1';
 import MyLinearProgressBar from './progressBar/MyLinearProgressBar';
+import Direct_Line1 from '../direct/direct_line1/Direct_Line1'
 import Direct_Line3 from '../direct/direct_line3/Direct_Line3';
+import React from 'react';
 
 const Leadership = () => {
   return (
@@ -92,4 +92,4 @@ const Leadership = () => {
   )
 }
 
-export default Leadership
+export default React.memo(Leadership)

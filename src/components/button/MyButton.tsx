@@ -6,18 +6,18 @@ interface props {
     bg?: string,
     color?: string,
     text?: any,
-    action?: Function,
+    action?: any,
     prop?:any,
 }
 
 const MyButton = ({styles,text,action,color,bg,prop}:props) => {
     return (
       <div className={`MyButton ${styles}`}>
-          <button  style={{color:color,backgroundColor: bg}} onClick={(e)=> action? action(prop): ()=> {}}  > {text || 'my button'} </button>
+          <button  style={{color:color,backgroundColor: bg}} onClick={()=> action? action(prop): ()=> {}}  > {text || 'my button'} </button>
             
       </div>
   )
 }
 
 
-export default MyButton
+export default React.memo(MyButton)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { direct2Card } from './direct2Data';
 import './directline2.scss';
 
@@ -16,8 +16,9 @@ const Direct_Line2 = () => {
                   )
               })
           }
+          
     </div>
   )
 }
 
-export default Direct_Line2
+export default React.memo(Direct_Line2)

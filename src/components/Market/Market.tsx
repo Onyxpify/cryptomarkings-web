@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom'
-import { FaLessThan } from 'react-icons/fa';
 import './market.scss';
-import { useRef, useState } from 'react';
+import React, {useState } from 'react';
 import { marketTabs } from './marketTab';
 import Header from '../header/Header';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -46,4 +44,4 @@ const Market = () => {
   )
 }
 
-export default Market
+export default React.memo(Market)

@@ -22,4 +22,4 @@ const SetTrades = () => {
   )
 }
 
-export default SetTrades
+export default React.memo(SetTrades)

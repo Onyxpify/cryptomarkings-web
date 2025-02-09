@@ -1,4 +1,4 @@
-let id = 0,
+var id = 0,
   pending = 0,
   rejected = 0,
   approved = 0;

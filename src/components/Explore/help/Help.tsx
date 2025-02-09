@@ -1,6 +1,6 @@
-import React from 'react';
 import './help.scss';
 import supportImg from '../../../assets/supportImg.svg'
+import React from 'react';
 const Help = () => {
   return (
     <div id='Help'>
@@ -21,4 +21,4 @@ const Help = () => {
   )
 }
 
-export default Help
+export default React.memo(Help)

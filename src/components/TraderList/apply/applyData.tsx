@@ -3,7 +3,7 @@ import PrimaryDetails from "./primaryDetails/PrimaryDetails";
 import TaskVerification from "./taskVerification/TaskVerification";
 import TrackApplication from "./trackApplication/TrackApplication";
 
-let id = 0;
+var id = 0;
 export const applyTab = [
     {
         id: id++,

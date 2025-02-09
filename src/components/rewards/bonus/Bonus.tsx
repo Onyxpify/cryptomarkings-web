@@ -1,14 +1,13 @@
-import React from 'react';
 import './bonus.scss';
 import { bonusCard } from './bonusData';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import { sideComps } from '../../atoms/sidebar';
 import { hideSide } from '../../atoms/rewards';
+import React from 'react';
 
 const Bonus = () => {
-    let [comp, setComp] = useRecoilState(sideComps);
-    let [hide, setHide] = useRecoilState(hideSide);
+    // let [comp, setComp] = useRecoilState(sideComps);
+    let [, setHide] = useRecoilState(hideSide);
   return (
       <div id='Bonus'>
           {
@@ -23,7 +22,7 @@ const Bonus = () => {
                               
                           </div>
                           <div className="btns">
-                              <Link onClick={(e)=> {setHide({class: 'no-left',comp: each.component})}} className='subscribe' to='#'>Subscribe</Link>
+                              <Link onClick={()=> {setHide({class: 'no-left',comp: each.component})}} className='subscribe' to='#'>Subscribe</Link>
                               <Link className='share' to='#'>Share</Link>
                           </div>
                       </div>
@@ -34,4 +33,4 @@ const Bonus = () => {
   )
 }
 
-export default Bonus
+export default React.memo(Bonus)

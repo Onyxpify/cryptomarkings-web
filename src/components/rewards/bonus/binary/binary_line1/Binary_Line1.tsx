@@ -1,7 +1,7 @@
-import React from 'react';
 import './binaryline1.scss';
 import LearnMore from '../../../../learnMore/LearnMore';
 import { svgs } from '../../../../svgs';
+import React from 'react';
 interface p{
     text: string,
 }
@@ -16,4 +16,4 @@ const Binary_Line1 = ({text}:p) => {
   )
 }
 
-export default Binary_Line1
+export default React.memo(Binary_Line1)

@@ -151,7 +151,7 @@
     }
     p {
       span {
-        padding-left: 0.5rem;
+        // padding-left: 0.5rem;
       }
     }
   }
@@ -340,5 +340,15 @@
     &::before {
       border-bottom: 1px solid white !important;
     }
+  }
+}
+
+.social-accordion {
+  // border: 1px solid red;
+  @include mobile {
+    width: 90%;
+  }
+  @include desktop {
+    width: 100%;
   }
 }

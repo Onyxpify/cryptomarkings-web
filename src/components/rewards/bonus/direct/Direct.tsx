@@ -1,8 +1,8 @@
-import React from 'react'
-import Direct_Line1 from './direct_line1/Direct_Line1'
+import React from 'react';
 import { svgs } from '../../../svgs'
-import Direct_Line2 from './direct_line2/Direct_Line2';
 import './direct.scss';
+import Direct_Line1 from './direct_line1/Direct_Line1'
+import Direct_Line2 from './direct_line2/Direct_Line2';
 import Direct_Line3 from './direct_line3/Direct_Line3';
 import { direct3Table } from './direct_line3/direct3Data';
 
@@ -23,4 +23,4 @@ const Direct = () => {
   )
 }
 
-export default Direct
+export default React.memo(Direct)

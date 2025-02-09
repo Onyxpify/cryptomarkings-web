@@ -1,11 +1,9 @@
-import React from "react";
 import "./binarytree.scss";
-import { svgs } from "../../../../svgs";
-import LearnMore from "../../../../learnMore/LearnMore";
 import user1 from "../../../../../assets/user1.svg";
 import user2 from "../../../../../assets/user2.svg";
 import user3 from "../../../../../assets/user3.svg";
 import Binary_Line1 from "../binary_line1/Binary_Line1";
+import React from "react";
 const BinaryTree = () => {
   return (
     <div id="BinaryTree">
@@ -124,4 +122,4 @@ const BinaryTree = () => {
   );
 };
 
-export default BinaryTree;
+export default React.memo(BinaryTree);

@@ -18,6 +18,15 @@
       font-weight: 700;
       line-height: normal;
     }
+    // border: 1px solid red;
     @include flex_between();
+    flex-wrap: wrap;
+    gap: 50px;
+    @include mobile {
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-direction: row;
+    }
   }
 }
