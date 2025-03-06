@@ -7,7 +7,7 @@ const JoinUs = () => {
   return (
       <div id='JoinUs' >
           <div className="line1">
-          <h6>CRYPTOMARKINGS OFFERS</h6>
+          <h6>Blackinum OFFERS</h6>
                   <h3>Join our affiliate program and start earning compensation with our various plans:</h3>
               
           </div>
@@ -15,7 +15,7 @@ const JoinUs = () => {
               <div className="text">
                   <div className="cell1">
                       <h3>Direct Referral Reward</h3>
-                      <p>Earn from 15% to 50% of the subscription fee from your direct referrals who sign up with Cryptomarkings.</p>
+                      <p>Earn from 15% to 50% of the subscription fee from your direct referrals who sign up with Blackinum.</p>
                   </div>
                   <div className="cell1">
                       <h3>Binary Plan</h3>

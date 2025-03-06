@@ -11,12 +11,12 @@ const AboutUs = () => {
               <div className="watchIcon"></div>
           </div>
           <div className="line3">
-              <h4>At CryptoMarkings, we&apos;ve redefined the way you trade cryptocurrencies.
+              <h4>At Blackinum, we&apos;ve redefined the way you trade cryptocurrencies.
                   Derived from &quot;Crypto Market Kings,&quot; we combine cutting-edge artificial intelligence algorithms with a range of innovative trading tools.
               </h4>
              <LearnMore />
               <p>
-                  At CryptoMarkings, we unveil the power of exclusive, closely guarded trading strategies that have been honed over several years of meticulous refinement. These unique strategies, crafted with precision and tested rigorously for over six years, have finally been made accessible to the public. This groundbreaking revelation is your gateway to unparalleled success in the world of crypto trading.
+                  At Blackinum, we unveil the power of exclusive, closely guarded trading strategies that have been honed over several years of meticulous refinement. These unique strategies, crafted with precision and tested rigorously for over six years, have finally been made accessible to the public. This groundbreaking revelation is your gateway to unparalleled success in the world of crypto trading.
               </p>
               <p>
                   We take immense pride in introducing a crypto trading experience that is truly exceptional, built upon a distinct, proven trading strategy that has evolved over six years. This strategy seamlessly harmonizes with artificial intelligence, harnessing the capabilities of automation.
@@ -25,7 +25,7 @@ const AboutUs = () => {
               </p>
               <p>
                   
-                  With CryptoMarkings, you&apos;re not just trading; you&apos;re trading with a strategic edge that&apos;s been kept under wraps until now. Join us, and unlock the unparalleled potential of our exclusive trading strategies today. It&apos;s time to redefine your crypto trading experience with the best-kept secret in the market.
+                  With Blackinum, you&apos;re not just trading; you&apos;re trading with a strategic edge that&apos;s been kept under wraps until now. Join us, and unlock the unparalleled potential of our exclusive trading strategies today. It&apos;s time to redefine your crypto trading experience with the best-kept secret in the market.
                   
               </p>
          </div>

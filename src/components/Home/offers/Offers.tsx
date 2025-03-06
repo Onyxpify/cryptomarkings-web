@@ -7,8 +7,8 @@ const Offers = () => {
   return (
       <div id='Offers'>
           <div className="line1">
-              <h6>CRYPTOMARKINGS OFFERS</h6>
-              <p>Explore the Outstanding Features that Make CryptoMarkings your Gateway to Unparalleled Success:</p>
+              <h6>Blackinum OFFERS</h6>
+              <p>Explore the Outstanding Features that Make Blackinum your Gateway to Unparalleled Success:</p>
           </div>
           <div className="offers">
               {

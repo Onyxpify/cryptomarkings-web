@@ -9,7 +9,7 @@ const GetStarted = () => {
       <div id='GetStarted'>
           <div className="line1">
               <h6>HOW TO GET STARTED</h6>
-              <h2>Crypto can be challenging, but CryptoMarkings simplifies it.</h2>
+              <h2>Crypto can be challenging, but Blackinum simplifies it.</h2>
           </div>
           <div className="line2">
               <div className="boxa">

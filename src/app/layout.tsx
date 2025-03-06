@@ -5,8 +5,8 @@ import MyLayout from '@/components/MyLayout'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CryptoMarkings',
-  description: `At CryptoMarkings, we've redefined the way you trade cryptocurrencies. Derived from "Crypto Market Kings," we combine cutting-edge artificial intelligence algorithms with a range of innovative trading tools.`,
+  title: 'Blackinum',
+  description: `At Blackinum, we've redefined the way you trade cryptocurrencies. We combine cutting-edge artificial intelligence algorithms with a range of innovative trading tools.`,
 }
 
 export default function RootLayout({

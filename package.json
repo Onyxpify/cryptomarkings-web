@@ -17,6 +17,7 @@
     "country-codes-list": "^1.6.11",
     "dotenv": "^16.4.5",
     "formik": "^2.4.6",
+    "html-react-parser": "^5.2.2",
     "jsonwebtoken": "^8.5.1",
     "next": "14.0.0",
     "react": "^18",

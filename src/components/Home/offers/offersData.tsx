@@ -41,7 +41,7 @@ export const offers = [
   </defs>
 </svg>,
         title: 'TRADING ROBOTS',
-        text: `Our groundbreaking trading robots, powered by cutting-edge Artificial Intelligence, fill a crucial void in the crypto realm. The Knight Robot relies on market indicators for precision, while the Centurion and Emperor Robots employ exclusive, time-tested secret strategies refined over the years. These strategies meticulously analyze the crypto market, ensuring you maximize profits and minimize losses. With CryptoMarkings, you trade with a strategic edge like no other.`
+        text: `Our groundbreaking trading robots, powered by cutting-edge Artificial Intelligence, fill a crucial void in the crypto realm. The Knight Robot relies on market indicators for precision, while the Centurion and Emperor Robots employ exclusive, time-tested secret strategies refined over the years. These strategies meticulously analyze the crypto market, ensuring you maximize profits and minimize losses. With Blackinum, you trade with a strategic edge like no other.`
 
     },
     {
@@ -123,7 +123,7 @@ export const offers = [
   </defs>
 </svg>,
         title: 'MANUAL TRADING TOOLS',
-        text: `The versatility of the CryptoMarkings system empowers professional traders to execute manual trades, allowing other users to replicate their strategies and earn substantial commissions. Our platform amplifies profits when successful manual trading strategies are copied by our vast subscriber base. learn more`
+        text: `The versatility of the Blackinum system empowers professional traders to execute manual trades, allowing other users to replicate their strategies and earn substantial commissions. Our platform amplifies profits when successful manual trading strategies are copied by our vast subscriber base. learn more`
 
     },
     {
@@ -236,7 +236,7 @@ export const offers = [
   </defs>
 </svg>,
         title: 'COPY TRADING',
-        text: `CryptoMarkings caters to traders of all levels, from novice to busy professionals. Our copy trading feature enables substantial financial gains by mirroring the strategies of expert traders on the platform. Beginners can take a step back from their screens as the platform automatically replicates these successful trades in their accounts. learn more`
+        text: `Blackinum caters to traders of all levels, from novice to busy professionals. Our copy trading feature enables substantial financial gains by mirroring the strategies of expert traders on the platform. Beginners can take a step back from their screens as the platform automatically replicates these successful trades in their accounts. learn more`
 
     },
     {
@@ -530,7 +530,7 @@ export const offers = [
     </clipPath>
   </defs>
 </svg>,
-        title: 'CMK TOKEN (CryptoMarkings Token)',
+        title: 'CMK TOKEN (Blackinum Token)',
         text: `In the future, we will launch our native CMK token, unlocking a host of additional features including Staking, DEX (Decentralized Exchange), Farming opportunities, Crypto Project Incubation, Launchpad access, and much more.`
 
     },

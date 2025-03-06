@@ -1,44 +1,48 @@
 "use client";
-import React from 'react';
-import './accordion.scss';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { faqs } from '../faq/faqData';
+import React from "react";
+import "./accordion.scss";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { faqs } from "../faq/faqData";
+import parse from "html-react-parser";
 
 const MyAccordion = () => {
-    const [expanded, setExpanded] = React.useState<string | false>('panel1');
+  const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
   return (
-      <div id='Accordion'>
-          {
-              faqs.map((each: any) => {
-                  return (
-                       <Accordion expanded={expanded === `${each.key}`} onChange={handleChange(each.key)} key={each.id}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls={each.ac}
-          id={each.key}
-        >
-          <Typography className='title'> <span> {each.id+1}. </span> {each.title} </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography className='text'>
-            {each.text}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-                  )
-              })
-          }
+    <div id="Accordion">
+      {faqs.map((each: any,index:number) => {
+        return (
+          <Accordion
+            expanded={expanded === `${each.key}`}
+            onChange={handleChange(each.key)}
+            key={each.id}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls={each.ac}
+              id={each.key}
+            >
+              <Typography className="title">
+                {" "}
+                <span> {index + 1}. </span> {each.title}{" "}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography className="text">{parse(each.text)}</Typography>
+            </AccordionDetails>
+          </Accordion>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default MyAccordion
+export default MyAccordion;

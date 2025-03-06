@@ -38,8 +38,10 @@
   }
   .line1 {
     margin-top: 7.13rem;
+    min-height: 30vh;
     @include mobile {
       @include grid(1);
+      
       gap: 5.79rem;
       .qa {
         order: 2;
@@ -67,7 +69,7 @@
       }
     }
     .qa {
-      //   border: 1px solid red;
+      width: 100%;
       @include mobile {
         // width: 41rem;
         width: 100%;
@@ -75,34 +77,59 @@
       }
       @include tablet {
         width: 100%;
-        min-height: 23.0625rem;
+        min-height: 43.0625rem;
       }
       @include desktop {
         width: 100%;
-        min-height: 27.0625rem;
+        height: 27.0625rem;
+        overflow-y: scroll;
       }
     }
     .icon {
-      //   border: 1px solid red;
+      min-height: 27.0625rem;
+      width: 100%;
+      .img{
+        
+        @include image("/faqIcon.svg");
+        @include mobile {
+          width: 100%;
+          min-height: 23.0625rem;
+          background-position:  right;
+        }
+        @include tablet {
+          width: 100%;
+          min-height: 23.0625rem;
+          margin: auto;
+          background-position: center;
+        }
+        @include desktop {
+          width: 30.2605rem;
+          height: 27.0625rem;
+          background-position:  top;
+         
+        }
+      }
 
-      @include image("/faqIcon.svg");
-
-      @include mobile {
-        width: 100%;
-        min-height: 23.0625rem;
-        background-position: right;
-      }
-      @include tablet {
-        width: 100%;
-        min-height: 23.0625rem;
-        margin: auto;
-        background-position: center;
-      }
-      @include desktop {
-        width: 30.2605rem;
-        height: 27.0625rem;
-        background-position: left;
-      }
     }
   }
+}
+
+.myScrollBar2{
+  &::-webkit-scrollbar {
+    display: inline-block;
+    background-color: white;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    height: 1px;
+    width: 4px;
+    border-radius: 100%;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: 2px; /* IE and Edge */
+  scrollbar-width: 2px; /* Firefox */
 }

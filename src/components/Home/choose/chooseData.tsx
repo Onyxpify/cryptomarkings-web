@@ -7,7 +7,7 @@ export const reasons = [
 <path d="M15 9L15.94 6.93L18 6L15.94 5.07L15 3L14.08 5.07L12 6L14.08 6.93L15 9ZM3.5 11L4 9L6 8.5L4 8L3.5 6L3 8L1 8.5L3 9L3.5 11Z" fill="#003D2B"/>
 </svg>,
         title: 'Expertise',
-        text: `Our strategies aren't just unique; they're unrivaled. Behind these exceptional strategies, we have a team of expert traders with a wealth of experience that spans many years. Their unparalleled expertise is what makes CryptoMarkings the best choice for crypto trading enthusiasts.`
+        text: `Our strategies aren't just unique; they're unrivaled. Behind these exceptional strategies, we have a team of expert traders with a wealth of experience that spans many years. Their unparalleled expertise is what makes Blackinum the best choice for crypto trading enthusiasts.`
 
     },
     {
@@ -25,7 +25,7 @@ export const reasons = [
 <path d="M9.663 17H14.336M12 3V4M18.364 5.636L17.657 6.343M21 12H20M4 12H3M6.343 6.343L5.636 5.636M8.464 15.536C7.76487 14.8367 7.2888 13.9458 7.09598 12.9759C6.90316 12.006 7.00225 11.0008 7.38073 10.0872C7.75921 9.17366 8.40007 8.39284 9.22229 7.84349C10.0445 7.29414 11.0111 7.00093 12 7.00093C12.9889 7.00093 13.9555 7.29414 14.7777 7.84349C15.5999 8.39284 16.2408 9.17366 16.6193 10.0872C16.9977 11.0008 17.0968 12.006 16.904 12.9759C16.7112 13.9458 16.2351 14.8367 15.536 15.536L14.988 16.083C14.6747 16.3963 14.4262 16.7683 14.2567 17.1777C14.0872 17.5871 13.9999 18.0259 14 18.469V19C14 19.5304 13.7893 20.0391 13.4142 20.4142C13.0391 20.7893 12.5304 21 12 21C11.4696 21 10.9609 20.7893 10.5858 20.4142C10.2107 20.0391 10 19.5304 10 19V18.469C10 17.574 9.644 16.715 9.012 16.083L8.464 15.536Z" stroke="#003D2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>,
         title: 'Real-Time Strategy',
-        text: `Take control of your trading strategy in real-time. Customize your trading strategies to your liking, and let CryptoMarkings execute your trades, so you can sit back and relax.`
+        text: `Take control of your trading strategy in real-time. Customize your trading strategies to your liking, and let Blackinum execute your trades, so you can sit back and relax.`
 
     },
     {
@@ -54,7 +54,7 @@ export const reasons = [
 <path d="M17.526 5.11606L14.347 0.659058L2.658 9.99706L2.01 9.99006V10.0001H1.5V22.0001H22.5V10.0001H21.538L19.624 4.40106L17.526 5.11606ZM19.425 10.0001H9.397L16.866 7.45406L18.388 6.96706L19.425 10.0001ZM15.55 5.79006L7.84 8.41806L13.946 3.54006L15.55 5.79006ZM3.5 18.1691V13.8291C3.9219 13.6796 4.30511 13.4378 4.6217 13.1214C4.93828 12.805 5.18027 12.4219 5.33 12.0001H18.67C18.8197 12.422 19.0616 12.8053 19.3782 13.1219C19.6948 13.4384 20.078 13.6804 20.5 13.8301V18.1701C20.078 18.3197 19.6948 18.5617 19.3782 18.8783C19.0616 19.1948 18.8197 19.5781 18.67 20.0001H5.332C5.18218 19.5777 4.93996 19.1942 4.62302 18.8774C4.30607 18.5607 3.9224 18.3186 3.5 18.1691Z" fill="#003D2B"/>
 </svg>,
         title: 'Profitability',
-        text: `CryptoMarkings bridges the gap between bull and bear markets, ensuring profitability in all conditions. But that's not all! We offer an attractive compensation plan, allowing users to earn substantial profits by referring others to enjoy the software's myriad benefits.`
+        text: `Blackinum bridges the gap between bull and bear markets, ensuring profitability in all conditions. But that's not all! We offer an attractive compensation plan, allowing users to earn substantial profits by referring others to enjoy the software's myriad benefits.`
 
     },
 ]

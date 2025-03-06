@@ -71,7 +71,7 @@ const Login = () => {
             <div className="line1">
               <p>
                 <span className="icon"></span> Ensure you are on{" "}
-                <span className="bold">www.cryptomarkings.com</span>{" "}
+                <span className="bold">www.Blackinum.com</span>{" "}
               </p>
             </div>
             <div className="line2">

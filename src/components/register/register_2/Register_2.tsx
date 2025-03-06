@@ -137,7 +137,7 @@ const Register_2 = ({ setPage, user }: p) => {
           country: "",
           password: "",
           confirmp: "",
-          referral_code:  userName.current || 'Cryptomarkings', 
+          referral_code:  userName.current || 'Blackinum', 
           terms: "",
           client_id: "VILA_BOT",
           position: "LEFT",
@@ -146,7 +146,7 @@ const Register_2 = ({ setPage, user }: p) => {
           // same shape as initial values
           user.current = { ...user.current, ...values };
           notify('Please wait...');
-          console.log(user.current)
+          // console.log(user.current)
           axios
             .post(
               baseUrl+"/GetVerificationCode",

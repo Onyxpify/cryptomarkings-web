@@ -8,11 +8,14 @@ const Faq = () => {
       <div id='Faq'>
           <h3>Frequently Asked Questions?</h3>
           <ScrollX className="line1">
-              <div className="qa">
+              <div className="qa myScrollBar2">
               <MyAccordion />
           </div>
           <div className="icon">
+          <div className="img">
               
+          </div>
+
           </div>
           </ScrollX>
     </div>

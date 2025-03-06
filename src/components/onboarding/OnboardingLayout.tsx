@@ -16,7 +16,7 @@ const OnboardingLayout = ({children,className}:props) => {
               {children}
           </div>
           <div className="line2">
-              <p>© Copyright {new Date().toDateString().split(' ')[3]}, All Rights Reserved CryptoMarkings</p>
+              <p>© Copyright {new Date().toDateString().split(' ')[3]}, All Rights Reserved Blackinum</p>
           </div>
 
     </div>

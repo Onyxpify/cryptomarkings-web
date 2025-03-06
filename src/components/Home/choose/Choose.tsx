@@ -5,7 +5,7 @@ import { reasons } from './chooseData';
 const Choose = () => {
   return (
     <div id='Choose'>
-          <h3>WHY CHOOSE CRYPTOMARKINGS?</h3>
+          <h3>WHY CHOOSE Blackinum?</h3>
             <div className="reasons">
               {
                   reasons.map((each: any) => {
