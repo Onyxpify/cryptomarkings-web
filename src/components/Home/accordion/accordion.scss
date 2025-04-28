@@ -1,0 +1,52 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#Accordion {
+  .title {
+    color: $mainText;
+
+    /* Desktop/Heading 5 */
+    font-family: "Lato";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .text {
+    color: $bodyText;
+
+    /* Desktop/Body 5 */
+    font-family: "Lato";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    h3{
+      font-size: 16px;
+      text-align: start;
+      margin: 10px 0px;
+    }
+    p{
+      padding-left: 12px;
+      font-size: 16px;
+      
+    }
+    ul{
+      list-style-type:disc;
+      li{
+        margin-left: 25px;
+        margin-bottom: 8px;
+      }
+    }
+    ol{
+      list-style-type:decimal;
+      li{
+        margin-left: 25px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

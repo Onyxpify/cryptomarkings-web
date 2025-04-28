@@ -1,0 +1,34 @@
+@import "../../scss/extends";
+@import "../../scss/media-queries";
+@import "../../scss/mixims";
+@import "../../scss/variables";
+
+#ScrollX {
+  @include mobile {
+    overflow-x: scroll;
+  }
+  @include tablet {
+    overflow-x: scroll;
+  }
+  @include desktop {
+    overflow-x: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    display: inline-block;
+    background-color: transparent;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    height: 10px;
+    width: 4px;
+    border-radius: 100%;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: 2px; /* IE and Edge */
+  scrollbar-width: 2px; /* Firefox */
+}
