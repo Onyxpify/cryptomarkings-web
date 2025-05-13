@@ -8,6 +8,7 @@
     @include flex_between();
     justify-content: start;
     gap: 1rem;
+    flex-wrap: nowrap;
     .get-started {
       gap: 0.625rem;
       display: flex;
@@ -17,7 +18,6 @@
       border-radius: 1rem;
       width: 9.6875rem;
       text-align: center;
-
       /* Desktop/Body 5 */
       font-family: "Lato";
       font-size: 1.125rem;

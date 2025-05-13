@@ -32,12 +32,12 @@
     }
     .logo {
       display: flex;
-      width: 5.1875rem;
-      height: 3.45831rem;
+      width: 10.1875rem;
+      height: 5.45831rem;
       justify-content: center;
       align-items: center;
-      @include image("/png/Logo1.png");
-      background-size: cover;
+      @include image("/png/Logo3.png");
+      background-size: 130%;
     }
     .group {
       // @include grid(6);
@@ -136,12 +136,12 @@
     }
     .logo {
       display: flex;
-      width: 5.1875rem;
-      height: 3.45831rem;
+      width: 10.1875rem;
+      height: 5.45831rem;
       justify-content: center;
       align-items: center;
-      @include image("/png/Logo1.png");
-      background-size: cover;
+      @include image("/png/Logo4.png");
+      background-size: 130%;
     }
     .group {
       @include flex_between();
@@ -222,14 +222,15 @@
       font-weight: 400;
       line-height: normal;
     }
+    // desktop logo
     .logo {
       display: flex;
-      width: 5.1875rem;
-      height: 3.45831rem;
+      width: 10.1875rem;
+      height: 5.45831rem;
       justify-content: center;
       align-items: center;
-      @include image("/png/Logo2.png");
-      background-size: cover;
+      @include image("/png/Logo4.png");
+      background-size: 130%;
     }
     .group {
       // @include grid(6);

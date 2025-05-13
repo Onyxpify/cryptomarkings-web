@@ -56,7 +56,7 @@ export default function MobileDropdown({ isOpen, setIsOpen }: MobileDropdownProp
             closing ? 'animate-jump-out' : 'animate-jump-in'
           }`}
         >
-            <Image src="/png/Logo1.png" width={200} height={200} alt='Blacktinum' className='w-[200px] h-[200px] mx-auto ' loading='lazy' />
+            <Image src="/png/Logo3.png" width={200} height={200} alt='Blacktinum' className='w-[200px] h-[200px] mx-auto ' loading='lazy' />
           <ul className="flex flex-col">
             {NavData.map((item: navDataType) => (
               <li key={item.id} className="border-b last:border-b-0 animate-fade-down">

@@ -5,7 +5,7 @@ import { reasons, reasonsTypes } from './chooseData';
 const Choose = () => {
   return (
     <div id='Choose'>
-          <h3>WHY CHOOSE Blacktinum?</h3>
+          <h3 className='uppercase ' >WHY CHOOSE Blacktinum?</h3>
             <div className="reasons">
               {
                   reasons.map((each: reasonsTypes) => {

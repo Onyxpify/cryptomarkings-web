@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './hero.scss';
 
@@ -21,7 +22,7 @@ const Hero = () => {
                   <FourBtn />
                  
               </div>
-              <div className="boxb">
+              <div  className={`boxb `}>
               </div>
               </div>
               

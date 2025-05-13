@@ -5,7 +5,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 
 export const metadata: Metadata = {
   title: 'Blacktinum',
-  description: `At Blacktinum, we've redefined the way you trade cryptocurrencies. We combine cutting-edge artificial intelligence algorithms with a range of innovative trading tools.`,
+  description: `AI-powered crypto trading reimagined — automate your profits, even while you sleep.`,
 }
 
 export default function RootLayout({

@@ -15,38 +15,103 @@
     line-height: normal;
     text-transform: capitalize;
   }
+  // .text {
+  //   color: $bodyText;
+
+  //   /* Desktop/Body 5 */
+  //   font-family: "Lato";
+  //   font-size: 1.125rem;
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   line-height: normal;
+  //   h3{
+  //     font-size: 16px;
+  //     text-align: start;
+  //     margin: 10px 0px;
+  //   }
+  //   p{
+  //     padding-left: 12px;
+  //     font-size: 16px;
+      
+  //   }
+  //   ul{
+  //     list-style-type:disc;
+  //     li{
+  //       margin-left: 25px;
+  //       margin-bottom: 8px;
+  //     }
+  //   }
+  //   ol{
+  //     list-style-type:decimal;
+  //     li{
+  //       margin-left: 25px;
+  //       margin-bottom: 8px;
+  //     }
+  //   }
+  // }
+
   .text {
     color: $bodyText;
-
-    /* Desktop/Body 5 */
     font-family: "Lato";
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    h3{
+  
+    max-height: 300px; // 👈 limit height
+    overflow-y: auto; // 👈 scroll if content exceeds height
+    padding-right: 8px; // optional: avoid scroll clipping
+
+     /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; // optional: no background
+  }
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE and Edge
+
+  // Restore visible scrollbar on hover if needed (optional)
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+
+    scrollbar-width: thin;
+  }
+  
+    h3 {
       font-size: 16px;
       text-align: start;
       margin: 10px 0px;
     }
-    p{
+  
+    p {
       padding-left: 12px;
       font-size: 16px;
-      
     }
-    ul{
-      list-style-type:disc;
-      li{
+  
+    ul {
+      list-style-type: disc;
+      li {
         margin-left: 25px;
         margin-bottom: 8px;
       }
     }
-    ol{
-      list-style-type:decimal;
-      li{
+  
+    ol {
+      list-style-type: decimal;
+      li {
         margin-left: 25px;
         margin-bottom: 8px;
       }
     }
   }
+  
 }

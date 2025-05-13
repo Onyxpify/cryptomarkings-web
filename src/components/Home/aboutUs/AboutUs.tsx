@@ -1,13 +1,14 @@
 import React from 'react';
 import './aboutus.scss';
 import LearnMore from '../learnMore/LearnMore';
+import Link from 'next/link';
 
 const AboutUs = () => {
   return (
       <div id='AboutUs'>
           <h3 className='mt-[94px] md:mt-[124px] text-start lg:text-center mb-4 md:mb-auto ms-3 ' >About Us</h3>
           <div className="line2">
-              <div className="watchIcon"></div>
+              <Link target='_blank' href="https://youtube.com/@blacktinum" className="watchIcon inline-block "></Link>
           </div>
           <div className="line3">
               <h4>At Blacktinum, we&apos;ve redefined the way you trade cryptocurrencies.

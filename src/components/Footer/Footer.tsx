@@ -1,46 +1,46 @@
 import Link from 'next/link'
 import './footer.scss'
-import { FaFacebook,FaInstagram, FaGithub,} from "react-icons/fa";
+import { FaFacebook,FaInstagram, FaTelegram,} from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import ScrollX from '../Home/scrollX/ScrollX';
 
 const Footer = () => {
   return (
-    <ScrollX className='Footer'>
-      <div className="boxa box">
+    <ScrollX  className='Footer'>
+      <div id='Footer' className="boxa box">
         <div className="img"></div>
         <div className="icons">
-            <Link href={'#'}><AiFillTwitterCircle /> </Link>
-          <Link href={'#'}><FaFacebook /> </Link>
-          <Link href={'#'}><FaInstagram /> </Link>
-          <Link href={'#'}><FaGithub /> </Link>
+            <Link target='_blank' href={'https://x.com/blacktinumai'}><AiFillTwitterCircle /> </Link>
+          <Link target='_blank' href={'https://www.facebook.com/profile.php?id=61573305990373'}><FaFacebook /> </Link>
+          <Link target='_blank' href={'https://www.instagram.com/blacktinum_'}><FaInstagram /> </Link>
+          <Link target='_blank' href={'https://t.me/blacktinum'}><FaTelegram /> </Link>
         </div>
       </div>
       <div className="boxb box">
         <h3>Company</h3>
         <div className="linkes">
-           <Link href={'#'}>About</Link>
-        <Link href={'#'}>Features</Link>
-        <Link href={'#'}>Work</Link>
-        <Link href={'#'}>Career</Link>
+           <Link href={'#AboutUs'}>About</Link>
+        <Link href={'#Footer'}>Features</Link>
+        <Link href={'#Footer'}>Work</Link>
+        <Link href={'#Footer'}>Career</Link>
        </div>
       </div>
       <div className="boxc box">
         <h3>Help</h3>
         <div className="linkes">
-          <Link href={'#'}>Customer Support</Link>
-        <Link href={'#'}>FAQ</Link>
-        <Link href={'#'}>Terms & Conditions</Link>
-        <Link href={'#'}>Privacy Policy</Link>
+          <Link href={'#Footer'}>Customer Support</Link>
+        <Link href={'#Faq'}>FAQ</Link>
+        <Link href={'#Footer'}>Terms & Conditions</Link>
+        <Link href={'#Footer'}>Privacy Policy</Link>
         </div>
       </div>
       <div className="boxd box">
         <h3>Resources</h3>
         <div className="linkes">
-           <Link href={'#'}>Development Tutorials</Link>
-        <Link href={'#'}>Blog</Link>
-        <Link href={'#'}>News</Link>
-        <Link href={'#'}>Crypto Prices</Link>
+           <Link href={'#Footer'}>Development Tutorials</Link>
+        <Link href={'#Footer'}>Blog</Link>
+        <Link href={'#Footer'}>News</Link>
+        <Link href={'#Footer'}>Crypto Prices</Link>
         </div>
       </div>
     </ScrollX>

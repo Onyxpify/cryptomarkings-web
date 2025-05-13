@@ -23,13 +23,16 @@ const MyAccordion = () => {
             expanded={expanded === `${each.key}`}
             onChange={handleChange(each.key)}
             key={each.id}
+            disableGutters
+            square
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls={each.ac}
               id={each.key}
+              tabIndex={-1} // 👈 prevents auto focus
             >
-              <div className="title">
+              <div className="title  ">
                 {" "}
                 <span> {index + 1}. </span> {each.title}{" "}
               </div>

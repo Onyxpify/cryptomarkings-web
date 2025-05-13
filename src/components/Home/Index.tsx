@@ -5,8 +5,6 @@ import Choose from './choose/Choose'
 import GetStarted from './getStarted/GetStarted'
 import Offers from './offers/Offers'
 import JoinUs from './joinUs/JoinUs'
-import Best from './best/Best'
-import Table from './table/Table'
 import Faq from './faq/Faq'
 import Informed from './informed/Informed'
 
@@ -19,8 +17,8 @@ const Index = () => {
       <GetStarted />
       <Offers />
       <JoinUs />
-      <Best />
-      <Table />
+      {/* <Best /> */}
+      {/* <Table /> */}
       <Faq />
       <Informed />
     </div>

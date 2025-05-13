@@ -2,12 +2,13 @@
   "name": "blacktinum-next202404",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-   "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
-  },
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next export",
+  "serve": "npx serve@latest out",
+  "lint": "next lint"
+},
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",

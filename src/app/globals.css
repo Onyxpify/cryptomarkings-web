@@ -43,3 +43,7 @@
   width: 4px;
   border-radius: 100%;
 }
+
+html{
+  scroll-behavior: smooth;
+}
