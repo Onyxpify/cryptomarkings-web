@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { FaFacebook,FaInstagram, FaTelegram,} from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import ScrollX from '../Home/scrollX/ScrollX';
 
 const Footer = () => {
   return (
@@ -23,27 +22,27 @@ const Footer = () => {
             <h3 className="text-[#95cea5] text-base font-semibold mb-2">Company</h3>
             <ul className="space-y-1 text-sm">
               <li><Link href={'#AboutUs'} className="hover:text-[#95cea5] transition">About</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Features</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Work</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Career</Link></li>
+              <li><Link href={'#Offers'} className="hover:text-[#95cea5] transition">Features</Link></li>
+              <li><Link href={'#JoinUs'} className="hover:text-[#95cea5] transition">Work</Link></li>
+              <li><a href="mailto:careers@blacktinum.io" className="hover:text-[#95cea5] transition">Career</a></li>
             </ul>
           </div>
           <div className="min-w-[120px]">
             <h3 className="text-[#95cea5] text-base font-semibold mb-2">Help</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Customer Support</Link></li>
+              <li><a href="mailto:support@blacktinum.io" className="hover:text-[#95cea5] transition">Customer Support</a></li>
               <li><Link href={'#Faq'} className="hover:text-[#95cea5] transition">FAQ</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Terms & Conditions</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Privacy Policy</Link></li>
+              <li><Link href={'/terms'} className="hover:text-[#95cea5] transition">Terms & Conditions</Link></li>
+              <li><Link href={'/privacy'} className="hover:text-[#95cea5] transition">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className="min-w-[120px]">
             <h3 className="text-[#95cea5] text-base font-semibold mb-2">Resources</h3>
             <ul className="space-y-1 text-sm">
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Development Tutorials</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Blog</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">News</Link></li>
-              <li><Link href={'#Footer'} className="hover:text-[#95cea5] transition">Crypto Prices</Link></li>
+              <li><Link href={'#Offers'} className="hover:text-[#95cea5] transition">Development Tutorials</Link></li>
+              <li><Link href={'#Informed'} className="hover:text-[#95cea5] transition">Blog</Link></li>
+              <li><Link href={'#Informed'} className="hover:text-[#95cea5] transition">News</Link></li>
+              <li><Link href={'#Offers'} className="hover:text-[#95cea5] transition">Crypto Prices</Link></li>
             </ul>
           </div>
         </div>
