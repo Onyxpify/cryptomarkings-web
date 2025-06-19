@@ -17,12 +17,24 @@ const FourBtn = ({ style }: props) => {
         </Link>
       </div>
       <div className="stores">
-        <button className="apple" >
-          {" "}
-        </button>
-        <button className="play" >
-          {" "}
-        </button>
+        <a
+          className="apple"
+          href="https://testflight.apple.com/join/g95phD5P"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download on the App Store (iOS)"
+        >
+          {/* App Store button */}
+        </a>
+        <a
+          className="play"
+          href="https://drive.google.com/file/d/1aC8cb423jinPSB9P1pWcrceyHbty-H-S/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download on the Play Store (Android)"
+        >
+          {/* Play Store button */}
+        </a>
       </div>
     </div>
   );

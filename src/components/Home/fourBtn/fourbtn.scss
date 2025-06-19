@@ -84,30 +84,62 @@
       display: flex;
     }
     @include desktop {
-      display: none;
+      display: flex;
     }
 
     a {
      
       @include mobile {
-        width: 9.0625rem;
-        height: 3.49938rem;
+        width: 10.5rem;
+        height: 3.5rem;
       }
       @include tablet {
-        width: 10.0625rem;
-        height: 3.49938rem;
+        width: 12rem;
+        height: 3.5rem;
       }
       @include desktop {
-        width: 11.0625rem;
-        height: 3.49938rem;
+        width: 13rem;
+        height: 3.5rem;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2rem;
+      border: 2px solid $background;
+      box-shadow: 0 2px 12px 0 rgba(0, 61, 43, 0.13);
+      background: #181818;
+      transition: background 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      outline: none;
+      padding: 0.3rem 1.2rem;
+      margin: 0 0.5rem;
+      box-sizing: border-box;
+      &:hover, &:focus {
+        box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.22), 0 3px 12px 0 rgba(0, 61, 43, 0.12);
+        border-color: $background;
+        transform: translateY(-2px) scale(1.04);
+        z-index: 2;
+      }
+      &:active {
+        background: #101010;
+        transform: scale(0.98);
+        box-shadow: 0 1px 4px 0 rgba(0, 61, 43, 0.10);
       }
     }
     
     .play {
       @include image("/Play Store.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80% 70%;
     }
     .apple {
       @include image("/App Store.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80% 70%;
     }
   }
 }
